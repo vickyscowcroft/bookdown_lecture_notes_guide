@@ -36,6 +36,14 @@ Note that the `{#sec:label}` syntax is still the same - you don't need to say wh
 
 Subsections are done similarly, with either three # at the start of the line.
 
+You can change the section heading from 'Chapter' to e.g. section by editing the following in the  `_bookdown.yml` file:
+
+```markdown
+language:
+  ui:
+    chapter_name: "Section "
+```
+
 Cross referencing {#sec:cross-ref}
 --------
 

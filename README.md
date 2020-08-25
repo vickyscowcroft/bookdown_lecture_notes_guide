@@ -1,4 +1,13 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. More detailed instructions are available here https://bookdown.org/yihui/bookdown/build-the-book.html.
+# Bookdown lecture notes guide
 
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
-# bookdown_lecture_notes_guide
+Guide for making accessible lecture notes with R and bookdown. Source files for this guide are in this repo.
+
+Guide can be found [here](https://vickyscowcroft.github.io/bookdown_lecture_notes_guide/)
+
+Example of lecture notes made with bookdown for PH40112 can be found [here](https://vickyscowcroft.github.io/PH40112_rmd/). Source for the lecture notes at [https://github.com/vickyscowcroft/PH40112_rmd](https://github.com/vickyscowcroft/PH40112_rmd)
+
+Last update 25/8/2020
+
+vs522@bath.ac.uk
+
+

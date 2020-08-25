@@ -1,5 +1,5 @@
 book_filename: "bookdown-lecture-notes"
 language:
   ui:
-    chapter_name: "Section "
+    chapter_name: "Chapter "
 delete_merged_file: true

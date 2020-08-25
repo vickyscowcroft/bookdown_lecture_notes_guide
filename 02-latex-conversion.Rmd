@@ -22,9 +22,10 @@ Pandoc will have done most of the work in getting your tex file converted to mar
 Things that typically will need fixing are:
 
  * Section etc labels - if you used underscores in any of your latex labels you should change these to '-' in the markdown file. The underscores confuse markdown. Section \@ref(sec:chapters) discusses sections, chapters, etc.
- * Figures - the syntax for figures is quite different. These will need some tidying up. See Section \@ref(sec:figures) for how to include figures.
- * Equations - the equations themselves should be fine, but if you want to have equation numbers you'll need to do some tidying. See Section \@ref(sec:equations) for the syntax.
- * Tables - tables have a different format but it's pretty easy to convert a latex table using find/replace. See Section \@ref(sec:tables).
+ * Figures - the syntax for figures is quite different. These will need some tidying up. See Chapter \@ref(sec:figures) for how to include figures.
+ * Equations - the equations themselves should be fine, but if you want to have equation numbers you'll need to do some tidying. See Chapter \@ref(sec:equations) for the syntax.
+ * Tables - tables have a different format but it's pretty easy to convert a latex table using find/replace. See Chapter \@ref(sec:tables).
+ * References - generally easy to fix. See Chapter \@ref(sec:referencing).
  
 A note on notes with gaps {#gaps}
 ---------------

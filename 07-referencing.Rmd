@@ -41,11 +41,21 @@ Example bib file entry:
 
 The referencing style is controlled in the `index.Rmd` file. 
 
+At the top of this file you'll find the section that defines things like the book title, output format etc. The following lines are where you define the bib file names and referencing format. You can have multiple bib files.
+
 ```markdown
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 ```
+
+Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file `99-references.Rmd`. It should contain the following text:
+
+```markdown
+`r if (knitr::is_html_output()) '# References {-}'`
+```
+This will create an **un-numbered** section at the end of the book called 'References' that has the full reference list.
+
 
 
 
