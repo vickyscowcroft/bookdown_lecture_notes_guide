@@ -41,6 +41,22 @@ git push -q origin gh-pages
 
 Your pretty lecture notes should now be online! You should find them at github_username.github.io/repo_name - or check the setting page of the repository. The address will be given in the github pages section.
 
+If you make changes and want to update the gh-pages site then below is a really hacky way of doing it
+
+```
+cd book-output
+git checkout gh-pages
+git merge origin/master
+cp -r ../_book/* ./
+git add --all *
+git commit -m "Update the book" || true
+git push -q origin gh-pages
+```
+
+There is a better way of doing this using Travis. I may update the notes to add some instructions.
+
+
+
 
 
 
