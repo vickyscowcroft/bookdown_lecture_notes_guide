@@ -1,0 +1,76 @@
+# Equations {#sec:equations}
+
+```{css, echo=FALSE}
+pre code {
+  white-space: pre-wrap;
+}
+```
+
+Adding equations {#sec:add-eqs}
+----------------
+
+The syntax for equations is similar (but not identical) to LaTeX.
+
+LaTeX code:
+
+```markdown
+\begin{equation}
+\label{eqn:friedman}
+	\left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho 
+\end{equation}
+```
+
+Rmd code:
+```markdown
+\begin{equation}
+    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
+(\#eq:friedman)
+\end{equation}
+```
+
+\begin{equation}
+    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
+(\#eq:friedman)
+\end{equation}
+
+Equation numbers and labels {#sec:eq-nos-labels}
+------
+
+The syntax for the maths is the same, but the labelling changes. To label and equation add
+
+```markdown
+(\#eq:label)
+```
+just before `end{equation}`. Only equations with labels will be numbered. If you don't want numbers then don't label the equations, but numbers are helpful.
+
+Cross referencing equations {#sec:cross-ref-eqs}
+-----
+
+The syntax for cross-referencing equations is similar to sections and figures, i.e.
+
+```markdown
+Eqn. \@ref(eq:friedman) is the Friedman equation
+```
+will give "Eqn. \@ref(eq:friedman) is the Friedman equation".
+
+Maths in captions {#sec:maths-captions}
+------
+R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions. 
+
+Example of a finicky caption:
+
+`````markdown
+```
+{r echo=FALSE, gaussian, out.width='100%', fig.show='hold', fig.cap="Gaussian uncertainties. 
+If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and
+uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within 
+$\\langle x \\rangle \\pm 1\\sigma$. There's a 95.4% probability of $x$ being within 
+$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  
+$\\langle x \\rangle \\pm 3\\sigma$."}
+knitr::include_graphics("Images/normal-curve.png")
+```
+`````
+
+```{r echo=FALSE, gaussian, out.width='100%', fig.show='hold', fig.cap="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within $\\langle x \\rangle \\pm 1\\sigma$. There's a 95.4% probability of $x$ being within $\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  $\\langle x \\rangle \\pm 3\\sigma$."}
+knitr::include_graphics("Images/normal-curve.png")
+```

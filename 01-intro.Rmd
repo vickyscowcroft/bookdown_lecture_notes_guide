@@ -1,0 +1,9 @@
+# Getting started {#getting-started}
+
+The quickest way to get started is to use the bookdown demo as a template. [This page](https://bookdown.org/yihui/bookdown/get-started.html) gives instructions for how to do this.
+
+The [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) is the main documentation for bookdown. I won't repeat a lot of the information here. 
+
+This guide will walk through the steps I used to convert my LaTeX lecture notes for PH40112 to the bookdown version [here](https://vickyscowcroft.github.io/PH40112_rmd/). The files used to create the PH40112 notes are available on [github](https://github.com/vickyscowcroft/PH40112_rmd) and you're welcome to use those as a starting point. 
+
+

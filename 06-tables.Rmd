@@ -1,0 +1,49 @@
+# Tables {#sec:tables}
+
+Markdown table generator {#sec:md-tab-gen}
+------
+
+If you're making a new table from scratch then the [Markdown Table Generator] (https://www.tablesgenerator.com/markdown_tables) is a handy tool.
+
+Table syntax {#sec:tab-syntax}
+----------------
+
+Tables are a bit more simple in markdown than in latex. I haven't played around with complex tables much, but it's straightforward to make a basic one.
+
+Example table:
+
+```markdown
+Table: (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. 
+
+| Parameter | Best fit value     | Uncertainty |
+|:--------------------|----------:|----------:|
+| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |
+| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |
+| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |
+| $H_0$ | 67.37 | 0.54 |
+| $\Omega_{m}$ | 0.3147 | 0.0074 |
+| Age (Gyr) | 13.801 | 0.024 | 
+| $z_{re}$ | 7.64 |  0.74 | 
+| 100$\theta_{*}$ | 1.04108 | 0.00031 | 
+```
+
+Important things about tables:
+ 
+ * Captions go **at the top** and should include the label definition.
+ * Label syntax is `Table: (\#tab:table-name)`
+ * Columns are delimited by `|`
+ * Justification given by the colons and dashes in the line under the header row.
+ 
+ Table: (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. 
+
+| Parameter | Best fit value     | Uncertainty |
+|:--------------------|----------:|----------:|
+| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |
+| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |
+| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |
+| $H_0$ | 67.37 | 0.54 |
+| $\Omega_{m}$ | 0.3147 | 0.0074 |
+| Age (Gyr) | 13.801 | 0.024 | 
+| $z_{re}$ | 7.64 |  0.74 | 
+| 100$\theta_{*}$ | 1.04108 | 0.00031 | 
+
