@@ -14,7 +14,7 @@ deploy:
   skip_cleanup: true
   repo: vickyscowcroft/bookdown_lecture_notes_guide
   target-branch: gh-pages
-  local-dir: book
+  local-dir: _book
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
