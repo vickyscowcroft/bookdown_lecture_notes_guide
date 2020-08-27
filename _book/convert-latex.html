@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown</title>
+  <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
+  <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown" />
+  
+  <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
+  
+
+<meta name="author" content="Vicky Scowcroft" />
+
+
+<meta name="date" content="2020-08-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="getting-started.html"/>
+<link rel="next" href="sec-chapters.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Making Lecture Notes with Bookdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#system-requirements"><i class="fa fa-check"></i>System Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#caveat"><i class="fa fa-check"></i>Caveat</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a></li>
+<li class="chapter" data-level="2" data-path="convert-latex.html"><a href="convert-latex.html"><i class="fa fa-check"></i><b>2</b> Converting from LaTeX notes</a><ul>
+<li class="chapter" data-level="2.1" data-path="convert-latex.html"><a href="convert-latex.html#sec:con-tex"><i class="fa fa-check"></i><b>2.1</b> Converting tex files</a></li>
+<li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
+<li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
+<li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
+<li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
+<li class="chapter" data-level="3.2" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:headings"><i class="fa fa-check"></i><b>3.2</b> Headings</a></li>
+<li class="chapter" data-level="3.3" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>3.3</b> Cross referencing</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec-figures.html"><a href="sec-figures.html"><i class="fa fa-check"></i><b>4</b> Figures</a><ul>
+<li class="chapter" data-level="4.1" data-path="sec-figures.html"><a href="sec-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>4.1</b> Adding figures</a></li>
+<li class="chapter" data-level="4.2" data-path="sec-figures.html"><a href="sec-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>4.2</b> Figure captions</a></li>
+<li class="chapter" data-level="4.3" data-path="sec-figures.html"><a href="sec-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>4.3</b> Figure numbering and referencing</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sec-equations.html"><a href="sec-equations.html"><i class="fa fa-check"></i><b>5</b> Equations</a><ul>
+<li class="chapter" data-level="5.1" data-path="sec-equations.html"><a href="sec-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>5.1</b> Equation syntax</a></li>
+<li class="chapter" data-level="5.2" data-path="sec-equations.html"><a href="sec-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>5.2</b> Equation numbers and labels</a></li>
+<li class="chapter" data-level="5.3" data-path="sec-equations.html"><a href="sec-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>5.3</b> Cross referencing equations</a></li>
+<li class="chapter" data-level="5.4" data-path="sec-equations.html"><a href="sec-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>5.4</b> Maths in captions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-tables.html"><a href="sec-tables.html"><i class="fa fa-check"></i><b>6</b> Tables</a><ul>
+<li class="chapter" data-level="6.1" data-path="sec-tables.html"><a href="sec-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>6.1</b> Markdown table generator</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-tables.html"><a href="sec-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>6.2</b> Table syntax</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-referencing.html"><a href="sec-referencing.html"><i class="fa fa-check"></i><b>7</b> Referencing</a><ul>
+<li class="chapter" data-level="7.1" data-path="sec-referencing.html"><a href="sec-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>7.1</b> Adding citations</a></li>
+<li class="chapter" data-level="7.2" data-path="sec-referencing.html"><a href="sec-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>7.2</b> Bibliography files</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-referencing.html"><a href="sec-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>7.3</b> Reference style</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sec-publishing.html"><a href="sec-publishing.html"><i class="fa fa-check"></i><b>8</b> Publishing</a><ul>
+<li class="chapter" data-level="8.1" data-path="sec-publishing.html"><a href="sec-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>8.1</b> Compiling the book</a></li>
+<li class="chapter" data-level="8.2" data-path="sec-publishing.html"><a href="sec-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>8.2</b> Publishing with github pages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Making Lecture Notes with Bookdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="convert-latex" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Converting from LaTeX notes</h1>
+<div id="sec:con-tex" class="section level2">
+<h2><span class="header-section-number">2.1</span> Converting tex files</h2>
+<p>If you already have LaTeX versions of your notes you can convert these to markdown using pandoc Pandoc won’t create <em>perfect</em> versions of your notes - you’ll most likely have to do a bit of tweaking, but it gets most of the way there.</p>
+<p>You can convert a tex file to Rmd via the command</p>
+<pre><code>pandoc -f latex -t markdown input-tex.tex -o output-md.Rmd</code></pre>
+<p>where <code>input-tex.tex</code> is the name of your tex file and <code>output-md.Rmd</code> is the name of your output Rmd file.</p>
+<div class="fyi">
+<p>Pandoc converts one tex file at a time. It doesn’t understand how to process a “master” tex file with <code>input</code> or <code>insert</code> LaTeX commands. Each file will need to be processed separately.</p>
+</div>
+</div>
+<div id="batch-conversion" class="section level2">
+<h2><span class="header-section-number">2.2</span> Batch conversion</h2>
+<p>If you want to convert a batch of latex files you can script the process.</p>
+</div>
+<div id="tidying" class="section level2">
+<h2><span class="header-section-number">2.3</span> Tidying up the Rmd file</h2>
+<p>Pandoc will have done most of the work in getting your tex file converted to markdown. However, depending on how complex the original file was, you may end up with some tidying to do.</p>
+<p>Things that typically will need fixing are:</p>
+<ul>
+<li>Section etc labels - if you used underscores in any of your latex labels you should change these to ‘-’ in the markdown file. The underscores confuse markdown. Section <a href="sec-chapters.html#sec:chapters">3</a> discusses sections, chapters, etc.</li>
+<li>Figures - the default pandoc conversion is quite limited, so here we’ll use a more adaptable figure environment. In practice its easiest to just copy-paste the example code in Chapter <a href="sec-figures.html#sec:figures">4</a> and edit the relavent bits.</li>
+<li>Equations - the equations themselves should be fine, but if you want to have equation numbers you’ll need to do some tidying. See Chapter <a href="sec-equations.html#sec:equations">5</a> for the syntax.</li>
+<li>Tables - tables have a different format but it’s pretty easy to convert a latex table using find/replace. See Chapter <a href="sec-tables.html#sec:tables">6</a>.</li>
+<li>References - generally easy to fix. See Chapter <a href="sec-referencing.html#sec:referencing">7</a>.</li>
+</ul>
+</div>
+<div id="sec:gaps" class="section level2">
+<h2><span class="header-section-number">2.4</span> Notes with gaps</h2>
+<p><strong>Think carefully about whether you want to provide notes with gaps.</strong> While they may serve a purpose when the students have a hard-copy of the notes in a live lecture, they will most likely be using your notes on a screen this year.</p>
+<p>It is possible to create notes with gaps for things like equations etc for the students to fill in. To do this you need to add some extra code to the <code>index.Rmd</code> file:</p>
+<pre><code>```
+{r setup, include=FALSE}
+library(knitr)
+knit_engines$set(asis = function(options) {
+  if (options$echo &amp;&amp; options$eval) knit_child(text = options$code)
+})
+```</code></pre>
+<p>Then to “hide” e.g. an equation but still keep the same numbering, edit your equation to the following format:</p>
+<pre><code>\begin{equation}
+```{asis, echo=FALSE}
+\Delta s^2 = \Delta x_{1}^{2} + \Delta x_{2}^{2}
+```
+(\#eq:dist01)
+\end{equation}</code></pre>
+<p>Here the <code>asis</code> command and back-ticks wrap around <strong>only</strong> the equation itself, rather than the whole <code>equation</code> object. If you wrap the <code>asis</code> around the <code>\begin{equation}</code> and <code>\end{equation}</code> the equation numbering will disappear too.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-chapters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-latex-conversion.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-lecture-notes.pdf", "bookdown-lecture-notes.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
