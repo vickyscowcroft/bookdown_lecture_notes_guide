@@ -43,7 +43,7 @@ Your pretty lecture notes should now be online! You should find them at github_u
 
 ** TO DO**
 
-Add info on how to update
+Add info on how to update stuff with travis
 
 
 
