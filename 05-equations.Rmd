@@ -6,7 +6,7 @@ pre code {
 }
 ```
 
-Adding equations {#sec:add-eqs}
+Equation syntax {#sec:add-eqs}
 ----------------
 
 The syntax for equations is similar (but not identical) to LaTeX.
@@ -33,6 +33,44 @@ Rmd code:
 (\#eq:friedman)
 \end{equation}
 
+You can also use the latex
+```markdown
+\begin{align}
+...
+\end{align}
+```
+format for equations. If you're converting from LaTeX to markdown with pandoc it may convert equations to 
+```markdown
+\begin{aligned}
+...
+\end{aligned}
+```
+which also works.
+
+:::fyi 
+**LaTeX subequations and intertext**
+
+I haven't been able to get subequations and intertext to work in bookdown. LaTeX equations of the form
+```markdown
+\begin{subequations}\begin{align}
+\vec{E} &= \left( x,t \right)
+\intertext{and in 3 dimensional space as}
+\vec{E} &= \left( x,y,z,t \right)
+\end{align}\end{subequations}
+```
+
+should be written as separate equations with the text between written outside the equation environment, e.g. 
+```markdown
+\begin{align}
+\vec{E} &= \left( x,t \right)
+\end{align}
+and in 3 dimensional space as
+\begin{align}
+\vec{E} &= \left( x,y,z,t \right)
+\end{align}
+```
+:::
+
 Equation numbers and labels {#sec:eq-nos-labels}
 ------
 
@@ -42,6 +80,7 @@ The syntax for the maths is the same, but the labelling changes. To label and eq
 (\#eq:label)
 ```
 just before `end{equation}`. Only equations with labels will be numbered. If you don't want numbers then don't label the equations, but numbers are helpful.
+
 
 Cross referencing equations {#sec:cross-ref-eqs}
 -----
@@ -74,3 +113,5 @@ knitr::include_graphics("Images/normal-curve.png")
 ```{r echo=FALSE, gaussian, out.width='100%', fig.show='hold', fig.cap="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within $\\langle x \\rangle \\pm 1\\sigma$. There's a 95.4% probability of $x$ being within $\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  $\\langle x \\rangle \\pm 3\\sigma$."}
 knitr::include_graphics("Images/normal-curve.png")
 ```
+
+

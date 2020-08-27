@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: bookdown-lecture-notes.aux
+The style file: plainnat.bst
+Database file #1: book.bib
+Database file #2: packages.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            614 strings with 5486 characters,
+and the built_in function-call counts, 1402 in all, are:
+= -- 111
+> -- 106
+< -- 3
++ -- 36
+- -- 33
+* -- 114
+:= -- 234
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 62
+empty$ -- 98
+format.name$ -- 38
+if$ -- 279
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 3
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 49
+stack$ -- 0
+substring$ -- 9
+swap$ -- 4
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 0
+while$ -- 10
+width$ -- 0
+write$ -- 46

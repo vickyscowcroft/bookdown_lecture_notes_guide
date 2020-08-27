@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
-biblio-style: apalike
+csl: apj.csl
 link-citations: yes
 github-repo: vickyscowcroft/bookdown_lecture_notes_guide
 description: "Guide for creating html lecture notes using Bookdown"
