@@ -1,4 +1,4 @@
-language: r
+language: generic
 
 deploy:
   provider: pages
