@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -206,10 +207,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \end{centering}
 \end{figure}</code></pre>
 <p>To include the figure in markdown the syntax is as follows:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="bn">```</span></a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="bn">{r echo=FALSE, ho-plot, out.width=&#39;70%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;This is a figure caption.&quot;}</span></a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="bn">knitr::include_graphics(&quot;Images/ho-tension.png&quot;)</span></a>
-<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="bn">```</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="bn">{r echo=FALSE, ho-plot, out.width=&#39;70%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;This is a figure caption.&quot;}</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="bn">knitr::include_graphics(&quot;Images/ho-tension.png&quot;)</span></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="bn">```</span></a></code></pre></div>
 <div class="figure"><span id="fig:ho-plot"></span>
 <img src="Images/ho-tension.png" alt="This is a figure caption." width="70%" />
 <p class="caption">
@@ -234,7 +235,7 @@ Figure 4.1: This is a figure caption.
 <h2><span class="header-section-number">4.3</span> Figure numbering and referencing</h2>
 <p>Figures with labels and captions are numbered according to the section (e.g. Fig <a href="sec-figures.html#fig:ho-plot">4.1</a> in this case).</p>
 <p>To reference a figure use the syntax</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" data-line-number="1">\@ref(fig:label)</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb13-1" data-line-number="1">\@ref(fig:label)</a></code></pre></div>
 <p>where <code>fig:label</code> would be <code>fig:ho-plot</code> in this case.</p>
 <p>You can cross reference between sections/chapters, so make sure to use unique figure labels.</p>
 

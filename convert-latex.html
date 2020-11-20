@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -239,6 +240,13 @@ knit_engines$set(asis = function(options) {
 (\#eq:dist01)
 \end{equation}</code></pre>
 <p>Here the <code>asis</code> command and back-ticks wrap around <strong>only</strong> the equation itself, rather than the whole <code>equation</code> object. If you wrap the <code>asis</code> around the <code>\begin{equation}</code> and <code>\end{equation}</code> the equation numbering will disappear too.</p>
+</div>
+<div id="sec:titlesec" class="section level2">
+<h2><span class="header-section-number">2.5</span> Using the <code>titlesec</code> package</h2>
+<p>If you’re using the <code>titlesec</code> latex package you’ll need to add an additional line to the yaml information on your index.Rmd file:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">subparagraph<span class="op">:</span><span class="st"> </span>yes</a></code></pre></div>
+<p>This should fix any compilation errors related to the <code>titlesec</code> package when you’re producing a pdf output.</p>
+<p>Source: <a href="https://stackoverflow.com/questions/42916124/not-able-to-use-titlesec-with-markdown-and-pandoc">Stack Overflow</a></p>
 
 </div>
 </div>

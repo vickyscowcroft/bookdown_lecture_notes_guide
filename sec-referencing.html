@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -197,38 +198,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="sec:add-cite" class="section level2">
 <h2><span class="header-section-number">7.1</span> Adding citations</h2>
 <p>You can reference publications etc using the following syntax:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb23-1" data-line-number="1">@bibcode </a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb24-1" data-line-number="1">@bibcode </a></code></pre></div>
 <p>where <code>bibcode</code> is the bibcode for the entry in your bib file (see Sec. <a href="sec-referencing.html#sec:bib-files">7.2</a>). This will give the equivalent of the LaTeX <code>\citet{}</code> command.
 Example:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb24-1" data-line-number="1">@2016Scowcroft showed that the SMC is a very elongated galaxy.</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb25-1" data-line-number="1">@2016Scowcroft showed that the SMC is a very elongated galaxy.</a></code></pre></div>
 <p><strong><span class="citation">Scowcroft et al. (<a href="#ref-2016Scowcroft">2016</a>)</span> showed that the SMC is a very elongated galaxy.</strong></p>
 <p>For <code>\citep{}</code>, just put the citation in square brackets.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb25-1" data-line-number="1">The first observations of SMC Cepheids were taken over 100 years ago [@1912Leavitt].</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb26-1" data-line-number="1">The first observations of SMC Cepheids were taken over 100 years ago [@1912Leavitt].</a></code></pre></div>
 <p><strong>The first observations of SMC Cepheids were taken over 100 years ago <span class="citation">(Leavitt &amp; Pickering <a href="#ref-1912Leavitt">1912</a>)</span>.</strong></p>
 </div>
 <div id="sec:bib-files" class="section level2">
 <h2><span class="header-section-number">7.2</span> Bibliography files</h2>
 <p>Assuming you’re using natbib style references you can pass the same bib file to bookdown.</p>
 <p>Example bib file entry:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb26-1" data-line-number="1">@ARTICLE{1912Leavitt,</a>
-<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="bn">       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span></a>
-<a class="sourceLine" id="cb26-3" data-line-number="3"><span class="bn">        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span></a>
-<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="bn">      journal = {Harvard College Observatory Circular},</span></a>
-<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="bn">         year = &quot;1912&quot;,</span></a>
-<a class="sourceLine" id="cb26-6" data-line-number="6"><span class="bn">       volume = {173},</span></a>
-<a class="sourceLine" id="cb26-7" data-line-number="7"><span class="bn">        pages = {1},</span></a>
-<a class="sourceLine" id="cb26-8" data-line-number="8">}</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb27-1" data-line-number="1">@ARTICLE{1912Leavitt,</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="bn">       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span></a>
+<a class="sourceLine" id="cb27-3" data-line-number="3"><span class="bn">        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span></a>
+<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="bn">      journal = {Harvard College Observatory Circular},</span></a>
+<a class="sourceLine" id="cb27-5" data-line-number="5"><span class="bn">         year = &quot;1912&quot;,</span></a>
+<a class="sourceLine" id="cb27-6" data-line-number="6"><span class="bn">       volume = {173},</span></a>
+<a class="sourceLine" id="cb27-7" data-line-number="7"><span class="bn">        pages = {1},</span></a>
+<a class="sourceLine" id="cb27-8" data-line-number="8">}</a></code></pre></div>
 </div>
 <div id="sec:ref-style" class="section level2">
 <h2><span class="header-section-number">7.3</span> Reference style</h2>
 <p>The referencing style is controlled in the <code>index.Rmd</code> file.</p>
 <p>At the top of this file you’ll find the section that defines things like the book title, output format etc. The following lines are where you define the bib file names and referencing format. You can have multiple bib files.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb27-1" data-line-number="1">bibliography: [book.bib, packages.bib]</a>
-<a class="sourceLine" id="cb27-2" data-line-number="2">csl: apj.csl</a>
-<a class="sourceLine" id="cb27-3" data-line-number="3">link-citations: yes</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb28-1" data-line-number="1">bibliography: [book.bib, packages.bib]</a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">csl: apj.csl</a>
+<a class="sourceLine" id="cb28-3" data-line-number="3">link-citations: yes</a></code></pre></div>
 <p>The <code>bibliography:</code> line points to your bib file. The <code>csl:</code> line points to your style file. This book uses the ApJ style. Additional style files (e.g. PRL etc.) can be downloaded from <a href="https://www.zotero.org/styles">zotero</a>. <code>link-citations: yes</code> creates links from the citations in the text to the reference list at the end of the chapter.</p>
 <p>Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file <code>99-references.Rmd</code>. It should contain the following text:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="fu"># References {-}</span></a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="fu"># References {-}</span></a></code></pre></div>
 <p>This will create an <strong>un-numbered</strong> section at the end of the book called ‘References’ that has the full reference list.</p>
 
 </div>

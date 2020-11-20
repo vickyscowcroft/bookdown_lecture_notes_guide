@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -198,31 +199,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> File Structure</h2>
 <p>Bookdown organises your notes into a book. The main page you see when you open a bookdown page is the <code>index.Rmd</code> file.</p>
 <p>Each chapter in the book has it’s own markdown file. Each chapter filename should start with a number, and will be ordered numerically. For this book, the files are</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" data-line-number="1">index.Rmd</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">01-intro.Rmd</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">02-latex-conversion.Rmd</a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">03-chapters.Rmd</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">... etc</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" data-line-number="1">index.Rmd</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">01-intro.Rmd</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">02-latex-conversion.Rmd</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">03-chapters.Rmd</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">... etc</a></code></pre></div>
 </div>
 <div id="sec:headings" class="section level2">
 <h2><span class="header-section-number">3.2</span> Headings</h2>
 <p>The chapter title and label are given in the first line of the file.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="fu"># Chapters, sections, etc {#sec:chapters}</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="fu"># Chapters, sections, etc {#sec:chapters}</span></a></code></pre></div>
 <p>The <code>#</code> at the start of the line denotes a chapter heading. The label is given in <code>{#sec:chapters}</code>.</p>
 <p>You can make sections either using two # at the start of the line, or with dashes under the section title:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" data-line-number="1">Headings {#sec:headings}</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">--------</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" data-line-number="1">Headings {#sec:headings}</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">--------</a></code></pre></div>
 <p>Note that the <code>{#sec:label}</code> syntax is still the same - you don’t need to say whether it’s a chapter, section, subsection etc.</p>
 <p>Subsections are done similarly, with either three # at the start of the line.</p>
 <p>You can change the section heading from ‘Chapter’ to e.g. section by editing the following in the <code>_bookdown.yml</code> file:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" data-line-number="1">language:</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">  ui:</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="bn">    chapter_name: &quot;Section &quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" data-line-number="1">language:</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">  ui:</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="bn">    chapter_name: &quot;Section &quot;</span></a></code></pre></div>
 </div>
 <div id="sec:cross-ref" class="section level2">
 <h2><span class="header-section-number">3.3</span> Cross referencing</h2>
 <p>You can reference other chapters, sections etc throughout the book with the following syntax:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" data-line-number="1">Section \@ref(sec:cross-ref) is this section.</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb10-1" data-line-number="1">Section \@ref(sec:cross-ref) is this section.</a></code></pre></div>
 <p>Which shows up as “Section <a href="sec-chapters.html#sec:cross-ref">3.3</a> is this section.”.</p>
 <p>When cross-referencing, you don’t need the # before <code>sec</code>. That’s only used to define the label.</p>
 
