@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -202,18 +203,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.2</span> Table syntax</h2>
 <p>Tables are a bit more simple in markdown than in latex. I haven’t played around with complex tables much, but it’s straightforward to make a basic one.</p>
 <p>Example table:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" data-line-number="1">Table: (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. </a>
-<a class="sourceLine" id="cb22-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb22-3" data-line-number="3">| Parameter | Best fit value     | Uncertainty |</a>
-<a class="sourceLine" id="cb22-4" data-line-number="4">|:--------------------|----------:|----------:|</a>
-<a class="sourceLine" id="cb22-5" data-line-number="5">| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |</a>
-<a class="sourceLine" id="cb22-6" data-line-number="6">| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |</a>
-<a class="sourceLine" id="cb22-7" data-line-number="7">| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |</a>
-<a class="sourceLine" id="cb22-8" data-line-number="8">| $H_0$ | 67.37 | 0.54 |</a>
-<a class="sourceLine" id="cb22-9" data-line-number="9">| $\Omega_{m}$ | 0.3147 | 0.0074 |</a>
-<a class="sourceLine" id="cb22-10" data-line-number="10">| Age (Gyr) | 13.801 | 0.024 | </a>
-<a class="sourceLine" id="cb22-11" data-line-number="11">| $z_{re}$ | 7.64 |  0.74 | </a>
-<a class="sourceLine" id="cb22-12" data-line-number="12">| 100$\theta_{*}$ | 1.04108 | 0.00031 | </a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb23-1" data-line-number="1">Table: (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. </a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb23-3" data-line-number="3">| Parameter | Best fit value     | Uncertainty |</a>
+<a class="sourceLine" id="cb23-4" data-line-number="4">|:--------------------|----------:|----------:|</a>
+<a class="sourceLine" id="cb23-5" data-line-number="5">| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |</a>
+<a class="sourceLine" id="cb23-6" data-line-number="6">| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |</a>
+<a class="sourceLine" id="cb23-7" data-line-number="7">| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |</a>
+<a class="sourceLine" id="cb23-8" data-line-number="8">| $H_0$ | 67.37 | 0.54 |</a>
+<a class="sourceLine" id="cb23-9" data-line-number="9">| $\Omega_{m}$ | 0.3147 | 0.0074 |</a>
+<a class="sourceLine" id="cb23-10" data-line-number="10">| Age (Gyr) | 13.801 | 0.024 | </a>
+<a class="sourceLine" id="cb23-11" data-line-number="11">| $z_{re}$ | 7.64 |  0.74 | </a>
+<a class="sourceLine" id="cb23-12" data-line-number="12">| 100$\theta_{*}$ | 1.04108 | 0.00031 | </a></code></pre></div>
 <p>Important things about tables:</p>
 <ul>
 <li>Captions go <strong>at the top</strong> and should include the label definition.</li>

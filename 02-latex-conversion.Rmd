@@ -63,5 +63,18 @@ Then to "hide" e.g. an equation but still keep the same numbering, edit your equ
 
 Here the `asis` command and back-ticks wrap around **only** the equation itself, rather than the whole `equation` object. If you wrap the `asis` around the `\begin{equation}` and `\end{equation}` the equation numbering will disappear too. 
 
+Using the `titlesec` package {#sec:titlesec}
+----------------
+
+If you're using the `titlesec` latex package you'll need to add an additional line to the yaml information on your index.Rmd file:
+
+```r
+subparagraph: yes
+```
+
+
+This should fix any compilation errors related to the `titlesec` package when you're producing a pdf output.
+
+Source: [Stack Overflow](https://stackoverflow.com/questions/42916124/not-able-to-use-titlesec-with-markdown-and-pandoc)
 
 

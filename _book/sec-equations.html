@@ -24,7 +24,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2020-08-27" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="convert-latex.html"><a href="convert-latex.html#batch-conversion"><i class="fa fa-check"></i><b>2.2</b> Batch conversion</a></li>
 <li class="chapter" data-level="2.3" data-path="convert-latex.html"><a href="convert-latex.html#tidying"><i class="fa fa-check"></i><b>2.3</b> Tidying up the Rmd file</a></li>
 <li class="chapter" data-level="2.4" data-path="convert-latex.html"><a href="convert-latex.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
+<li class="chapter" data-level="2.5" data-path="convert-latex.html"><a href="convert-latex.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sec-chapters.html"><a href="sec-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a><ul>
 <li class="chapter" data-level="3.1" data-path="sec-chapters.html"><a href="sec-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
@@ -203,71 +204,71 @@ pre code {
 <h2><span class="header-section-number">5.1</span> Equation syntax</h2>
 <p>The syntax for equations is similar (but not identical) to LaTeX.</p>
 <p>LaTeX code:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb13-1" data-line-number="1">\begin{equation}</a>
-<a class="sourceLine" id="cb13-2" data-line-number="2">\label{eqn:friedman}</a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="bn">    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho </span></a>
-<a class="sourceLine" id="cb13-4" data-line-number="4">\end{equation}</a></code></pre></div>
-<p>Rmd code:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb14-1" data-line-number="1">\begin{equation}</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="bn">    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho</span></a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">(\#eq:friedman)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">\label{eqn:friedman}</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="bn">    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho </span></a>
 <a class="sourceLine" id="cb14-4" data-line-number="4">\end{equation}</a></code></pre></div>
+<p>Rmd code:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb15-1" data-line-number="1">\begin{equation}</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="bn">    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho</span></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3">(\#eq:friedman)</a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">\end{equation}</a></code></pre></div>
 <p><span class="math display" id="eq:friedman">\[\begin{equation}
     \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
 \tag{5.1}
 \end{equation}\]</span></p>
 <p>You can also use the latex</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb15-1" data-line-number="1">\begin{align}</a>
-<a class="sourceLine" id="cb15-2" data-line-number="2">...</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3">\end{align}</a></code></pre></div>
-<p>format for equations. If you’re converting from LaTeX to markdown with pandoc it may convert equations to</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb16-1" data-line-number="1">\begin{aligned}</a>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb16-1" data-line-number="1">\begin{align}</a>
 <a class="sourceLine" id="cb16-2" data-line-number="2">...</a>
-<a class="sourceLine" id="cb16-3" data-line-number="3">\end{aligned}</a></code></pre></div>
+<a class="sourceLine" id="cb16-3" data-line-number="3">\end{align}</a></code></pre></div>
+<p>format for equations. If you’re converting from LaTeX to markdown with pandoc it may convert equations to</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb17-1" data-line-number="1">\begin{aligned}</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2">...</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">\end{aligned}</a></code></pre></div>
 <p>which also works.</p>
 <div class="fyi">
 <p><strong>LaTeX subequations and intertext</strong></p>
 <p>I haven’t been able to get subequations and intertext to work in bookdown. LaTeX equations of the form</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb17-1" data-line-number="1">\begin{subequations}\begin{align}</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2">\vec{E} &amp;= \left( x,t \right)</a>
-<a class="sourceLine" id="cb17-3" data-line-number="3">\intertext{and in 3 dimensional space as}</a>
-<a class="sourceLine" id="cb17-4" data-line-number="4">\vec{E} &amp;= \left( x,y,z,t \right)</a>
-<a class="sourceLine" id="cb17-5" data-line-number="5">\end{align}\end{subequations}</a></code></pre></div>
-<p>should be written as separate equations with the text between written outside the equation environment, e.g.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb18-1" data-line-number="1">\begin{align}</a>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb18-1" data-line-number="1">\begin{subequations}\begin{align}</a>
 <a class="sourceLine" id="cb18-2" data-line-number="2">\vec{E} &amp;= \left( x,t \right)</a>
-<a class="sourceLine" id="cb18-3" data-line-number="3">\end{align}</a>
-<a class="sourceLine" id="cb18-4" data-line-number="4">and in 3 dimensional space as</a>
-<a class="sourceLine" id="cb18-5" data-line-number="5">\begin{align}</a>
-<a class="sourceLine" id="cb18-6" data-line-number="6">\vec{E} &amp;= \left( x,y,z,t \right)</a>
-<a class="sourceLine" id="cb18-7" data-line-number="7">\end{align}</a></code></pre></div>
+<a class="sourceLine" id="cb18-3" data-line-number="3">\intertext{and in 3 dimensional space as}</a>
+<a class="sourceLine" id="cb18-4" data-line-number="4">\vec{E} &amp;= \left( x,y,z,t \right)</a>
+<a class="sourceLine" id="cb18-5" data-line-number="5">\end{align}\end{subequations}</a></code></pre></div>
+<p>should be written as separate equations with the text between written outside the equation environment, e.g.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" data-line-number="1">\begin{align}</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">\vec{E} &amp;= \left( x,t \right)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3">\end{align}</a>
+<a class="sourceLine" id="cb19-4" data-line-number="4">and in 3 dimensional space as</a>
+<a class="sourceLine" id="cb19-5" data-line-number="5">\begin{align}</a>
+<a class="sourceLine" id="cb19-6" data-line-number="6">\vec{E} &amp;= \left( x,y,z,t \right)</a>
+<a class="sourceLine" id="cb19-7" data-line-number="7">\end{align}</a></code></pre></div>
 </div>
 </div>
 <div id="sec:eq-nos-labels" class="section level2">
 <h2><span class="header-section-number">5.2</span> Equation numbers and labels</h2>
 <p>The syntax for the maths is the same, but the labelling changes. To label and equation add</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" data-line-number="1">(\#eq:label)</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" data-line-number="1">(\#eq:label)</a></code></pre></div>
 <p>just before <code>end{equation}</code>. Only equations with labels will be numbered. If you don’t want numbers then don’t label the equations, but numbers are helpful.</p>
 </div>
 <div id="sec:cross-ref-eqs" class="section level2">
 <h2><span class="header-section-number">5.3</span> Cross referencing equations</h2>
 <p>The syntax for cross-referencing equations is similar to sections and figures, i.e.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" data-line-number="1">Eqn. \@ref(eq:friedman) is the Friedman equation</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb21-1" data-line-number="1">Eqn. \@ref(eq:friedman) is the Friedman equation</a></code></pre></div>
 <p>will give “Eqn. <a href="sec-equations.html#eq:friedman">(5.1)</a> is the Friedman equation”.</p>
 </div>
 <div id="sec:maths-captions" class="section level2">
 <h2><span class="header-section-number">5.4</span> Maths in captions</h2>
 <p>R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions.</p>
 <p>Example of a finicky caption:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="bn">```</span></a>
-<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="bn">{r echo=FALSE, gaussian, out.width=&#39;100%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;Gaussian uncertainties. </span></a>
-<a class="sourceLine" id="cb21-3" data-line-number="3"><span class="bn">If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and</span></a>
-<a class="sourceLine" id="cb21-4" data-line-number="4"><span class="bn">uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within </span></a>
-<a class="sourceLine" id="cb21-5" data-line-number="5"><span class="bn">$\\langle x \\rangle \\pm 1\\sigma$. There&#39;s a 95.4% probability of $x$ being within </span></a>
-<a class="sourceLine" id="cb21-6" data-line-number="6"><span class="bn">$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  </span></a>
-<a class="sourceLine" id="cb21-7" data-line-number="7"><span class="bn">$\\langle x \\rangle \\pm 3\\sigma$.&quot;}</span></a>
-<a class="sourceLine" id="cb21-8" data-line-number="8"><span class="bn">knitr::include_graphics(&quot;Images/normal-curve.png&quot;)</span></a>
-<a class="sourceLine" id="cb21-9" data-line-number="9"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="bn">```</span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="bn">{r echo=FALSE, gaussian, out.width=&#39;100%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;Gaussian uncertainties. </span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="bn">If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and</span></a>
+<a class="sourceLine" id="cb22-4" data-line-number="4"><span class="bn">uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within </span></a>
+<a class="sourceLine" id="cb22-5" data-line-number="5"><span class="bn">$\\langle x \\rangle \\pm 1\\sigma$. There&#39;s a 95.4% probability of $x$ being within </span></a>
+<a class="sourceLine" id="cb22-6" data-line-number="6"><span class="bn">$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  </span></a>
+<a class="sourceLine" id="cb22-7" data-line-number="7"><span class="bn">$\\langle x \\rangle \\pm 3\\sigma$.&quot;}</span></a>
+<a class="sourceLine" id="cb22-8" data-line-number="8"><span class="bn">knitr::include_graphics(&quot;Images/normal-curve.png&quot;)</span></a>
+<a class="sourceLine" id="cb22-9" data-line-number="9"><span class="bn">```</span></a></code></pre></div>
 <div class="figure"><span id="fig:gaussian"></span>
 <img src="Images/normal-curve.png" alt="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\langle x \rangle$ and uncertainty $\sigma$, there is a 68.3% probability that $x$ will be within $\langle x \rangle \pm 1\sigma$. There's a 95.4% probability of $x$ being within $\langle x \rangle \pm 2\sigma$, and 99.7% of $x$ being within  $\langle x \rangle \pm 3\sigma$." width="100%" />
 <p class="caption">
