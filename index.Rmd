@@ -3,7 +3,10 @@ title: "Making Lecture Notes with Bookdown"
 author: "Vicky Scowcroft"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+  bookdown::gitbook:
+    #css: "mystyle.css"
+    split_by: rmd
 documentclass: book
 bibliography: [book.bib, packages.bib]
 csl: apj.csl
@@ -13,6 +16,7 @@ github-repo: vickyscowcroft/bookdown_lecture_notes_guide
 description: "Guide for creating html lecture notes using Bookdown"
 ---
 
+\newcommand{\AA}{\unicode{x0212B}}
 
 # Introduction {-}
 

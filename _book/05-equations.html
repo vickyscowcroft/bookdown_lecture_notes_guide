@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 5 Equations | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 5 Equations | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 5 Equations | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="04-figures.html"/>
+<link rel="next" href="06-tables.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -229,25 +229,94 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-04</em></p>
+<div id="sec:equations" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Equations<a href="05-equations.html#sec:equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<style type="text/css">
+pre code {
+  white-space: pre-wrap;
+}
+</style>
+<div id="sec:add-eqs" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Equation syntax<a href="05-equations.html#sec:add-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The syntax for equations is similar (but not identical) to LaTeX.</p>
+<p>LaTeX code:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="05-equations.html#cb14-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
+<span id="cb14-2"><a href="05-equations.html#cb14-2" aria-hidden="true" tabindex="-1"></a>\label{eqn:friedman}</span>
+<span id="cb14-3"><a href="05-equations.html#cb14-3" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho </span>
+<span id="cb14-4"><a href="05-equations.html#cb14-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
+<p>Rmd code:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="05-equations.html#cb15-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
+<span id="cb15-2"><a href="05-equations.html#cb15-2" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho</span>
+<span id="cb15-3"><a href="05-equations.html#cb15-3" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:friedman)</span>
+<span id="cb15-4"><a href="05-equations.html#cb15-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
+<p><span class="math display" id="eq:friedman">\[\begin{equation}
+    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
+\tag{5.1}
+\end{equation}\]</span></p>
+<p>You can also use the latex</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="05-equations.html#cb16-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb16-2"><a href="05-equations.html#cb16-2" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb16-3"><a href="05-equations.html#cb16-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
+<p>format for equations. If you’re converting from LaTeX to markdown with pandoc it may convert equations to</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="05-equations.html#cb17-1" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb17-2"><a href="05-equations.html#cb17-2" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-3"><a href="05-equations.html#cb17-3" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span></code></pre></div>
+<p>which also works.</p>
+<div class="fyi">
+<p><strong>LaTeX subequations and intertext</strong></p>
+<p>I haven’t been able to get subequations and intertext to work in bookdown. LaTeX equations of the form</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="05-equations.html#cb18-1" aria-hidden="true" tabindex="-1"></a>\begin{subequations}\begin{align}</span>
+<span id="cb18-2"><a href="05-equations.html#cb18-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
+<span id="cb18-3"><a href="05-equations.html#cb18-3" aria-hidden="true" tabindex="-1"></a>\intertext{and in 3 dimensional space as}</span>
+<span id="cb18-4"><a href="05-equations.html#cb18-4" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
+<span id="cb18-5"><a href="05-equations.html#cb18-5" aria-hidden="true" tabindex="-1"></a>\end{align}\end{subequations}</span></code></pre></div>
+<p>should be written as separate equations with the text between written outside the equation environment, e.g. </p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb19-1"><a href="05-equations.html#cb19-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb19-2"><a href="05-equations.html#cb19-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
+<span id="cb19-3"><a href="05-equations.html#cb19-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb19-4"><a href="05-equations.html#cb19-4" aria-hidden="true" tabindex="-1"></a>and in 3 dimensional space as</span>
+<span id="cb19-5"><a href="05-equations.html#cb19-5" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb19-6"><a href="05-equations.html#cb19-6" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
+<span id="cb19-7"><a href="05-equations.html#cb19-7" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.0.2, R Studio version 1.3 and pandoc version 2.2.3.2. This guide also assumes that you’re familiar with using the command line.</p>
+<div id="sec:eq-nos-labels" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Equation numbers and labels<a href="05-equations.html#sec:eq-nos-labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The syntax for the maths is the same, but the labelling changes. To label and equation add</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="05-equations.html#cb20-1" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:label)</span></code></pre></div>
+<p>just before <code>end{equation}</code>. Only equations with labels will be numbered. If you don’t want numbers then don’t label the equations, but numbers are helpful.</p>
+</div>
+<div id="sec:cross-ref-eqs" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Cross referencing equations<a href="05-equations.html#sec:cross-ref-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The syntax for cross-referencing equations is similar to sections and figures, i.e.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="05-equations.html#cb21-1" aria-hidden="true" tabindex="-1"></a>Eqn. \@ref(eq:friedman) is the Friedman equation</span></code></pre></div>
+<p>will give “Eqn. <a href="05-equations.html#eq:friedman">(5.1)</a> is the Friedman equation”.</p>
+</div>
+<div id="sec:maths-captions" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Maths in captions<a href="05-equations.html#sec:maths-captions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions.</p>
+<p>Example of a finicky caption:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="05-equations.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-2"><a href="05-equations.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">{r echo=FALSE, gaussian, out.width=&#39;100%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;Gaussian uncertainties. </span></span>
+<span id="cb22-3"><a href="05-equations.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and</span></span>
+<span id="cb22-4"><a href="05-equations.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="in">uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within </span></span>
+<span id="cb22-5"><a href="05-equations.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 1\\sigma$. There&#39;s a 95.4% probability of $x$ being within </span></span>
+<span id="cb22-6"><a href="05-equations.html#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  </span></span>
+<span id="cb22-7"><a href="05-equations.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 3\\sigma$.&quot;}</span></span>
+<span id="cb22-8"><a href="05-equations.html#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::include_graphics(&quot;Images/normal-curve.png&quot;)</span></span>
+<span id="cb22-9"><a href="05-equations.html#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:gaussian"></span>
+<img src="Images/normal-curve.png" alt="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\langle x \rangle$ and uncertainty $\sigma$, there is a 68.3% probability that $x$ will be within $\langle x \rangle \pm 1\sigma$. There's a 95.4% probability of $x$ being within $\langle x \rangle \pm 2\sigma$, and 99.7% of $x$ being within  $\langle x \rangle \pm 3\sigma$." width="100%" />
+<p class="caption">
+Figure 5.1: Gaussian uncertainties. If we measure a value <span class="math inline">\(x\)</span> for a variable that has a true value <span class="math inline">\(\langle x \rangle\)</span> and uncertainty <span class="math inline">\(\sigma\)</span>, there is a 68.3% probability that <span class="math inline">\(x\)</span> will be within <span class="math inline">\(\langle x \rangle \pm 1\sigma\)</span>. There’s a 95.4% probability of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 2\sigma\)</span>, and 99.7% of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 3\sigma\)</span>.
+</p>
+</div>
+</div>
+<div id="sec:random-tips" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Random tips<a href="05-equations.html#sec:random-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Angstrom symbol:</strong> Use <code>$\unicode{x0212B}$</code> rather than <code>$\AA$</code> to get <span class="math inline">\(\unicode{x0212B}\)</span></p>
+<p>Does the <span class="math inline">\(\unicode{x0212B}\)</span> work now its defined with new command? YES</p>
+<p>Add <code>\newcommand{\AA}{\unicode{x0212B}}</code> to index.Rmd file before the main text starts.</p>
 
 </div>
 </div>
@@ -256,8 +325,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="04-figures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="06-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -288,7 +357,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-equations.Rmd",
 "text": "Edit"
 },
 "history": {

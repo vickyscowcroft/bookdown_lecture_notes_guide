@@ -14,6 +14,8 @@ This compiles all the markdown to create html files for the book. The output fil
 
 **THIS SECTION IS NOT COMPLETE**
 
+**Testing whether the travis stuff still works**
+
 **Note:** There is probably a way to do this so that the files are published to somewhere on the University servers. I haven't tried. This is the way I do it.
 
 I use [github pages](pages.github.com) to publish my notes. 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="02-latex-conversion.html"/>
+<link rel="next" href="04-figures.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -229,25 +229,39 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-04</em></p>
+<div id="sec:chapters" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Chapters, sections, etc<a href="03-chapters.html#sec:chapters" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:file-structure" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> File Structure<a href="03-chapters.html#sec:file-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bookdown organises your notes into a book. The main page you see when you open a bookdown page is the <code>index.Rmd</code> file.</p>
+<p>Each chapter in the book has it’s own markdown file. Each chapter filename should start with a number, and will be ordered numerically. For this book, the files are</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="03-chapters.html#cb6-1" aria-hidden="true" tabindex="-1"></a>index.Rmd</span>
+<span id="cb6-2"><a href="03-chapters.html#cb6-2" aria-hidden="true" tabindex="-1"></a>01-intro.Rmd</span>
+<span id="cb6-3"><a href="03-chapters.html#cb6-3" aria-hidden="true" tabindex="-1"></a>02-latex-conversion.Rmd</span>
+<span id="cb6-4"><a href="03-chapters.html#cb6-4" aria-hidden="true" tabindex="-1"></a>03-chapters.Rmd</span>
+<span id="cb6-5"><a href="03-chapters.html#cb6-5" aria-hidden="true" tabindex="-1"></a>... etc</span></code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div id="sec:headings" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Headings<a href="03-chapters.html#sec:headings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The chapter title and label are given in the first line of the file.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="03-chapters.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapters, sections, etc {#sec:chapters}</span></span></code></pre></div>
+<p>The <code>#</code> at the start of the line denotes a chapter heading. The label is given in <code>{#sec:chapters}</code>.</p>
+<p>You can make sections either using two # at the start of the line, or with dashes under the section title:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="03-chapters.html#cb8-1" aria-hidden="true" tabindex="-1"></a>Headings {#sec:headings}</span>
+<span id="cb8-2"><a href="03-chapters.html#cb8-2" aria-hidden="true" tabindex="-1"></a>--------</span></code></pre></div>
+<p>Note that the <code>{#sec:label}</code> syntax is still the same - you don’t need to say whether it’s a chapter, section, subsection etc.</p>
+<p>Subsections are done similarly, with either three # at the start of the line.</p>
+<p>You can change the section heading from ‘Chapter’ to e.g. section by editing the following in the <code>_bookdown.yml</code> file:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="03-chapters.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="an">language:</span></span>
+<span id="cb9-2"><a href="03-chapters.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  ui:</span>
+<span id="cb9-3"><a href="03-chapters.html#cb9-3" aria-hidden="true" tabindex="-1"></a>    chapter_name: &quot;Section &quot;</span></code></pre></div>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.0.2, R Studio version 1.3 and pandoc version 2.2.3.2. This guide also assumes that you’re familiar with using the command line.</p>
+<div id="sec:cross-ref" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Cross referencing<a href="03-chapters.html#sec:cross-ref" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can reference other chapters, sections etc throughout the book with the following syntax:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="03-chapters.html#cb10-1" aria-hidden="true" tabindex="-1"></a>Section \@ref(sec:cross-ref) is this section.</span></code></pre></div>
+<p>Which shows up as “Section <a href="03-chapters.html#sec:cross-ref">3.3</a> is this section.”.</p>
+<p>When cross-referencing, you don’t need the # before <code>sec</code>. That’s only used to define the label.</p>
 
 </div>
 </div>
@@ -256,8 +270,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="02-latex-conversion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="04-figures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -288,7 +302,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-chapters.Rmd",
 "text": "Edit"
 },
 "history": {

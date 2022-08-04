@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 4 Figures | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 4 Figures | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 4 Figures | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="03-chapters.html"/>
+<link rel="next" href="05-equations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -229,25 +229,51 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-04</em></p>
+<div id="sec:figures" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Figures<a href="04-figures.html#sec:figures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:add-figs" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Adding figures<a href="04-figures.html#sec:add-figs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figures and captions can be included, but the syntax is quite different to LaTeX.</p>
+<p>Assuming that you would add a figure to a LaTeX document with the following code:</p>
+<pre><code>\begin{figure}
+\begin{centering}
+\includegraphics[width=0.7\textwidth]{Images/ho-tension.png}
+\caption{This is a figure caption.}
+\label{fig:ho-plot}
+\end{centering}
+\end{figure}</code></pre>
+<p>To include the figure in markdown the syntax is as follows:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="04-figures.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-2"><a href="04-figures.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="in">{r echo=FALSE, ho-plot, out.width=&#39;70%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;This is a figure caption.&quot;}</span></span>
+<span id="cb12-3"><a href="04-figures.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::include_graphics(&quot;Images/ho-tension.png&quot;)</span></span>
+<span id="cb12-4"><a href="04-figures.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:ho-plot"></span>
+<img src="Images/ho-tension.png" alt="This is a figure caption." width="70%" />
+<p class="caption">
+Figure 4.1: This is a figure caption.
+</p>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<p>Important parts of this command:</p>
+<ul>
+<li><code>echo=FALSE</code> prevents the code being used to display the figure being shown.</li>
+<li><code>ho-plot</code> is your figure label.</li>
+<li><code>out-width</code> is the output width of the figure.</li>
+<li><code>fig.cap</code> is the figure caption.</li>
+<li><code>knitr::include_graphics</code> gives the location of the image file.</li>
+</ul>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.0.2, R Studio version 1.3 and pandoc version 2.2.3.2. This guide also assumes that you’re familiar with using the command line.</p>
+<div id="sec:fig-captions" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Figure captions<a href="04-figures.html#sec:fig-captions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figure captions are controlled by the <code>fig.cap</code> setting. Your caption should be inside the double quotes. Remember to use \” to escape any ” characters you may use inside your caption.</p>
+<p>You can include cross-references and citations inside figure captions. See Sections <a href="04-figures.html#sec:fig-nos">4.3</a>, <a href="05-equations.html#sec:cross-ref-eqs">5.3</a>, and <a href="06-tables.html#sec:tab-syntax">6.2</a> for how to label and cross-reference figures, equations, and tables. Citations are covered in Section <a href="07-referencing.html#sec:add-cite">7.1</a>.</p>
+</div>
+<div id="sec:fig-nos" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Figure numbering and referencing<a href="04-figures.html#sec:fig-nos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figures with labels and captions are numbered according to the section (e.g. Fig <a href="04-figures.html#fig:ho-plot">4.1</a> in this case).</p>
+<p>To reference a figure use the syntax</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="04-figures.html#cb13-1" aria-hidden="true" tabindex="-1"></a>\@ref(fig:label)</span></code></pre></div>
+<p>where <code>fig:label</code> would be <code>fig:ho-plot</code> in this case.</p>
+<p>You can cross reference between sections/chapters, so make sure to use unique figure labels.</p>
 
 </div>
 </div>
@@ -256,8 +282,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="03-chapters.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="05-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -288,7 +314,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-figures.Rmd",
 "text": "Edit"
 },
 "history": {
