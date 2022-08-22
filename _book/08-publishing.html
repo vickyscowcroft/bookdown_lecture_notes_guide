@@ -268,7 +268,7 @@ Figure 9.1: Build book button
 <p>Once you have your book on github, create a new branch called <code>gh-pages</code>. This should enable the gh-pages setting in the repo.</p>
 <p>Now clone the gh-pages branch into a directory called <code>book-output</code></p>
 <pre><code>git clone -b gh-pages $repo-path book-output</code></pre>
-<p>where <code>$repo-path</code> is the location of the repository on github, e.g. <code>https://github.com/your_user_name/lecture_notes.git/</code></p>
+<p>where <code>$repo-path</code> is the location of the repository on github, e.g. <code>https://github.com/your_user_name/lecture_notes.git</code></p>
 <p>Then you want to copy all the output files into this directory and push it to the gh-pages branch.</p>
 <pre><code>cd book-output
 cp -r ../_book/* ./

@@ -23,7 +23,7 @@ Now clone the gh-pages branch into a directory called `book-output`
 ```
 git clone -b gh-pages $repo-path book-output
 ```
-where `$repo-path` is the location of the repository on github, e.g. `https://github.com/your_user_name/lecture_notes.git/`
+where `$repo-path` is the location of the repository on github, e.g. `https://github.com/your_user_name/lecture_notes.git`
 
 Then you want to copy all the output files into this directory and push it to the gh-pages branch.
 
