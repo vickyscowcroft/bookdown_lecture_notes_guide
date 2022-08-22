@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="02-latex-conversion.html"/>
+<link rel="next" href="03-chapters.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,35 +248,143 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-22</em></p>
+<div id="sec:intro-markdown" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> A quick introduction to Markdown<a href="intro-markdown.html#sec:intro-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:what-is-markdown" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> What is Markdown?<a href="intro-markdown.html#sec:what-is-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.</p>
+<p><a href="https://www.markdownguide.org/getting-started/">markdown.org</a></p>
+</blockquote>
+<p>You can create markdown documents in any text editor that can create plain text files. For making things in bookdown, I prefer to use the <a href="https://www.rstudio.com/," title="RStudio">RStudio</a> IDE so I have access to the build tools while I’m writing.</p>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div id="sec:markdown-syntax" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Markdown syntax<a href="intro-markdown.html#sec:markdown-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You may already be familiar with some/all of the markdown syntax from using things like Moodle. A nice markdown cheat sheet can be found <a href="https://en.support.wordpress.com/markdown-quick-reference/," title="markdown cheatsheet">here</a>.</p>
+<p>These are some of the features I use most frequently. In the following examples, the grey boxes with mono-spaced font show the markdown and the green boxes show the rendered output. The “\” you see in the raw markdown is an escape character to render the #, * etc. as symbols rather than a formatter.</p>
+<div id="sec:heading-syntax" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Headings<a href="intro-markdown.html#sec:heading-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can make different levels of headings using different numbers of #’s at the start of a line</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="intro-markdown.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># One \#  for a chapter </span></span>
+<span id="cb6-2"><a href="intro-markdown.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Two \#\# for a section </span></span>
+<span id="cb6-3"><a href="intro-markdown.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Three \#\#\# for a subsection</span></span></code></pre></div>
+<div class="showoutput">
+<div class="showh1">
+<p>Chapter 1  One # for a chapter</p>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you’re familiar with using the command line.</p>
+<div class="showh2">
+<p>1.1  Two ## for a section</p>
+</div>
+<div class="showh3">
+<p>1.1.1  Three ### for a subsection</p>
+</div>
+</div>
+<p>More details about chapter and section headings is in Section <a href="03-chapters.html#sec:chapters">4</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</div>
+<div id="sec:text-formatting" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Text formatting<a href="intro-markdown.html#sec:text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can make text <em>italic</em> using one * or _ at each end of the text. Bold uses two of each.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="intro-markdown.html#cb7-1" aria-hidden="true" tabindex="-1"></a>make italics using _one underscore_ or *one star* at each end</span>
+<span id="cb7-2"><a href="intro-markdown.html#cb7-2" aria-hidden="true" tabindex="-1"></a>make bold using __two underscores__ or **two stars** at each end</span></code></pre></div>
+<div class="showoutput">
+<p>make italics using <em>one underscore</em> or <em>one star</em> at each end</p>
+<p>make bold using <strong>two underscores</strong> or <strong>two stars</strong> at each end</p>
+</div>
+</div>
+<div id="sec:lists" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Lists<a href="intro-markdown.html#sec:lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Making lists is easy too!</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="intro-markdown.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>Bulleted lists</span>
+<span id="cb8-2"><a href="intro-markdown.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>are made by putting</span>
+<span id="cb8-3"><a href="intro-markdown.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>a <span class="sc">\*</span> (asterix) </span>
+<span id="cb8-4"><a href="intro-markdown.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>or a dash (-)</span>
+<span id="cb8-5"><a href="intro-markdown.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>at the start of the line.</span>
+<span id="cb8-6"><a href="intro-markdown.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>You don&#39;t even need to be consistent.</span>
+<span id="cb8-7"><a href="intro-markdown.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>You can make a sub-list by adding 4 spaces before the -</span>
+<span id="cb8-8"><a href="intro-markdown.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>but I&#39;m not sure how many levels this goes to...</span></code></pre></div>
+<div class="showoutput">
+<ul>
+<li>Bulleted lists</li>
+<li>are made by putting</li>
+<li>a * (asterix)</li>
+<li>or a dash (-)</li>
+<li>at the start of the line.</li>
+<li>You don’t even need to be consistent.
+<ul>
+<li>You can make a sub-list by adding 4 spaces before the -
+<ul>
+<li>but I’m not sure how many levels this goes to…</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="intro-markdown.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To make a numbered list</span>
+<span id="cb9-2"><a href="intro-markdown.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>you just number things</span>
+<span id="cb9-3"><a href="intro-markdown.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>i.e. 1., 2., at the start of a line</span>
+<span id="cb9-4"><a href="intro-markdown.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>and it doesn&#39;t matter</span>
+<span id="cb9-5"><a href="intro-markdown.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>if your numbers are in the right order</span>
+<span id="cb9-6"><a href="intro-markdown.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>or if you keep using</span>
+<span id="cb9-7"><a href="intro-markdown.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the same number</span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: decimal">
+<li>To make a numbered list</li>
+<li>you just number things</li>
+<li>i.e. 1., 2., at the start of a line</li>
+<li>and it doesn’t matter</li>
+<li>if your numbers are in the right order</li>
+<li>or if you keep using</li>
+<li>the same number</li>
+</ol>
+</div>
+<p>You can also do</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="intro-markdown.html#cb10-1" aria-hidden="true" tabindex="-1"></a>a) Alphabetical lists</span>
+<span id="cb10-2"><a href="intro-markdown.html#cb10-2" aria-hidden="true" tabindex="-1"></a>a) using lower case letters,</span>
+<span id="cb10-3"><a href="intro-markdown.html#cb10-3" aria-hidden="true" tabindex="-1"></a>A) or using</span>
+<span id="cb10-4"><a href="intro-markdown.html#cb10-4" aria-hidden="true" tabindex="-1"></a>A) upper case letters</span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: lower-alpha">
+<li>Alphabetical lists</li>
+<li>using lower case letters,</li>
+</ol>
+<ol style="list-style-type: upper-alpha">
+<li>or using</li>
+<li>upper case letters</li>
+</ol>
+</div>
+<p>or you can</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="intro-markdown.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>mix all of them together</span>
+<span id="cb11-2"><a href="intro-markdown.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    a) if that&#39;s how</span>
+<span id="cb11-3"><a href="intro-markdown.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>you like to spend</span>
+<span id="cb11-4"><a href="intro-markdown.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>your time. </span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: decimal">
+<li>mix all of them together
+<ol style="list-style-type: lower-alpha">
+<li>if that’s how
+<ul>
+<li>you like to spend</li>
+<li>your time.</li>
+</ul></li>
+</ol></li>
+</ol>
+</div>
 
 </div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>If you look at the source code for this section you’ll see that the code to display the headings example doesn’t match the markdown. This was a hacky way to get it to display correctly without messing up the section numbering If you find a solution for how to reset section numbers please let me know, because I’ve spent far too long on Stack Overflow today.<a href="intro-markdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="02-latex-conversion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="03-chapters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -307,7 +415,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/intro-markdown.Rmd",
 "text": "Edit"
 },
 "history": {

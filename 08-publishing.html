@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 9 Publishing | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 9 Publishing | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 9 Publishing | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="07-referencing.html"/>
+<link rel="next" href="inprogress.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,25 +248,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-22</em></p>
+<div id="sec:publishing" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Publishing<a href="08-publishing.html#sec:publishing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:create-book" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Compiling the book<a href="08-publishing.html#sec:create-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To compile the book, press the ‘Build Book’ button in R Studio. You may need to press the arrow on the button and select <code>bookdown::gitbook</code> the first time you do this.</p>
+<div class="figure"><span style="display:block;" id="fig:build-book"></span>
+<img src="Images/build-book.png" alt="Build book button" width="50%" />
+<p class="caption">
+Figure 9.1: Build book button
+</p>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<p>This compiles all the markdown to create html files for the book. The output files should be in the <code>_book</code> folder.</p>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you’re familiar with using the command line.</p>
+<div id="sec:gh-pages" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Publishing with github pages<a href="08-publishing.html#sec:gh-pages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I use <a href="pages.github.com">github pages</a> to publish my notes.</p>
+<p>The following assumes you are already using github to store your files. <strong>TODO: Can add instructions for this part if needed</strong>.</p>
+<p>Once you have your book on github, create a new branch called <code>gh-pages</code>. This should enable the gh-pages setting in the repo.</p>
+<p>Now clone the gh-pages branch into a directory called <code>book-output</code></p>
+<pre><code>git clone -b gh-pages $repo-path book-output</code></pre>
+<p>where <code>$repo-path</code> is the location of the repository on github, e.g. <code>https://github.com/your_user_name/lecture_notes.git</code></p>
+<p>Then you want to copy all the output files into this directory and push it to the gh-pages branch.</p>
+<pre><code>cd book-output
+cp -r ../_book/* ./
+git add --all *
+git commit -m &quot;Update the book&quot; || true
+git push -q origin gh-pages</code></pre>
+<p>Your pretty lecture notes should now be online! You should find them at github_username.github.io/repo_name - or check the setting page of the repository. The address will be given in the github pages section.</p>
+</div>
+<div id="sec:moodle-pub" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Publishing to Moodle<a href="08-publishing.html#sec:moodle-pub" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To be written soon….</p>
 
 </div>
 </div>
@@ -275,8 +288,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="07-referencing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inprogress.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -307,7 +320,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-publishing.Rmd",
 "text": "Edit"
 },
 "history": {

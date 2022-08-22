@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 11 Including code | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 11 Including code | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 11 Including code | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="09-style-formatting.html"/>
+<link rel="next" href="99-references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,8 +52,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -162,7 +160,10 @@ div.csl-indent {
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#system-requirements"><i class="fa fa-check"></i>System Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#system-requirements"><i class="fa fa-check"></i>System Requirements</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#optional-packages"><i class="fa fa-check"></i>Optional packages</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#caveat"><i class="fa fa-check"></i>Caveat</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="01-intro.html"><a href="01-intro.html"><i class="fa fa-check"></i><b>1</b> Getting started</a></li>
@@ -191,7 +192,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:specify-order"><i class="fa fa-check"></i><b>4.1.1</b> Specifying the order in <code>_bookdown.yml</code></a></li>
 <li class="chapter" data-level="4.1.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:order-filename"><i class="fa fa-check"></i><b>4.1.2</b> Order by filename</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:sec-labels"><i class="fa fa-check"></i><b>4.2</b> Section labels</a></li>
+<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:headings"><i class="fa fa-check"></i><b>4.2</b> Headings</a></li>
 <li class="chapter" data-level="4.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>4.3</b> Cross referencing</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>5</b> Figures</a>
@@ -212,7 +213,6 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="7.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>7.1</b> Markdown table generator</a></li>
 <li class="chapter" data-level="7.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>7.2</b> Table syntax</a></li>
-<li class="chapter" data-level="7.3" data-path="06-tables.html"><a href="06-tables.html#sec:fancy-tables"><i class="fa fa-check"></i><b>7.3</b> Fancy tables</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>8</b> Referencing</a>
 <ul>
@@ -224,9 +224,14 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
 <li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
-<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
+<li class="chapter" data-level="10" data-path="09-style-formatting.html"><a href="09-style-formatting.html"><i class="fa fa-check"></i><b>10</b> Formatting output</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="09-style-formatting.html"><a href="09-style-formatting.html#html-output"><i class="fa fa-check"></i><b>10.1</b> HTML output</a></li>
+<li class="chapter" data-level="10.2" data-path="09-style-formatting.html"><a href="09-style-formatting.html#pdf-output"><i class="fa fa-check"></i><b>10.2</b> PDF output</a></li>
+<li class="chapter" data-level="10.3" data-path="09-style-formatting.html"><a href="09-style-formatting.html#adding-new-styles"><i class="fa fa-check"></i><b>10.3</b> Adding new styles</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>11</b> Including code</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -248,35 +253,21 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-22</em></p>
-</div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-</div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you’re familiar with using the command line.</p>
+<div id="sec:code" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Including code<a href="code.html#sec:code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>TO DO</p>
+<ul>
+<li><code>formatR</code>: Wordwrap on code chunks.</li>
+</ul>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="09-style-formatting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="99-references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -307,7 +298,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/code.Rmd",
 "text": "Edit"
 },
 "history": {

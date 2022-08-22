@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Making Lecture Notes with Bookdown</title>
+  <title>Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 2 Converting from LaTeX notes | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="01-intro.html"/>
+<link rel="prev" href="01-intro.html"/>
+<link rel="next" href="intro-markdown.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,25 +248,60 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Making Lecture Notes with Bookdown</h1>
-<p class="author"><em>Vicky Scowcroft</em></p>
-<p class="date"><em>2022-08-22</em></p>
+<div id="convert-latex" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Converting from LaTeX notes<a href="02-latex-conversion.html#convert-latex" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:con-tex" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Converting tex files<a href="02-latex-conversion.html#sec:con-tex" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you already have LaTeX versions of your notes you can convert these to markdown using pandoc Pandoc won’t create <em>perfect</em> versions of your notes - you’ll most likely have to do a bit of tweaking, but it gets most of the way there.</p>
+<p>You can convert a tex file to Rmd via the command</p>
+<pre><code>pandoc -f latex -t markdown input-tex.tex -o output-md.Rmd</code></pre>
+<p>where <code>input-tex.tex</code> is the name of your tex file and <code>output-md.Rmd</code> is the name of your output Rmd file.</p>
+<div class="fyi">
+<p>Pandoc converts one tex file at a time. It doesn’t understand how to process a “master” tex file with <code>input</code> or <code>insert</code> LaTeX commands. Each file will need to be processed separately.</p>
 </div>
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide walks through how to create html lecture notes using <strong>R</strong>, <strong>Markdown</strong> and <strong>Bookdown</strong>. This format is preferred as LaTeX doesn’t play nicely with accessibility tools like screen readers, especially for maths heavy content.</p>
-<div id="system-requirements" class="section level2 unnumbered hasAnchor">
-<h2>System Requirements<a href="index.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from <a href="https://cran.r-project.org/">here</a> and R Studio from <a href="https://rstudio.com/products/rstudio/download/">here</a>. You will also need <a href="https://pandoc.org/index.html"><strong>pandoc</strong></a>. This may already be installed on your system as part of the Anaconda distribution.</p>
-<p>The <a href="https://bookdown.org/yihui/bookdown/"><strong>bookdown</strong></a> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 </div>
-<div id="caveat" class="section level2 unnumbered hasAnchor">
-<h2>Caveat<a href="index.html#caveat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you’re familiar with using the command line.</p>
+<div id="batch-conversion" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Batch conversion<a href="02-latex-conversion.html#batch-conversion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you want to convert a batch of latex files you can script the process.</p>
+</div>
+<div id="tidying" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Tidying up the Rmd file<a href="02-latex-conversion.html#tidying" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pandoc will have done most of the work in getting your tex file converted to markdown. However, depending on how complex the original file was, you may end up with some tidying to do.</p>
+<p>Things that typically will need fixing are:</p>
+<ul>
+<li>Section etc labels - if you used underscores in any of your latex labels you should change these to ‘-’ in the markdown file. The underscores confuse markdown. Section <a href="03-chapters.html#sec:chapters">4</a> discusses sections, chapters, etc.</li>
+<li>Figures - the default pandoc conversion is quite limited, so here we’ll use a more adaptable figure environment. In practice its easiest to just copy-paste the example code in Chapter <a href="04-figures.html#sec:figures">5</a> and edit the relavent bits.</li>
+<li>Equations - the equations themselves should be fine, but if you want to have equation numbers you’ll need to do some tidying. See Chapter <a href="05-equations.html#sec:equations">6</a> for the syntax.</li>
+<li>Tables - tables have a different format but it’s pretty easy to convert a latex table using find/replace. See Chapter <a href="06-tables.html#sec:tables">7</a>.</li>
+<li>References - generally easy to fix. See Chapter <a href="07-referencing.html#sec:referencing">8</a>.</li>
+</ul>
+</div>
+<div id="sec:gaps" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Notes with gaps<a href="02-latex-conversion.html#sec:gaps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Think carefully about whether you want to provide notes with gaps.</strong> While they may serve a purpose when the students have a hard-copy of the notes in a live lecture, they will most likely be using your notes on a screen this year.</p>
+<p>It is possible to create notes with gaps for things like equations etc for the students to fill in. To do this you need to add some extra code to the <code>index.Rmd</code> file:</p>
+<pre><code>```
+{r setup, include=FALSE}
+library(knitr)
+knit_engines$set(asis = function(options) {
+  if (options$echo &amp;&amp; options$eval) knit_child(text = options$code)
+})
+```</code></pre>
+<p>Then to “hide” e.g. an equation but still keep the same numbering, edit your equation to the following format:</p>
+<pre><code>\begin{equation}
+```{asis, echo=FALSE}
+\Delta s^2 = \Delta x_{1}^{2} + \Delta x_{2}^{2}
+```
+(\#eq:dist01)
+\end{equation}</code></pre>
+<p>Here the <code>asis</code> command and back-ticks wrap around <strong>only</strong> the equation itself, rather than the whole <code>equation</code> object. If you wrap the <code>asis</code> around the <code>\begin{equation}</code> and <code>\end{equation}</code> the equation numbering will disappear too.</p>
+</div>
+<div id="sec:titlesec" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Using the <code>titlesec</code> package<a href="02-latex-conversion.html#sec:titlesec" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you’re using the <code>titlesec</code> latex package you’ll need to add an additional line to the yaml information on your index.Rmd file:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="02-latex-conversion.html#cb5-1" aria-hidden="true" tabindex="-1"></a>subparagraph<span class="sc">:</span> yes</span></code></pre></div>
+<p>This should fix any compilation errors related to the <code>titlesec</code> package when you’re producing a pdf output.</p>
+<p>Source: <a href="https://stackoverflow.com/questions/42916124/not-able-to-use-titlesec-with-markdown-and-pandoc">Stack Overflow</a></p>
 
 </div>
 </div>
@@ -275,8 +310,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="01-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -307,7 +342,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-latex-conversion.Rmd",
 "text": "Edit"
 },
 "history": {
