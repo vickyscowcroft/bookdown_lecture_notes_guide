@@ -1,14 +1,2 @@
-p.caption {
-  color: #777;
-  margin-top: 10px;
-}
-p code {
-  white-space: inherit;
-}
-pre {
-  word-break: normal;
-  word-wrap: normal;
-}
-pre code {
-  white-space: pre-wrap;
-}
+.book.font-family-0 {font-family: Georgia, serif;}
+.book.font-family-1 {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Equations | Making Lecture Notes with Bookdown</title>
+  <title>Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Equations | Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Equations | Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="04-figures.html"/>
-<link rel="next" href="06-tables.html"/>
+<link rel="prev" href="02-latex-conversion.html"/>
+<link rel="next" href="03-chapters.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,102 +248,143 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec:equations" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Equations<a href="05-equations.html#sec:equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<style type="text/css">
-pre code {
-  white-space: pre-wrap;
-}
-</style>
-<div id="sec:add-eqs" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Equation syntax<a href="05-equations.html#sec:add-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for equations is similar (but not identical) to LaTeX.</p>
-<p>LaTeX code:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="05-equations.html#cb21-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
-<span id="cb21-2"><a href="05-equations.html#cb21-2" aria-hidden="true" tabindex="-1"></a>\label{eqn:friedman}</span>
-<span id="cb21-3"><a href="05-equations.html#cb21-3" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho </span>
-<span id="cb21-4"><a href="05-equations.html#cb21-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
-<p>Rmd code:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="05-equations.html#cb22-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
-<span id="cb22-2"><a href="05-equations.html#cb22-2" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho</span>
-<span id="cb22-3"><a href="05-equations.html#cb22-3" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:friedman)</span>
-<span id="cb22-4"><a href="05-equations.html#cb22-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
-<p><span class="math display" id="eq:friedman">\[\begin{equation}
-    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
-\tag{6.1}
-\end{equation}\]</span></p>
-<p>You can also use the latex</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="05-equations.html#cb23-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb23-2"><a href="05-equations.html#cb23-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb23-3"><a href="05-equations.html#cb23-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-<p>format for equations. If you’re converting from LaTeX to markdown with pandoc it may convert equations to</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="05-equations.html#cb24-1" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
-<span id="cb24-2"><a href="05-equations.html#cb24-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb24-3"><a href="05-equations.html#cb24-3" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span></code></pre></div>
-<p>which also works.</p>
-<div class="fyi">
-<p><strong>LaTeX subequations and intertext</strong></p>
-<p>I haven’t been able to get subequations and intertext to work in bookdown. LaTeX equations of the form</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="05-equations.html#cb25-1" aria-hidden="true" tabindex="-1"></a>\begin{subequations}\begin{align}</span>
-<span id="cb25-2"><a href="05-equations.html#cb25-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
-<span id="cb25-3"><a href="05-equations.html#cb25-3" aria-hidden="true" tabindex="-1"></a>\intertext{and in 3 dimensional space as}</span>
-<span id="cb25-4"><a href="05-equations.html#cb25-4" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
-<span id="cb25-5"><a href="05-equations.html#cb25-5" aria-hidden="true" tabindex="-1"></a>\end{align}\end{subequations}</span></code></pre></div>
-<p>should be written as separate equations with the text between written outside the equation environment, e.g. </p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="05-equations.html#cb26-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb26-2"><a href="05-equations.html#cb26-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
-<span id="cb26-3"><a href="05-equations.html#cb26-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb26-4"><a href="05-equations.html#cb26-4" aria-hidden="true" tabindex="-1"></a>and in 3 dimensional space as</span>
-<span id="cb26-5"><a href="05-equations.html#cb26-5" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb26-6"><a href="05-equations.html#cb26-6" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
-<span id="cb26-7"><a href="05-equations.html#cb26-7" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
+<div id="sec:intro-markdown" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> A quick introduction to Markdown<a href="intro-markdown.html#sec:intro-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:what-is-markdown" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> What is Markdown?<a href="intro-markdown.html#sec:what-is-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.</p>
+<p><a href="https://www.markdownguide.org/getting-started/">markdown.org</a></p>
+</blockquote>
+<p>You can create markdown documents in any text editor that can create plain text files. For making things in bookdown, I prefer to use the <a href="https://www.rstudio.com/," title="RStudio">RStudio</a> IDE so I have access to the build tools while I’m writing.</p>
+</div>
+<div id="sec:markdown-syntax" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Markdown syntax<a href="intro-markdown.html#sec:markdown-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You may already be familiar with some/all of the markdown syntax from using things like Moodle. A nice markdown cheat sheet can be found <a href="https://en.support.wordpress.com/markdown-quick-reference/," title="markdown cheatsheet">here</a>.</p>
+<p>These are some of the features I use most frequently. In the following examples, the grey boxes with mono-spaced font show the markdown and the green boxes show the rendered output. The “\” you see in the raw markdown is an escape character to render the #, * etc. as symbols rather than a formatter.</p>
+<div id="sec:heading-syntax" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Headings<a href="intro-markdown.html#sec:heading-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can make different levels of headings using different numbers of #’s at the start of a line</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="intro-markdown.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># One \#  for a chapter </span></span>
+<span id="cb6-2"><a href="intro-markdown.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Two \#\# for a section </span></span>
+<span id="cb6-3"><a href="intro-markdown.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Three \#\#\# for a subsection</span></span></code></pre></div>
+<div class="showoutput">
+<div class="showh1">
+<p>Chapter 1  One # for a chapter</p>
+</div>
+<div class="showh2">
+<p>1.1  Two ## for a section</p>
+</div>
+<div class="showh3">
+<p>1.1.1  Three ### for a subsection</p>
 </div>
 </div>
-<div id="sec:eq-nos-labels" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Equation numbers and labels<a href="05-equations.html#sec:eq-nos-labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for the maths is the same, but the labelling changes. To label and equation add</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb27-1"><a href="05-equations.html#cb27-1" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:label)</span></code></pre></div>
-<p>just before <code>end{equation}</code>. Only equations with labels will be numbered. If you don’t want numbers then don’t label the equations, but numbers are helpful.</p>
+<p>More details about chapter and section headings is in Section <a href="03-chapters.html#sec:chapters">4</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </div>
-<div id="sec:cross-ref-eqs" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Cross referencing equations<a href="05-equations.html#sec:cross-ref-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for cross-referencing equations is similar to sections and figures, i.e.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb28-1"><a href="05-equations.html#cb28-1" aria-hidden="true" tabindex="-1"></a>Eqn. \@ref(eq:friedman) is the Friedman equation</span></code></pre></div>
-<p>will give “Eqn. <a href="05-equations.html#eq:friedman">(6.1)</a> is the Friedman equation”.</p>
-</div>
-<div id="sec:maths-captions" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Maths in captions<a href="05-equations.html#sec:maths-captions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions.</p>
-<p>Example of a finicky caption:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb29-1"><a href="05-equations.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb29-2"><a href="05-equations.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="in">{r echo=FALSE, gaussian, out.width=&#39;100%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;Gaussian uncertainties. </span></span>
-<span id="cb29-3"><a href="05-equations.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="in">If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and</span></span>
-<span id="cb29-4"><a href="05-equations.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="in">uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within </span></span>
-<span id="cb29-5"><a href="05-equations.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 1\\sigma$. There&#39;s a 95.4% probability of $x$ being within </span></span>
-<span id="cb29-6"><a href="05-equations.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  </span></span>
-<span id="cb29-7"><a href="05-equations.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 3\\sigma$.&quot;}</span></span>
-<span id="cb29-8"><a href="05-equations.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::include_graphics(&quot;Images/normal-curve.png&quot;)</span></span>
-<span id="cb29-9"><a href="05-equations.html#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:gaussian"></span>
-<img src="Images/normal-curve.png" alt="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\langle x \rangle$ and uncertainty $\sigma$, there is a 68.3% probability that $x$ will be within $\langle x \rangle \pm 1\sigma$. There's a 95.4% probability of $x$ being within $\langle x \rangle \pm 2\sigma$, and 99.7% of $x$ being within  $\langle x \rangle \pm 3\sigma$." width="100%" />
-<p class="caption">
-Figure 6.1: Gaussian uncertainties. If we measure a value <span class="math inline">\(x\)</span> for a variable that has a true value <span class="math inline">\(\langle x \rangle\)</span> and uncertainty <span class="math inline">\(\sigma\)</span>, there is a 68.3% probability that <span class="math inline">\(x\)</span> will be within <span class="math inline">\(\langle x \rangle \pm 1\sigma\)</span>. There’s a 95.4% probability of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 2\sigma\)</span>, and 99.7% of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 3\sigma\)</span>.
-</p>
+<div id="sec:text-formatting" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Text formatting<a href="intro-markdown.html#sec:text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can make text <em>italic</em> using one * or _ at each end of the text. Bold uses two of each.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="intro-markdown.html#cb7-1" aria-hidden="true" tabindex="-1"></a>make italics using _one underscore_ or *one star* at each end</span>
+<span id="cb7-2"><a href="intro-markdown.html#cb7-2" aria-hidden="true" tabindex="-1"></a>make bold using __two underscores__ or **two stars** at each end</span></code></pre></div>
+<div class="showoutput">
+<p>make italics using <em>one underscore</em> or <em>one star</em> at each end</p>
+<p>make bold using <strong>two underscores</strong> or <strong>two stars</strong> at each end</p>
 </div>
 </div>
-<div id="sec:random-tips" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Random tips<a href="05-equations.html#sec:random-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Angstrom symbol:</strong> Use <code>$\unicode{x0212B}$</code> rather than <code>$\AA$</code> to get <span class="math inline">\(\unicode{x0212B}\)</span>. You can ddd <code>\newcommand{\AA}{\unicode{x0212B}}</code> to index.Rmd file before the main text starts to make <code>$\AA$</code> work.</p>
+<div id="sec:lists" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Lists<a href="intro-markdown.html#sec:lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Making lists is easy too!</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="intro-markdown.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>Bulleted lists</span>
+<span id="cb8-2"><a href="intro-markdown.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>are made by putting</span>
+<span id="cb8-3"><a href="intro-markdown.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>a <span class="sc">\*</span> (asterix) </span>
+<span id="cb8-4"><a href="intro-markdown.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>or a dash (-)</span>
+<span id="cb8-5"><a href="intro-markdown.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>at the start of the line.</span>
+<span id="cb8-6"><a href="intro-markdown.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>You don&#39;t even need to be consistent.</span>
+<span id="cb8-7"><a href="intro-markdown.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>You can make a sub-list by adding 4 spaces before the -</span>
+<span id="cb8-8"><a href="intro-markdown.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>but I&#39;m not sure how many levels this goes to...</span></code></pre></div>
+<div class="showoutput">
+<ul>
+<li>Bulleted lists</li>
+<li>are made by putting</li>
+<li>a * (asterix)</li>
+<li>or a dash (-)</li>
+<li>at the start of the line.</li>
+<li>You don’t even need to be consistent.
+<ul>
+<li>You can make a sub-list by adding 4 spaces before the -
+<ul>
+<li>but I’m not sure how many levels this goes to…</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="intro-markdown.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To make a numbered list</span>
+<span id="cb9-2"><a href="intro-markdown.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>you just number things</span>
+<span id="cb9-3"><a href="intro-markdown.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>i.e. 1., 2., at the start of a line</span>
+<span id="cb9-4"><a href="intro-markdown.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>and it doesn&#39;t matter</span>
+<span id="cb9-5"><a href="intro-markdown.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>if your numbers are in the right order</span>
+<span id="cb9-6"><a href="intro-markdown.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>or if you keep using</span>
+<span id="cb9-7"><a href="intro-markdown.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the same number</span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: decimal">
+<li>To make a numbered list</li>
+<li>you just number things</li>
+<li>i.e. 1., 2., at the start of a line</li>
+<li>and it doesn’t matter</li>
+<li>if your numbers are in the right order</li>
+<li>or if you keep using</li>
+<li>the same number</li>
+</ol>
+</div>
+<p>You can also do</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="intro-markdown.html#cb10-1" aria-hidden="true" tabindex="-1"></a>a) Alphabetical lists</span>
+<span id="cb10-2"><a href="intro-markdown.html#cb10-2" aria-hidden="true" tabindex="-1"></a>a) using lower case letters,</span>
+<span id="cb10-3"><a href="intro-markdown.html#cb10-3" aria-hidden="true" tabindex="-1"></a>A) or using</span>
+<span id="cb10-4"><a href="intro-markdown.html#cb10-4" aria-hidden="true" tabindex="-1"></a>A) upper case letters</span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: lower-alpha">
+<li>Alphabetical lists</li>
+<li>using lower case letters,</li>
+</ol>
+<ol style="list-style-type: upper-alpha">
+<li>or using</li>
+<li>upper case letters</li>
+</ol>
+</div>
+<p>or you can</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="intro-markdown.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>mix all of them together</span>
+<span id="cb11-2"><a href="intro-markdown.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    a) if that&#39;s how</span>
+<span id="cb11-3"><a href="intro-markdown.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>you like to spend</span>
+<span id="cb11-4"><a href="intro-markdown.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>your time. </span></code></pre></div>
+<div class="showoutput">
+<ol style="list-style-type: decimal">
+<li>mix all of them together
+<ol style="list-style-type: lower-alpha">
+<li>if that’s how
+<ul>
+<li>you like to spend</li>
+<li>your time.</li>
+</ul></li>
+</ol></li>
+</ol>
+</div>
 
 </div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>If you look at the source code for this section you’ll see that the code to display the headings example doesn’t match the markdown. This was a hacky way to get it to display correctly without messing up the section numbering If you find a solution for how to reset section numbers please let me know, because I’ve spent far too long on Stack Overflow today.<a href="intro-markdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="04-figures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="06-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="02-latex-conversion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="03-chapters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -374,7 +415,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-equations.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/intro-markdown.Rmd",
 "text": "Edit"
 },
 "history": {

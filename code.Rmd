@@ -1,0 +1,6 @@
+# Including code {#sec:code}
+
+TO DO
+ 
+ - `formatR`: Wordwrap on code chunks.
+ 

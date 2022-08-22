@@ -44,3 +44,32 @@ a.fyi:link { color:#ff3399; text-decoration:none; font-weight:bold; }
 a.fyi:visited { color:#ff3399; text-decoration:none; font-weight:bold; }
 a.fyi:hover { color:#ff3399; text-decoration:underline; font-weight:bold; }
 a.fyi:active { color:#ff3399; text-decoration:none; font-weight:bold; }
+
+div.showoutput {
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    margin: 0 0 1.275em;
+    color: #000000;
+    background-color: #F5FFFA;
+    border: solid 2px #7FFFD4;
+  }
+
+div.showh1 {
+    font-size:2em;
+    font-weight:700;
+    margin:.67em 0
+}
+
+div.showh2 {
+    font-size:1.75em;
+    font-weight:700;
+    margin:.67em 0
+}
+
+div.showh3 {
+    font-size:1.5em;
+    font-weight:700;
+    margin:.67em 0
+}

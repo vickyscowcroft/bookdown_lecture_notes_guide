@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Referencing | Making Lecture Notes with Bookdown</title>
+  <title>Chapter 8 Referencing | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Referencing | Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 8 Referencing | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Referencing | Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 8 Referencing | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2022-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -172,42 +174,59 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
 <li class="chapter" data-level="2.5" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a>
+<li class="chapter" data-level="3" data-path="intro-markdown.html"><a href="intro-markdown.html"><i class="fa fa-check"></i><b>3</b> A quick introduction to Markdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
-<li class="chapter" data-level="3.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:headings"><i class="fa fa-check"></i><b>3.2</b> Headings</a></li>
-<li class="chapter" data-level="3.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>3.3</b> Cross referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>4</b> Figures</a>
+<li class="chapter" data-level="3.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:what-is-markdown"><i class="fa fa-check"></i><b>3.1</b> What is Markdown?</a></li>
+<li class="chapter" data-level="3.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:markdown-syntax"><i class="fa fa-check"></i><b>3.2</b> Markdown syntax</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>4.1</b> Adding figures</a></li>
-<li class="chapter" data-level="4.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>4.2</b> Figure captions</a></li>
-<li class="chapter" data-level="4.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>4.3</b> Figure numbering and referencing</a></li>
+<li class="chapter" data-level="3.2.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:heading-syntax"><i class="fa fa-check"></i><b>3.2.1</b> Headings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:text-formatting"><i class="fa fa-check"></i><b>3.2.2</b> Text formatting</a></li>
+<li class="chapter" data-level="3.2.3" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:lists"><i class="fa fa-check"></i><b>3.2.3</b> Lists</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>5</b> Equations</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>4</b> Chapters, sections, etc.</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>5.1</b> Equation syntax</a></li>
-<li class="chapter" data-level="5.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>5.2</b> Equation numbers and labels</a></li>
-<li class="chapter" data-level="5.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>5.3</b> Cross referencing equations</a></li>
-<li class="chapter" data-level="5.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>5.4</b> Maths in captions</a></li>
-<li class="chapter" data-level="5.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>5.5</b> Random tips</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>6</b> Tables</a>
+<li class="chapter" data-level="4.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>4.1</b> File Structure</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>6.1</b> Markdown table generator</a></li>
-<li class="chapter" data-level="6.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>6.2</b> Table syntax</a></li>
+<li class="chapter" data-level="4.1.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:specify-order"><i class="fa fa-check"></i><b>4.1.1</b> Specifying the order in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:order-filename"><i class="fa fa-check"></i><b>4.1.2</b> Order by filename</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>7</b> Referencing</a>
+<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:sec-labels"><i class="fa fa-check"></i><b>4.2</b> Section labels</a></li>
+<li class="chapter" data-level="4.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>4.3</b> Cross referencing</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>5</b> Figures</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>7.1</b> Adding citations</a></li>
-<li class="chapter" data-level="7.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>7.2</b> Bibliography files</a></li>
-<li class="chapter" data-level="7.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>7.3</b> Reference style</a></li>
+<li class="chapter" data-level="5.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>5.1</b> Adding figures</a></li>
+<li class="chapter" data-level="5.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>5.2</b> Figure captions</a></li>
+<li class="chapter" data-level="5.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>5.3</b> Figure numbering and referencing</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>8</b> Publishing</a>
+<li class="chapter" data-level="6" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>6</b> Equations</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>8.1</b> Compiling the book</a></li>
-<li class="chapter" data-level="8.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>8.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="6.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>6.1</b> Equation syntax</a></li>
+<li class="chapter" data-level="6.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>6.2</b> Equation numbers and labels</a></li>
+<li class="chapter" data-level="6.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>6.3</b> Cross referencing equations</a></li>
+<li class="chapter" data-level="6.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>6.4</b> Maths in captions</a></li>
+<li class="chapter" data-level="6.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>6.5</b> Random tips</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>7</b> Tables</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>7.1</b> Markdown table generator</a></li>
+<li class="chapter" data-level="7.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>7.2</b> Table syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="06-tables.html"><a href="06-tables.html#sec:fancy-tables"><i class="fa fa-check"></i><b>7.3</b> Fancy tables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>8</b> Referencing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>8.1</b> Adding citations</a></li>
+<li class="chapter" data-level="8.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>8.2</b> Bibliography files</a></li>
+<li class="chapter" data-level="8.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>8.3</b> Reference style</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>9</b> Publishing</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
+<li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -229,43 +248,47 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec:referencing" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Referencing<a href="07-referencing.html#sec:referencing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="sec:add-cite" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Adding citations<a href="07-referencing.html#sec:add-cite" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:referencing" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Referencing<a href="07-referencing.html#sec:referencing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:add-cite" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Adding citations<a href="07-referencing.html#sec:add-cite" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can reference publications etc using the following syntax:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="07-referencing.html#cb24-1" aria-hidden="true" tabindex="-1"></a>@bibcode </span></code></pre></div>
-<p>where <code>bibcode</code> is the bibcode for the entry in your bib file (see Sec. <a href="07-referencing.html#sec:bib-files">7.2</a>). This will give the equivalent of the LaTeX <code>\citet{}</code> command.
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb33-1"><a href="07-referencing.html#cb33-1" aria-hidden="true" tabindex="-1"></a>@bibcode </span></code></pre></div>
+<p>where <code>bibcode</code> is the bibcode for the entry in your bib file (see Sec. <a href="07-referencing.html#sec:bib-files">8.2</a>). This will give the equivalent of the LaTeX <code>\citet{}</code> command.
 Example:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="07-referencing.html#cb25-1" aria-hidden="true" tabindex="-1"></a>@2016Scowcroft showed that the SMC is a very elongated galaxy.</span></code></pre></div>
-<p><strong><span class="citation">Scowcroft et al. (<a href="#ref-2016Scowcroft" role="doc-biblioref">2016</a>)</span> showed that the SMC is a very elongated galaxy.</strong></p>
-<p>For <code>\citep{}</code>, just put the citation in square brackets.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="07-referencing.html#cb26-1" aria-hidden="true" tabindex="-1"></a>The first observations of SMC Cepheids were taken over 100 years ago <span class="co">[</span><span class="ot">@1912Leavitt</span><span class="co">]</span>.</span></code></pre></div>
-<p><strong>The first observations of SMC Cepheids were taken over 100 years ago <span class="citation">(<a href="#ref-1912Leavitt" role="doc-biblioref">Leavitt &amp; Pickering 1912</a>)</span>.</strong></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb34-1"><a href="07-referencing.html#cb34-1" aria-hidden="true" tabindex="-1"></a>@2016Scowcroft showed that the SMC is a very elongated galaxy.</span></code></pre></div>
+<div class="showoutput">
+<p><span class="citation">Scowcroft et al. (<a href="#ref-2016Scowcroft" role="doc-biblioref">2016</a>)</span> showed that the SMC is a very elongated galaxy.</p>
 </div>
-<div id="sec:bib-files" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> Bibliography files<a href="07-referencing.html#sec:bib-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For <code>\citep{}</code>, just put the citation in square brackets.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb35-1"><a href="07-referencing.html#cb35-1" aria-hidden="true" tabindex="-1"></a>The first observations of SMC Cepheids were taken over 100 years ago <span class="co">[</span><span class="ot">@1912Leavitt</span><span class="co">]</span>.</span></code></pre></div>
+<div class="showoutput">
+<p>The first observations of SMC Cepheids were taken over 100 years ago <span class="citation">(<a href="#ref-1912Leavitt" role="doc-biblioref">Leavitt &amp; Pickering 1912</a>)</span>.</p>
+</div>
+</div>
+<div id="sec:bib-files" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Bibliography files<a href="07-referencing.html#sec:bib-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assuming you’re using natbib style references you can pass the same bib file to bookdown.</p>
 <p>Example bib file entry:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb27-1"><a href="07-referencing.html#cb27-1" aria-hidden="true" tabindex="-1"></a>@ARTICLE{1912Leavitt,</span>
-<span id="cb27-2"><a href="07-referencing.html#cb27-2" aria-hidden="true" tabindex="-1"></a>       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span>
-<span id="cb27-3"><a href="07-referencing.html#cb27-3" aria-hidden="true" tabindex="-1"></a>        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span>
-<span id="cb27-4"><a href="07-referencing.html#cb27-4" aria-hidden="true" tabindex="-1"></a>      journal = {Harvard College Observatory Circular},</span>
-<span id="cb27-5"><a href="07-referencing.html#cb27-5" aria-hidden="true" tabindex="-1"></a>         year = &quot;1912&quot;,</span>
-<span id="cb27-6"><a href="07-referencing.html#cb27-6" aria-hidden="true" tabindex="-1"></a>       volume = {173},</span>
-<span id="cb27-7"><a href="07-referencing.html#cb27-7" aria-hidden="true" tabindex="-1"></a>        pages = {1},</span>
-<span id="cb27-8"><a href="07-referencing.html#cb27-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb36-1"><a href="07-referencing.html#cb36-1" aria-hidden="true" tabindex="-1"></a>@ARTICLE{1912Leavitt,</span>
+<span id="cb36-2"><a href="07-referencing.html#cb36-2" aria-hidden="true" tabindex="-1"></a>       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span>
+<span id="cb36-3"><a href="07-referencing.html#cb36-3" aria-hidden="true" tabindex="-1"></a>        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span>
+<span id="cb36-4"><a href="07-referencing.html#cb36-4" aria-hidden="true" tabindex="-1"></a>      journal = {Harvard College Observatory Circular},</span>
+<span id="cb36-5"><a href="07-referencing.html#cb36-5" aria-hidden="true" tabindex="-1"></a>         year = &quot;1912&quot;,</span>
+<span id="cb36-6"><a href="07-referencing.html#cb36-6" aria-hidden="true" tabindex="-1"></a>       volume = {173},</span>
+<span id="cb36-7"><a href="07-referencing.html#cb36-7" aria-hidden="true" tabindex="-1"></a>        pages = {1},</span>
+<span id="cb36-8"><a href="07-referencing.html#cb36-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<div id="sec:ref-style" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Reference style<a href="07-referencing.html#sec:ref-style" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:ref-style" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Reference style<a href="07-referencing.html#sec:ref-style" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The referencing style is controlled in the <code>index.Rmd</code> file.</p>
 <p>At the top of this file you’ll find the section that defines things like the book title, output format etc. The following lines are where you define the bib file names and referencing format. You can have multiple bib files.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb28-1"><a href="07-referencing.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [book.bib, packages.bib]</span></span>
-<span id="cb28-2"><a href="07-referencing.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> apj.csl</span></span>
-<span id="cb28-3"><a href="07-referencing.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> yes</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb37-1"><a href="07-referencing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [book.bib, packages.bib]</span></span>
+<span id="cb37-2"><a href="07-referencing.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> apj.csl</span></span>
+<span id="cb37-3"><a href="07-referencing.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> yes</span></span></code></pre></div>
 <p>The <code>bibliography:</code> line points to your bib file. The <code>csl:</code> line points to your style file. This book uses the ApJ style. Additional style files (e.g. PRL etc.) can be downloaded from <a href="https://www.zotero.org/styles">zotero</a>. <code>link-citations: yes</code> creates links from the citations in the text to the reference list at the end of the chapter.</p>
-<p>Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file <code>99-references.Rmd</code>. It should contain the following text:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb29-1"><a href="07-referencing.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {-}</span></span></code></pre></div>
+<p>Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file <code>99-references.Rmd</code>. <strong>If you specify the ordering as described in Section <a href="03-chapters.html#sec:specify-order">4.1.1</a> you need to make sure that the reference chapter is the last one in the list.</strong> The references file should contain the following text:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="07-referencing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r if (knitr::is_html_output()) &#39;# References {-}&#39;</span><span class="st">`</span></span></code></pre></div>
 <p>This will create an <strong>un-numbered</strong> section at the end of the book called ‘References’ that has the full reference list.</p>
 
 </div>

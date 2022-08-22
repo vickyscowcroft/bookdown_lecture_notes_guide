@@ -1,0 +1,124 @@
+# A quick introduction to Markdown {#sec:intro-markdown}
+
+## What is Markdown? {#sec:what-is-markdown}
+
+> Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
+>
+> [markdown.org](https://www.markdownguide.org/getting-started/)
+
+You can create markdown documents in any text editor that can create plain text files. For making things in bookdown, I prefer to use the  [RStudio](https://www.rstudio.com/, "RStudio") IDE so I have access to the build tools while I'm writing. 
+
+## Markdown syntax {#sec:markdown-syntax}
+
+You may already be familiar with some/all of the markdown syntax from using things like Moodle. A nice markdown cheat sheet can be found [here](https://en.support.wordpress.com/markdown-quick-reference/, "markdown cheatsheet").
+
+These are some of the features I use most frequently. In the following examples, the grey boxes with mono-spaced font show the markdown and the green boxes show the rendered output. The "\\" you see in the raw markdown is an escape character to render the \#, \* etc. as symbols rather than a formatter. 
+
+### Headings {#sec:heading-syntax}
+
+You can make different levels of headings using different numbers of \#'s at the start of a line
+```markdown
+# One \#  for a chapter 
+## Two \#\# for a section 
+### Three \#\#\# for a subsection
+```
+:::showoutput
+:::showh1
+Chapter 1 \ One \#  for a chapter 
+:::
+:::showh2
+1.1 \ Two \#\# for a section 
+:::
+:::showh3
+1.1.1 \ Three \#\#\# for a subsection 
+:::
+:::
+
+More details about chapter and section headings is in Section \@ref(sec:chapters).^[If you look at the source code for this section you'll see that the code to display the headings example doesn't match the markdown. This was a hacky way to get it to display correctly without messing up the section numbering If you find a solution for how to reset section numbers please let me know, because I've spent far too long on Stack Overflow today.]
+
+
+### Text formatting {#sec:text-formatting}
+
+You can make text *italic* using one \* or \_ at each end of the text. Bold uses two of each. 
+```markdown
+make italics using _one underscore_ or *one star* at each end
+make bold using __two underscores__ or **two stars** at each end
+```
+:::showoutput
+make italics using _one underscore_ or *one star* at each end
+
+make bold using __two underscores__ or **two stars** at each end
+:::
+
+### Lists {#sec:lists}
+
+Making lists is easy too!
+
+```markdown
+*   Bulleted lists
+*   are made by putting
+*   a \* (asterix) 
+-   or a dash (-)
+-   at the start of the line.
+-   You don't even need to be consistent.
+    - You can make a sub-list by adding 4 spaces before the -
+        - but I'm not sure how many levels this goes to...
+```
+:::showoutput
+*   Bulleted lists
+*   are made by putting
+*   a \* (asterix) 
+-   or a dash (-)
+-   at the start of the line.
+-   You don't even need to be consistent.
+    - You can make a sub-list by adding 4 spaces before the -
+        - but I'm not sure how many levels this goes to...
+:::
+
+```markdown
+1. To make a numbered list
+2. you just number things
+3. i.e. 1., 2., at the start of a line
+7. and it doesn't matter
+4. if your numbers are in the right order
+1. or if you keep using
+1. the same number
+```
+:::showoutput
+1. To make a numbered list
+2. you just number things
+3. i.e. 1., 2., at the start of a line
+7. and it doesn't matter
+4. if your numbers are in the right order
+1. or if you keep using
+1. the same number
+:::
+
+You can also do
+```markdown
+a) Alphabetical lists
+a) using lower case letters,
+A) or using
+A) upper case letters
+```
+:::showoutput
+a) Alphabetical lists
+a) using lower case letters,
+A) or using
+A) upper case letters
+:::
+
+or you can
+```markdown
+1. mix all of them together
+    a) if that's how
+        - you like to spend
+        - your time. 
+```
+:::showoutput
+1. mix all of them together
+    a) if that's how
+        - you like to spend
+        - your time. 
+:::
+

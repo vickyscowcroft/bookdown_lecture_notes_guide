@@ -2,6 +2,7 @@ fig:ho-plot
 eq:friedman
 fig:gaussian
 tab:planck-model
+tab:unnamed-chunk-5
 fig:build-book
 getting-started
 convert-latex
@@ -10,9 +11,17 @@ batch-conversion
 tidying
 sec:gaps
 sec:titlesec
+sec:intro-markdown
+sec:what-is-markdown
+sec:markdown-syntax
+sec:heading-syntax
+sec:text-formatting
+sec:lists
 sec:chapters
 sec:file-structure
-sec:headings
+sec:specify-order
+sec:order-filename
+sec:sec-labels
 sec:cross-ref
 sec:figures
 sec:add-figs
@@ -27,6 +36,7 @@ sec:random-tips
 sec:tables
 sec:md-tab-gen
 sec:tab-syntax
+sec:fancy-tables
 sec:referencing
 sec:add-cite
 sec:bib-files
@@ -34,3 +44,4 @@ sec:ref-style
 sec:publishing
 sec:create-book
 sec:gh-pages
+sec:moodle-pub

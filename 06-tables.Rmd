@@ -47,3 +47,37 @@ Important things about tables:
 | $z_{re}$ | 7.64 |  0.74 | 
 | 100$\theta_{*}$ | 1.04108 | 0.00031 | 
 
+## Fancy tables {#sec:fancy-tables}
+
+The `kableExtra` package is useful if you want to make fancier tables with things like grouped columns. The documentation is [here](https://haozhu233.github.io/kableExtra/bookdown/index.html) (it's a bit sparse...) but I'm including an example here to save you the time googling.
+
+
+```{r}
+library(kableExtra)
+## read the table in from a file
+df <- read.csv('lj_table.csv', header = TRUE, row.names='Element')
+## changing the names of my column headings. R starts counting at 1
+names(df)[1]<-paste("$10^{-21}$ J")
+names(df)[2]<-paste("meV")
+names(df)[3]<-paste("$10^{-10}$ m")
+## fancy formatting
+df %>%
+  kbl(caption = "Lennerd-Jones potentials, apparently. Shamelessly stolen from Sloan's lecture notes.", align=c('l','c', 'c', 'c')) %>%
+  ## only a little table, so stopping it being the full width of the page
+  kable_styling(full_width = F) %>%
+  ## Grouping some columns
+  add_header_above(c("Element" = 1, "$\\epsilon$" = 2, "$\\sigma$"=1, "$r_0$"=1), align=c('l','c', 'c', 'c')) 
+```
+
+To get this to show your table, include the code above inside an `r` code chunk. The `echo=FALSE` part hides the code but still displays the result (which is probably what you want).
+
+````{verbatim, lang = "r"}
+```
+{r echo=FALSE}
+
+## table code goes here
+
+```
+````
+
+

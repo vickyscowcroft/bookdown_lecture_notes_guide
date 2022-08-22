@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Equations | Making Lecture Notes with Bookdown</title>
+  <title>Chapter 11 Including code | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Equations | Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 11 Including code | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Equations | Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 11 Including code | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="04-figures.html"/>
-<link rel="next" href="06-tables.html"/>
+<link rel="prev" href="09-style-formatting.html"/>
+<link rel="next" href="99-references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,8 +52,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -162,7 +160,10 @@ div.csl-indent {
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#system-requirements"><i class="fa fa-check"></i>System Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#system-requirements"><i class="fa fa-check"></i>System Requirements</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#optional-packages"><i class="fa fa-check"></i>Optional packages</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#caveat"><i class="fa fa-check"></i>Caveat</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="01-intro.html"><a href="01-intro.html"><i class="fa fa-check"></i><b>1</b> Getting started</a></li>
@@ -191,7 +192,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:specify-order"><i class="fa fa-check"></i><b>4.1.1</b> Specifying the order in <code>_bookdown.yml</code></a></li>
 <li class="chapter" data-level="4.1.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:order-filename"><i class="fa fa-check"></i><b>4.1.2</b> Order by filename</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:sec-labels"><i class="fa fa-check"></i><b>4.2</b> Section labels</a></li>
+<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:headings"><i class="fa fa-check"></i><b>4.2</b> Headings</a></li>
 <li class="chapter" data-level="4.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>4.3</b> Cross referencing</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>5</b> Figures</a>
@@ -212,7 +213,6 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="7.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>7.1</b> Markdown table generator</a></li>
 <li class="chapter" data-level="7.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>7.2</b> Table syntax</a></li>
-<li class="chapter" data-level="7.3" data-path="06-tables.html"><a href="06-tables.html#sec:fancy-tables"><i class="fa fa-check"></i><b>7.3</b> Fancy tables</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>8</b> Referencing</a>
 <ul>
@@ -224,9 +224,14 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
 <li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
-<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
+<li class="chapter" data-level="10" data-path="09-style-formatting.html"><a href="09-style-formatting.html"><i class="fa fa-check"></i><b>10</b> Formatting output</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="09-style-formatting.html"><a href="09-style-formatting.html#html-output"><i class="fa fa-check"></i><b>10.1</b> HTML output</a></li>
+<li class="chapter" data-level="10.2" data-path="09-style-formatting.html"><a href="09-style-formatting.html#pdf-output"><i class="fa fa-check"></i><b>10.2</b> PDF output</a></li>
+<li class="chapter" data-level="10.3" data-path="09-style-formatting.html"><a href="09-style-formatting.html#adding-new-styles"><i class="fa fa-check"></i><b>10.3</b> Adding new styles</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>11</b> Including code</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -248,102 +253,21 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec:equations" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Equations<a href="05-equations.html#sec:equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<style type="text/css">
-pre code {
-  white-space: pre-wrap;
-}
-</style>
-<div id="sec:add-eqs" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Equation syntax<a href="05-equations.html#sec:add-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for equations is similar (but not identical) to LaTeX.</p>
-<p>LaTeX code:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="05-equations.html#cb21-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
-<span id="cb21-2"><a href="05-equations.html#cb21-2" aria-hidden="true" tabindex="-1"></a>\label{eqn:friedman}</span>
-<span id="cb21-3"><a href="05-equations.html#cb21-3" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho </span>
-<span id="cb21-4"><a href="05-equations.html#cb21-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
-<p>Rmd code:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="05-equations.html#cb22-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
-<span id="cb22-2"><a href="05-equations.html#cb22-2" aria-hidden="true" tabindex="-1"></a>    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho</span>
-<span id="cb22-3"><a href="05-equations.html#cb22-3" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:friedman)</span>
-<span id="cb22-4"><a href="05-equations.html#cb22-4" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
-<p><span class="math display" id="eq:friedman">\[\begin{equation}
-    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
-\tag{6.1}
-\end{equation}\]</span></p>
-<p>You can also use the latex</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="05-equations.html#cb23-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb23-2"><a href="05-equations.html#cb23-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb23-3"><a href="05-equations.html#cb23-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-<p>format for equations. If you’re converting from LaTeX to markdown with pandoc it may convert equations to</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="05-equations.html#cb24-1" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
-<span id="cb24-2"><a href="05-equations.html#cb24-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb24-3"><a href="05-equations.html#cb24-3" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span></code></pre></div>
-<p>which also works.</p>
-<div class="fyi">
-<p><strong>LaTeX subequations and intertext</strong></p>
-<p>I haven’t been able to get subequations and intertext to work in bookdown. LaTeX equations of the form</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="05-equations.html#cb25-1" aria-hidden="true" tabindex="-1"></a>\begin{subequations}\begin{align}</span>
-<span id="cb25-2"><a href="05-equations.html#cb25-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
-<span id="cb25-3"><a href="05-equations.html#cb25-3" aria-hidden="true" tabindex="-1"></a>\intertext{and in 3 dimensional space as}</span>
-<span id="cb25-4"><a href="05-equations.html#cb25-4" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
-<span id="cb25-5"><a href="05-equations.html#cb25-5" aria-hidden="true" tabindex="-1"></a>\end{align}\end{subequations}</span></code></pre></div>
-<p>should be written as separate equations with the text between written outside the equation environment, e.g. </p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="05-equations.html#cb26-1" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb26-2"><a href="05-equations.html#cb26-2" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,t \right)</span>
-<span id="cb26-3"><a href="05-equations.html#cb26-3" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb26-4"><a href="05-equations.html#cb26-4" aria-hidden="true" tabindex="-1"></a>and in 3 dimensional space as</span>
-<span id="cb26-5"><a href="05-equations.html#cb26-5" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb26-6"><a href="05-equations.html#cb26-6" aria-hidden="true" tabindex="-1"></a>\vec{E} &amp;= \left( x,y,z,t \right)</span>
-<span id="cb26-7"><a href="05-equations.html#cb26-7" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-</div>
-</div>
-<div id="sec:eq-nos-labels" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Equation numbers and labels<a href="05-equations.html#sec:eq-nos-labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for the maths is the same, but the labelling changes. To label and equation add</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb27-1"><a href="05-equations.html#cb27-1" aria-hidden="true" tabindex="-1"></a>(<span class="sc">\#</span>eq:label)</span></code></pre></div>
-<p>just before <code>end{equation}</code>. Only equations with labels will be numbered. If you don’t want numbers then don’t label the equations, but numbers are helpful.</p>
-</div>
-<div id="sec:cross-ref-eqs" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Cross referencing equations<a href="05-equations.html#sec:cross-ref-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The syntax for cross-referencing equations is similar to sections and figures, i.e.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb28-1"><a href="05-equations.html#cb28-1" aria-hidden="true" tabindex="-1"></a>Eqn. \@ref(eq:friedman) is the Friedman equation</span></code></pre></div>
-<p>will give “Eqn. <a href="05-equations.html#eq:friedman">(6.1)</a> is the Friedman equation”.</p>
-</div>
-<div id="sec:maths-captions" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Maths in captions<a href="05-equations.html#sec:maths-captions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions.</p>
-<p>Example of a finicky caption:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb29-1"><a href="05-equations.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb29-2"><a href="05-equations.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="in">{r echo=FALSE, gaussian, out.width=&#39;100%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;Gaussian uncertainties. </span></span>
-<span id="cb29-3"><a href="05-equations.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="in">If we measure a value $x$ for a variable that has a true value $\\langle x \\rangle$ and</span></span>
-<span id="cb29-4"><a href="05-equations.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="in">uncertainty $\\sigma$, there is a 68.3% probability that $x$ will be within </span></span>
-<span id="cb29-5"><a href="05-equations.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 1\\sigma$. There&#39;s a 95.4% probability of $x$ being within </span></span>
-<span id="cb29-6"><a href="05-equations.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 2\\sigma$, and 99.7% of $x$ being within  </span></span>
-<span id="cb29-7"><a href="05-equations.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="in">$\\langle x \\rangle \\pm 3\\sigma$.&quot;}</span></span>
-<span id="cb29-8"><a href="05-equations.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::include_graphics(&quot;Images/normal-curve.png&quot;)</span></span>
-<span id="cb29-9"><a href="05-equations.html#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:gaussian"></span>
-<img src="Images/normal-curve.png" alt="Gaussian uncertainties. If we measure a value $x$ for a variable that has a true value $\langle x \rangle$ and uncertainty $\sigma$, there is a 68.3% probability that $x$ will be within $\langle x \rangle \pm 1\sigma$. There's a 95.4% probability of $x$ being within $\langle x \rangle \pm 2\sigma$, and 99.7% of $x$ being within  $\langle x \rangle \pm 3\sigma$." width="100%" />
-<p class="caption">
-Figure 6.1: Gaussian uncertainties. If we measure a value <span class="math inline">\(x\)</span> for a variable that has a true value <span class="math inline">\(\langle x \rangle\)</span> and uncertainty <span class="math inline">\(\sigma\)</span>, there is a 68.3% probability that <span class="math inline">\(x\)</span> will be within <span class="math inline">\(\langle x \rangle \pm 1\sigma\)</span>. There’s a 95.4% probability of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 2\sigma\)</span>, and 99.7% of <span class="math inline">\(x\)</span> being within <span class="math inline">\(\langle x \rangle \pm 3\sigma\)</span>.
-</p>
-</div>
-</div>
-<div id="sec:random-tips" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Random tips<a href="05-equations.html#sec:random-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Angstrom symbol:</strong> Use <code>$\unicode{x0212B}$</code> rather than <code>$\AA$</code> to get <span class="math inline">\(\unicode{x0212B}\)</span>. You can ddd <code>\newcommand{\AA}{\unicode{x0212B}}</code> to index.Rmd file before the main text starts to make <code>$\AA$</code> work.</p>
+<div id="sec:code" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Including code<a href="code.html#sec:code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>TO DO</p>
+<ul>
+<li><code>formatR</code>: Wordwrap on code chunks.</li>
+</ul>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="04-figures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="06-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="09-style-formatting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="99-references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -374,7 +298,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-equations.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/code.Rmd",
 "text": "Edit"
 },
 "history": {

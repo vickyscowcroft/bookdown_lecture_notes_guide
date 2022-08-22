@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Tables | Making Lecture Notes with Bookdown</title>
+  <title>Chapter 7 Tables | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Tables | Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 7 Tables | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Tables | Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 7 Tables | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2022-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -172,42 +174,59 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
 <li class="chapter" data-level="2.5" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a>
+<li class="chapter" data-level="3" data-path="intro-markdown.html"><a href="intro-markdown.html"><i class="fa fa-check"></i><b>3</b> A quick introduction to Markdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
-<li class="chapter" data-level="3.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:headings"><i class="fa fa-check"></i><b>3.2</b> Headings</a></li>
-<li class="chapter" data-level="3.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>3.3</b> Cross referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>4</b> Figures</a>
+<li class="chapter" data-level="3.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:what-is-markdown"><i class="fa fa-check"></i><b>3.1</b> What is Markdown?</a></li>
+<li class="chapter" data-level="3.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:markdown-syntax"><i class="fa fa-check"></i><b>3.2</b> Markdown syntax</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>4.1</b> Adding figures</a></li>
-<li class="chapter" data-level="4.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>4.2</b> Figure captions</a></li>
-<li class="chapter" data-level="4.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>4.3</b> Figure numbering and referencing</a></li>
+<li class="chapter" data-level="3.2.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:heading-syntax"><i class="fa fa-check"></i><b>3.2.1</b> Headings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:text-formatting"><i class="fa fa-check"></i><b>3.2.2</b> Text formatting</a></li>
+<li class="chapter" data-level="3.2.3" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:lists"><i class="fa fa-check"></i><b>3.2.3</b> Lists</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>5</b> Equations</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>4</b> Chapters, sections, etc.</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>5.1</b> Equation syntax</a></li>
-<li class="chapter" data-level="5.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>5.2</b> Equation numbers and labels</a></li>
-<li class="chapter" data-level="5.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>5.3</b> Cross referencing equations</a></li>
-<li class="chapter" data-level="5.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>5.4</b> Maths in captions</a></li>
-<li class="chapter" data-level="5.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>5.5</b> Random tips</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>6</b> Tables</a>
+<li class="chapter" data-level="4.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>4.1</b> File Structure</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>6.1</b> Markdown table generator</a></li>
-<li class="chapter" data-level="6.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>6.2</b> Table syntax</a></li>
+<li class="chapter" data-level="4.1.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:specify-order"><i class="fa fa-check"></i><b>4.1.1</b> Specifying the order in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:order-filename"><i class="fa fa-check"></i><b>4.1.2</b> Order by filename</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>7</b> Referencing</a>
+<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:sec-labels"><i class="fa fa-check"></i><b>4.2</b> Section labels</a></li>
+<li class="chapter" data-level="4.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>4.3</b> Cross referencing</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>5</b> Figures</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>7.1</b> Adding citations</a></li>
-<li class="chapter" data-level="7.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>7.2</b> Bibliography files</a></li>
-<li class="chapter" data-level="7.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>7.3</b> Reference style</a></li>
+<li class="chapter" data-level="5.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>5.1</b> Adding figures</a></li>
+<li class="chapter" data-level="5.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>5.2</b> Figure captions</a></li>
+<li class="chapter" data-level="5.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>5.3</b> Figure numbering and referencing</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>8</b> Publishing</a>
+<li class="chapter" data-level="6" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>6</b> Equations</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>8.1</b> Compiling the book</a></li>
-<li class="chapter" data-level="8.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>8.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="6.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>6.1</b> Equation syntax</a></li>
+<li class="chapter" data-level="6.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>6.2</b> Equation numbers and labels</a></li>
+<li class="chapter" data-level="6.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>6.3</b> Cross referencing equations</a></li>
+<li class="chapter" data-level="6.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>6.4</b> Maths in captions</a></li>
+<li class="chapter" data-level="6.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>6.5</b> Random tips</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>7</b> Tables</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>7.1</b> Markdown table generator</a></li>
+<li class="chapter" data-level="7.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>7.2</b> Table syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="06-tables.html"><a href="06-tables.html#sec:fancy-tables"><i class="fa fa-check"></i><b>7.3</b> Fancy tables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>8</b> Referencing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>8.1</b> Adding citations</a></li>
+<li class="chapter" data-level="8.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>8.2</b> Bibliography files</a></li>
+<li class="chapter" data-level="8.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>8.3</b> Reference style</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>9</b> Publishing</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
+<li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -229,28 +248,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec:tables" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Tables<a href="06-tables.html#sec:tables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="sec:md-tab-gen" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Markdown table generator<a href="06-tables.html#sec:md-tab-gen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:tables" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Tables<a href="06-tables.html#sec:tables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:md-tab-gen" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Markdown table generator<a href="06-tables.html#sec:md-tab-gen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you’re making a new table from scratch then the <a href="06-tables.html#sec:md-tab-gen">Markdown Table Generator</a> (<a href="https://www.tablesgenerator.com/markdown_tables" class="uri">https://www.tablesgenerator.com/markdown_tables</a>) is a handy tool.</p>
 </div>
-<div id="sec:tab-syntax" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Table syntax<a href="06-tables.html#sec:tab-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:tab-syntax" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Table syntax<a href="06-tables.html#sec:tab-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Tables are a bit more simple in markdown than in latex. I haven’t played around with complex tables much, but it’s straightforward to make a basic one.</p>
 <p>Example table:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="06-tables.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. </span></span>
-<span id="cb23-2"><a href="06-tables.html#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="06-tables.html#cb23-3" aria-hidden="true" tabindex="-1"></a>| Parameter | Best fit value     | Uncertainty |</span>
-<span id="cb23-4"><a href="06-tables.html#cb23-4" aria-hidden="true" tabindex="-1"></a>|:--------------------|----------:|----------:|</span>
-<span id="cb23-5"><a href="06-tables.html#cb23-5" aria-hidden="true" tabindex="-1"></a>| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |</span>
-<span id="cb23-6"><a href="06-tables.html#cb23-6" aria-hidden="true" tabindex="-1"></a>| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |</span>
-<span id="cb23-7"><a href="06-tables.html#cb23-7" aria-hidden="true" tabindex="-1"></a>| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |</span>
-<span id="cb23-8"><a href="06-tables.html#cb23-8" aria-hidden="true" tabindex="-1"></a>| $H_0$ | 67.37 | 0.54 |</span>
-<span id="cb23-9"><a href="06-tables.html#cb23-9" aria-hidden="true" tabindex="-1"></a>| $\Omega_{m}$ | 0.3147 | 0.0074 |</span>
-<span id="cb23-10"><a href="06-tables.html#cb23-10" aria-hidden="true" tabindex="-1"></a>| Age (Gyr) | 13.801 | 0.024 | </span>
-<span id="cb23-11"><a href="06-tables.html#cb23-11" aria-hidden="true" tabindex="-1"></a>| $z_{re}$ | 7.64 |  0.74 | </span>
-<span id="cb23-12"><a href="06-tables.html#cb23-12" aria-hidden="true" tabindex="-1"></a>| 100$\theta_{*}$ | 1.04108 | 0.00031 | </span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb30-1"><a href="06-tables.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> (\#tab:planck-model) Base $\Lambda$CDM cosmological parameters from @Planck18. </span></span>
+<span id="cb30-2"><a href="06-tables.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="06-tables.html#cb30-3" aria-hidden="true" tabindex="-1"></a>| Parameter | Best fit value     | Uncertainty |</span>
+<span id="cb30-4"><a href="06-tables.html#cb30-4" aria-hidden="true" tabindex="-1"></a>|:--------------------|----------:|----------:|</span>
+<span id="cb30-5"><a href="06-tables.html#cb30-5" aria-hidden="true" tabindex="-1"></a>| $\Omega_{b}h^2$ | 0.02233 | 0.00015 |</span>
+<span id="cb30-6"><a href="06-tables.html#cb30-6" aria-hidden="true" tabindex="-1"></a>| $\Omega_{c}h^2$ | 0.1198 | 0.0012 |</span>
+<span id="cb30-7"><a href="06-tables.html#cb30-7" aria-hidden="true" tabindex="-1"></a>| $\Omega_{m}h^2$ | 0.1428 | 0.0011 |</span>
+<span id="cb30-8"><a href="06-tables.html#cb30-8" aria-hidden="true" tabindex="-1"></a>| $H_0$ | 67.37 | 0.54 |</span>
+<span id="cb30-9"><a href="06-tables.html#cb30-9" aria-hidden="true" tabindex="-1"></a>| $\Omega_{m}$ | 0.3147 | 0.0074 |</span>
+<span id="cb30-10"><a href="06-tables.html#cb30-10" aria-hidden="true" tabindex="-1"></a>| Age (Gyr) | 13.801 | 0.024 | </span>
+<span id="cb30-11"><a href="06-tables.html#cb30-11" aria-hidden="true" tabindex="-1"></a>| $z_{re}$ | 7.64 |  0.74 | </span>
+<span id="cb30-12"><a href="06-tables.html#cb30-12" aria-hidden="true" tabindex="-1"></a>| 100$\theta_{*}$ | 1.04108 | 0.00031 | </span></code></pre></div>
 <p>Important things about tables:</p>
 <ul>
 <li>Captions go <strong>at the top</strong> and should include the label definition.</li>
@@ -259,7 +278,7 @@ div.csl-indent {
 <li>Justification given by the colons and dashes in the line under the header row.</li>
 </ul>
 <table>
-<caption><span id="tab:planck-model">Table 6.1: </span> Base <span class="math inline">\(\Lambda\)</span>CDM cosmological parameters from <span class="citation">Planck Collaboration (<a href="#ref-Planck18" role="doc-biblioref">2018</a>)</span>.</caption>
+<caption><span id="tab:planck-model">Table 7.1: </span> Base <span class="math inline">\(\Lambda\)</span>CDM cosmological parameters from <span class="citation">Planck Collaboration (<a href="#ref-Planck18" role="doc-biblioref">2018</a>)</span>.</caption>
 <thead>
 <tr class="header">
 <th align="left">Parameter</th>
@@ -310,6 +329,133 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+</div>
+<div id="sec:fancy-tables" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Fancy tables<a href="06-tables.html#sec:fancy-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <code>kableExtra</code> package is useful if you want to make fancier tables with things like grouped columns. The documentation is <a href="https://haozhu233.github.io/kableExtra/bookdown/index.html">here</a> (it’s a bit sparse…) but I’m including an example here to save you the time googling.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="06-tables.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb31-2"><a href="06-tables.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="do">## read the table in from a file</span></span>
+<span id="cb31-3"><a href="06-tables.html#cb31-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;lj_table.csv&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="st">&quot;Element&quot;</span>)</span>
+<span id="cb31-4"><a href="06-tables.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="do">## changing the names of my column headings. R starts</span></span>
+<span id="cb31-5"><a href="06-tables.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="do">## counting at 1</span></span>
+<span id="cb31-6"><a href="06-tables.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;$10^{-21}$ J&quot;</span>)</span>
+<span id="cb31-7"><a href="06-tables.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;meV&quot;</span>)</span>
+<span id="cb31-8"><a href="06-tables.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;$10^{-10}$ m&quot;</span>)</span>
+<span id="cb31-9"><a href="06-tables.html#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="do">## fancy formatting</span></span>
+<span id="cb31-10"><a href="06-tables.html#cb31-10" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb31-11"><a href="06-tables.html#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">&quot;Lennerd-Jones potentials, apparently. Shamelessly stolen from Sloan&#39;s lecture notes.&quot;</span>,</span>
+<span id="cb31-12"><a href="06-tables.html#cb31-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb31-13"><a href="06-tables.html#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="do">## only a little table, so stopping it being the full</span></span>
+<span id="cb31-14"><a href="06-tables.html#cb31-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">## width of the page</span></span>
+<span id="cb31-15"><a href="06-tables.html#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">full_width =</span> F) <span class="sc">%&gt;%</span></span>
+<span id="cb31-16"><a href="06-tables.html#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Grouping some columns</span></span>
+<span id="cb31-17"><a href="06-tables.html#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="at">Element =</span> <span class="dv">1</span>, <span class="st">`</span><span class="at">$</span><span class="sc">\\</span><span class="at">epsilon$</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">`</span><span class="at">$</span><span class="sc">\\</span><span class="at">sigma$</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb31-18"><a href="06-tables.html#cb31-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">$r_0$</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span>), <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>))</span></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 7.2: </span>Lennerd-Jones potentials, apparently. Shamelessly stolen from Sloan’s lecture notes.
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Element
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<span class="math inline">\(\epsilon\)</span>
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<span class="math inline">\(\sigma\)</span>
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<span class="math inline">\(r_0\)</span>
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(10^{-21}\)</span> J
+</th>
+<th style="text-align:center;">
+meV
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(10^{-10}\)</span> m
+</th>
+<th style="text-align:center;">
+Å
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+He
+</td>
+<td style="text-align:left;">
+0.14
+</td>
+<td style="text-align:center;">
+0.9
+</td>
+<td style="text-align:center;">
+2.56
+</td>
+<td style="text-align:center;">
+3.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ne
+</td>
+<td style="text-align:left;">
+0.49
+</td>
+<td style="text-align:center;">
+3.1
+</td>
+<td style="text-align:center;">
+2.75
+</td>
+<td style="text-align:center;">
+3.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ar
+</td>
+<td style="text-align:left;">
+1.70
+</td>
+<td style="text-align:center;">
+10.6
+</td>
+<td style="text-align:center;">
+3.40
+</td>
+<td style="text-align:center;">
+4.15
+</td>
+</tr>
+</tbody>
+</table>
+<p>To get this to show your table, include the code above inside an <code>r</code> code chunk. The <code>echo=FALSE</code> part hides the code but still displays the result (which is probably what you want).</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="06-tables.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb32-2"><a href="06-tables.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="at">{r echo=FALSE}</span></span>
+<span id="cb32-3"><a href="06-tables.html#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="06-tables.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="at">## table code goes here</span></span>
+<span id="cb32-5"><a href="06-tables.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="06-tables.html#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span></code></pre></div>
 
 </div>
 </div>

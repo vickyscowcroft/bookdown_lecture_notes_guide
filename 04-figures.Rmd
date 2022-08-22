@@ -20,12 +20,12 @@ Assuming that you would add a figure to a LaTeX document with the following code
 To include the figure in markdown the syntax is as follows:
 
 
-`````markdown
+````{verbatim, lang = "r"}
 ```
 {r echo=FALSE, ho-plot, out.width='70%', fig.show='hold', fig.cap="This is a figure caption."}
 knitr::include_graphics("Images/ho-tension.png")
 ```
-`````
+````
 
 
 ```{r echo=FALSE, ho-plot, out.width='70%', fig.show='hold', fig.cap="This is a figure caption."}

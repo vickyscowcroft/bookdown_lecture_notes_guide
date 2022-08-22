@@ -12,12 +12,6 @@ This compiles all the markdown to create html files for the book. The output fil
 
 ## Publishing with github pages {#sec:gh-pages}
 
-**THIS SECTION IS NOT COMPLETE**
-
-**Testing whether the travis stuff still works**
-
-**Note:** There is probably a way to do this so that the files are published to somewhere on the University servers. I haven't tried. This is the way I do it.
-
 I use [github pages](pages.github.com) to publish my notes. 
 
 The following assumes you are already using github to store your files. **TODO: Can add instructions for this part if needed**.
@@ -43,10 +37,9 @@ git push -q origin gh-pages
 
 Your pretty lecture notes should now be online! You should find them at github_username.github.io/repo_name - or check the setting page of the repository. The address will be given in the github pages section.
 
-** TO DO**
+## Publishing to Moodle {#sec:moodle-pub}
 
-Add info on how to update stuff with travis
-
+To be written soon....
 
 
 

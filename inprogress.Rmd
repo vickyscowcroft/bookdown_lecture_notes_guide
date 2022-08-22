@@ -1,0 +1,21 @@
+# Things I should probably add to this guide at some point {#sec:todo .unnumbered}
+
+## HTML output {.unnumbered .unlisted}
+* editing css
+  - what files?
+  - where?
+  - how?
+
+## PDF output {.unnumbered .unlisted}
+* latex stuff?
+  - latex templates?
+  - is this even a good idea?
+
+## Adding new styles {.unnumbered .unlisted}
+* adding `div` things to the css
+* other stuff?
+
+## Publishing to mooodle {.unnumbered .unlisted}
+* quick way to update individual files. 
+
+Suggestions for things that should be added are welcome. 

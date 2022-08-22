@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown</title>
+  <title>Chapter 4 Chapters, sections, etc. | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown" />
+  <meta property="og:title" content="Chapter 4 Chapters, sections, etc. | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Guide for creating html lecture notes using Bookdown" />
   <meta name="github-repo" content="vickyscowcroft/bookdown_lecture_notes_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Chapters, sections, etc | Making Lecture Notes with Bookdown" />
+  <meta name="twitter:title" content="Chapter 4 Chapters, sections, etc. | Making Lecture Notes with Bookdown" />
   
   <meta name="twitter:description" content="Guide for creating html lecture notes using Bookdown" />
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2022-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="02-latex-conversion.html"/>
+<link rel="prev" href="intro-markdown.html"/>
 <link rel="next" href="04-figures.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -172,42 +174,59 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:gaps"><i class="fa fa-check"></i><b>2.4</b> Notes with gaps</a></li>
 <li class="chapter" data-level="2.5" data-path="02-latex-conversion.html"><a href="02-latex-conversion.html#sec:titlesec"><i class="fa fa-check"></i><b>2.5</b> Using the <code>titlesec</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>3</b> Chapters, sections, etc</a>
+<li class="chapter" data-level="3" data-path="intro-markdown.html"><a href="intro-markdown.html"><i class="fa fa-check"></i><b>3</b> A quick introduction to Markdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>3.1</b> File Structure</a></li>
-<li class="chapter" data-level="3.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:headings"><i class="fa fa-check"></i><b>3.2</b> Headings</a></li>
-<li class="chapter" data-level="3.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>3.3</b> Cross referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>4</b> Figures</a>
+<li class="chapter" data-level="3.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:what-is-markdown"><i class="fa fa-check"></i><b>3.1</b> What is Markdown?</a></li>
+<li class="chapter" data-level="3.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:markdown-syntax"><i class="fa fa-check"></i><b>3.2</b> Markdown syntax</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>4.1</b> Adding figures</a></li>
-<li class="chapter" data-level="4.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>4.2</b> Figure captions</a></li>
-<li class="chapter" data-level="4.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>4.3</b> Figure numbering and referencing</a></li>
+<li class="chapter" data-level="3.2.1" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:heading-syntax"><i class="fa fa-check"></i><b>3.2.1</b> Headings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:text-formatting"><i class="fa fa-check"></i><b>3.2.2</b> Text formatting</a></li>
+<li class="chapter" data-level="3.2.3" data-path="intro-markdown.html"><a href="intro-markdown.html#sec:lists"><i class="fa fa-check"></i><b>3.2.3</b> Lists</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>5</b> Equations</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-chapters.html"><a href="03-chapters.html"><i class="fa fa-check"></i><b>4</b> Chapters, sections, etc.</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>5.1</b> Equation syntax</a></li>
-<li class="chapter" data-level="5.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>5.2</b> Equation numbers and labels</a></li>
-<li class="chapter" data-level="5.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>5.3</b> Cross referencing equations</a></li>
-<li class="chapter" data-level="5.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>5.4</b> Maths in captions</a></li>
-<li class="chapter" data-level="5.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>5.5</b> Random tips</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>6</b> Tables</a>
+<li class="chapter" data-level="4.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:file-structure"><i class="fa fa-check"></i><b>4.1</b> File Structure</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>6.1</b> Markdown table generator</a></li>
-<li class="chapter" data-level="6.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>6.2</b> Table syntax</a></li>
+<li class="chapter" data-level="4.1.1" data-path="03-chapters.html"><a href="03-chapters.html#sec:specify-order"><i class="fa fa-check"></i><b>4.1.1</b> Specifying the order in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:order-filename"><i class="fa fa-check"></i><b>4.1.2</b> Order by filename</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>7</b> Referencing</a>
+<li class="chapter" data-level="4.2" data-path="03-chapters.html"><a href="03-chapters.html#sec:sec-labels"><i class="fa fa-check"></i><b>4.2</b> Section labels</a></li>
+<li class="chapter" data-level="4.3" data-path="03-chapters.html"><a href="03-chapters.html#sec:cross-ref"><i class="fa fa-check"></i><b>4.3</b> Cross referencing</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-figures.html"><a href="04-figures.html"><i class="fa fa-check"></i><b>5</b> Figures</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>7.1</b> Adding citations</a></li>
-<li class="chapter" data-level="7.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>7.2</b> Bibliography files</a></li>
-<li class="chapter" data-level="7.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>7.3</b> Reference style</a></li>
+<li class="chapter" data-level="5.1" data-path="04-figures.html"><a href="04-figures.html#sec:add-figs"><i class="fa fa-check"></i><b>5.1</b> Adding figures</a></li>
+<li class="chapter" data-level="5.2" data-path="04-figures.html"><a href="04-figures.html#sec:fig-captions"><i class="fa fa-check"></i><b>5.2</b> Figure captions</a></li>
+<li class="chapter" data-level="5.3" data-path="04-figures.html"><a href="04-figures.html#sec:fig-nos"><i class="fa fa-check"></i><b>5.3</b> Figure numbering and referencing</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>8</b> Publishing</a>
+<li class="chapter" data-level="6" data-path="05-equations.html"><a href="05-equations.html"><i class="fa fa-check"></i><b>6</b> Equations</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>8.1</b> Compiling the book</a></li>
-<li class="chapter" data-level="8.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>8.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="6.1" data-path="05-equations.html"><a href="05-equations.html#sec:add-eqs"><i class="fa fa-check"></i><b>6.1</b> Equation syntax</a></li>
+<li class="chapter" data-level="6.2" data-path="05-equations.html"><a href="05-equations.html#sec:eq-nos-labels"><i class="fa fa-check"></i><b>6.2</b> Equation numbers and labels</a></li>
+<li class="chapter" data-level="6.3" data-path="05-equations.html"><a href="05-equations.html#sec:cross-ref-eqs"><i class="fa fa-check"></i><b>6.3</b> Cross referencing equations</a></li>
+<li class="chapter" data-level="6.4" data-path="05-equations.html"><a href="05-equations.html#sec:maths-captions"><i class="fa fa-check"></i><b>6.4</b> Maths in captions</a></li>
+<li class="chapter" data-level="6.5" data-path="05-equations.html"><a href="05-equations.html#sec:random-tips"><i class="fa fa-check"></i><b>6.5</b> Random tips</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="06-tables.html"><a href="06-tables.html"><i class="fa fa-check"></i><b>7</b> Tables</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-tables.html"><a href="06-tables.html#sec:md-tab-gen"><i class="fa fa-check"></i><b>7.1</b> Markdown table generator</a></li>
+<li class="chapter" data-level="7.2" data-path="06-tables.html"><a href="06-tables.html#sec:tab-syntax"><i class="fa fa-check"></i><b>7.2</b> Table syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="06-tables.html"><a href="06-tables.html#sec:fancy-tables"><i class="fa fa-check"></i><b>7.3</b> Fancy tables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="07-referencing.html"><a href="07-referencing.html"><i class="fa fa-check"></i><b>8</b> Referencing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="07-referencing.html"><a href="07-referencing.html#sec:add-cite"><i class="fa fa-check"></i><b>8.1</b> Adding citations</a></li>
+<li class="chapter" data-level="8.2" data-path="07-referencing.html"><a href="07-referencing.html#sec:bib-files"><i class="fa fa-check"></i><b>8.2</b> Bibliography files</a></li>
+<li class="chapter" data-level="8.3" data-path="07-referencing.html"><a href="07-referencing.html#sec:ref-style"><i class="fa fa-check"></i><b>8.3</b> Reference style</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>9</b> Publishing</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
+<li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
+<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -229,38 +248,58 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec:chapters" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Chapters, sections, etc<a href="03-chapters.html#sec:chapters" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="sec:file-structure" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> File Structure<a href="03-chapters.html#sec:file-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:chapters" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Chapters, sections, etc.<a href="03-chapters.html#sec:chapters" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sec:file-structure" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> File Structure<a href="03-chapters.html#sec:file-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown organises your notes into a book. The main page you see when you open a bookdown page is the <code>index.Rmd</code> file.</p>
-<p>Each chapter in the book has it’s own markdown file. Each chapter filename should start with a number, and will be ordered numerically. For this book, the files are</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="03-chapters.html#cb6-1" aria-hidden="true" tabindex="-1"></a>index.Rmd</span>
-<span id="cb6-2"><a href="03-chapters.html#cb6-2" aria-hidden="true" tabindex="-1"></a>01-intro.Rmd</span>
-<span id="cb6-3"><a href="03-chapters.html#cb6-3" aria-hidden="true" tabindex="-1"></a>02-latex-conversion.Rmd</span>
-<span id="cb6-4"><a href="03-chapters.html#cb6-4" aria-hidden="true" tabindex="-1"></a>03-chapters.Rmd</span>
-<span id="cb6-5"><a href="03-chapters.html#cb6-5" aria-hidden="true" tabindex="-1"></a>... etc</span></code></pre></div>
+<p>Each chapter in the book has it’s own markdown file. There are two options for defining the order of your chapters: using numbers in the file name, or specifying the order in the <code>_bookdown.yml</code> file.</p>
+<div id="sec:specify-order" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Specifying the order in <code>_bookdown.yml</code><a href="03-chapters.html#sec:specify-order" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The easiest way to organise chapters is to specify the order in the <code>_bookdown.yml</code> file. For this method you don’t need to have the numbers in the file name, and it’s much easier to rearrange things. To specify the order, add an <code>rmd_files</code> section to the <code>_bookdown.yml</code> file and put the file names in the order you want them to appear:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="03-chapters.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="an">rmd_files:</span></span>
+<span id="cb12-2"><a href="03-chapters.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>index.Rmd</span>
+<span id="cb12-3"><a href="03-chapters.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>01-intro.Rmd</span>
+<span id="cb12-4"><a href="03-chapters.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>02-latex-conversion.Rmd</span>
+<span id="cb12-5"><a href="03-chapters.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>intro-markdown.Rmd</span>
+<span id="cb12-6"><a href="03-chapters.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>03-chapters.Rmd</span>
+<span id="cb12-7"><a href="03-chapters.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb12-8"><a href="03-chapters.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>99-references.Rmd</span></code></pre></div>
+<p>You’ll see here that the <code>intro-markdown.Rmd</code> chapter doesn’t have a number at the start. You don’t need them for this method; bookdown will ignore the numbers and render things in your listed order. More details (that you probably won’t need) about how this works are <a href="https://bookdown.org/yihui/bookdown/usage.html">here</a>. <strong>Your references chapter should be the last one, otherwise it doesn’t work properly.</strong></p>
 </div>
-<div id="sec:headings" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Headings<a href="03-chapters.html#sec:headings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sec:order-filename" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Order by filename<a href="03-chapters.html#sec:order-filename" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is the old method of ordering chapters. If you start from the bookdown template (described in Section <a href="01-intro.html#getting-started">1</a>), you’ll see that the template files all start with a number. Bookdown will put the chapters in numerical order. For example, the following file names would order the chapters as they are in this book:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="03-chapters.html#cb13-1" aria-hidden="true" tabindex="-1"></a>index.Rmd</span>
+<span id="cb13-2"><a href="03-chapters.html#cb13-2" aria-hidden="true" tabindex="-1"></a>01-intro.Rmd</span>
+<span id="cb13-3"><a href="03-chapters.html#cb13-3" aria-hidden="true" tabindex="-1"></a>02-latex-conversion.Rmd</span>
+<span id="cb13-4"><a href="03-chapters.html#cb13-4" aria-hidden="true" tabindex="-1"></a>03-intro-markdown.Rmd</span>
+<span id="cb13-5"><a href="03-chapters.html#cb13-5" aria-hidden="true" tabindex="-1"></a>04-chapters.Rmd</span>
+<span id="cb13-6"><a href="03-chapters.html#cb13-6" aria-hidden="true" tabindex="-1"></a>... etc</span></code></pre></div>
+<p>I find this works reasonably well if you know beforehand what order you’re going to put things in, but it quickly gets annoying if you decide later on that you want to add a chapter between two existing ones (you’d have to rename all the subsequent chapters), so I recommend using the method in Section <a href="03-chapters.html#sec:specify-order">4.1.1</a>.</p>
+</div>
+</div>
+<div id="sec:sec-labels" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Section labels<a href="03-chapters.html#sec:sec-labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The chapter title and label are given in the first line of the file.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="03-chapters.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapters, sections, etc {#sec:chapters}</span></span></code></pre></div>
-<p>The <code>#</code> at the start of the line denotes a chapter heading. The label is given in <code>{#sec:chapters}</code>.</p>
-<p>You can make sections either using two # at the start of the line, or with dashes under the section title:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="03-chapters.html#cb8-1" aria-hidden="true" tabindex="-1"></a>Headings {#sec:headings}</span>
-<span id="cb8-2"><a href="03-chapters.html#cb8-2" aria-hidden="true" tabindex="-1"></a>--------</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="03-chapters.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapters, sections, etc. {#sec:chapters}</span></span></code></pre></div>
+<p>The <code>#</code> at the start of the line denotes a chapter heading (see Section <a href="intro-markdown.html#sec:heading-syntax">3.2.1</a>). The label is given in <code>{#sec:chapters}</code>. I think bookdown can create its own labels from the chapter/section heading, but it’s easier to cross-reference if you set them yourself.</p>
+<p>You can make sections using two # at the start of the line:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="03-chapters.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section labels {#sec:sec-lables}</span></span></code></pre></div>
 <p>Note that the <code>{#sec:label}</code> syntax is still the same - you don’t need to say whether it’s a chapter, section, subsection etc.</p>
-<p>Subsections are done similarly, with either three # at the start of the line.</p>
-<p>You can change the section heading from ‘Chapter’ to e.g. section by editing the following in the <code>_bookdown.yml</code> file:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="03-chapters.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="an">language:</span></span>
-<span id="cb9-2"><a href="03-chapters.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  ui:</span>
-<span id="cb9-3"><a href="03-chapters.html#cb9-3" aria-hidden="true" tabindex="-1"></a>    chapter_name: &quot;Section &quot;</span></code></pre></div>
+<p>Subsections are done similarly, with three # at the start of the line.</p>
+<p>You can change the section heading from “Chapter” to e.g. “Section” by editing the following in the <code>_bookdown.yml</code> file:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="03-chapters.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="an">language:</span></span>
+<span id="cb16-2"><a href="03-chapters.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  ui:</span>
+<span id="cb16-3"><a href="03-chapters.html#cb16-3" aria-hidden="true" tabindex="-1"></a>    chapter_name: &quot;Section &quot;</span></code></pre></div>
 </div>
-<div id="sec:cross-ref" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Cross referencing<a href="03-chapters.html#sec:cross-ref" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can reference other chapters, sections etc throughout the book with the following syntax:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="03-chapters.html#cb10-1" aria-hidden="true" tabindex="-1"></a>Section \@ref(sec:cross-ref) is this section.</span></code></pre></div>
-<p>Which shows up as “Section <a href="03-chapters.html#sec:cross-ref">3.3</a> is this section.”.</p>
+<div id="sec:cross-ref" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Cross referencing<a href="03-chapters.html#sec:cross-ref" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can reference other chapters, sections etc. throughout the book with the following syntax:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="03-chapters.html#cb17-1" aria-hidden="true" tabindex="-1"></a>Section \@ref(sec:cross-ref) is this section.</span></code></pre></div>
+<div class="showoutput">
+<p>Section <a href="03-chapters.html#sec:cross-ref">4.3</a> is this section.</p>
+</div>
 <p>When cross-referencing, you don’t need the # before <code>sec</code>. That’s only used to define the label.</p>
 
 </div>
@@ -270,7 +309,7 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="02-latex-conversion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro-markdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="04-figures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

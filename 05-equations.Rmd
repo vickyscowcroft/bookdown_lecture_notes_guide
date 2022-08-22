@@ -117,8 +117,4 @@ knitr::include_graphics("Images/normal-curve.png")
 Random tips {#sec:random-tips}
 ---------
 
-**Angstrom symbol:** Use `$\unicode{x0212B}$` rather than `$\AA$` to get $\unicode{x0212B}$
-
-Does the $\AA$ work now its defined with new command? YES
-
-Add `\newcommand{\AA}{\unicode{x0212B}}` to index.Rmd file before the main text starts.
+**Angstrom symbol:** Use `$\unicode{x0212B}$` rather than `$\AA$` to get $\unicode{x0212B}$. You can ddd `\newcommand{\AA}{\unicode{x0212B}}` to index.Rmd file before the main text starts to make `$\AA$` work.

@@ -1,0 +1,16 @@
+# Formatting output {#sec:style-formatting}
+
+## HTML output
+* editing css
+  - what files?
+  - where?
+  - how?
+
+## PDF output
+* latex stuff?
+  - latex templates?
+  - is this even a good idea?
+
+## Adding new styles
+* adding `div` things to the css
+* other stuff?

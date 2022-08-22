@@ -12,14 +12,17 @@ Example:
 ```markdown
 @2016Scowcroft showed that the SMC is a very elongated galaxy.
 ```
-**@2016Scowcroft showed that the SMC is a very elongated galaxy.**
-
+:::showoutput
+@2016Scowcroft showed that the SMC is a very elongated galaxy.
+:::
 For `\citep{}`, just put the citation in square brackets.
 
 ```markdown
 The first observations of SMC Cepheids were taken over 100 years ago [@1912Leavitt].
 ```
-**The first observations of SMC Cepheids were taken over 100 years ago [@1912Leavitt].**
+:::showoutput
+The first observations of SMC Cepheids were taken over 100 years ago [@1912Leavitt].
+:::
 
 ## Bibliography files {#sec:bib-files}
 
@@ -51,9 +54,9 @@ link-citations: yes
 
 The `bibliography:` line points to your bib file. The `csl:` line points to your style file. This book uses the ApJ style. Additional style files (e.g. PRL etc.) can be downloaded from [zotero](https://www.zotero.org/styles). `link-citations: yes` creates links from the citations in the text to the reference list at the end of the chapter. 
 
-Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file `99-references.Rmd`. It should contain the following text:
+Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file `99-references.Rmd`. **If you specify the ordering as described in Section \@ref(sec:specify-order) you need to make sure that the reference chapter is the last one in the list.** The references file should contain the following text:
 
-```markdown
+```{verbatim lang='r'}
 `r if (knitr::is_html_output()) '# References {-}'`
 ```
 This will create an **un-numbered** section at the end of the book called 'References' that has the full reference list.
