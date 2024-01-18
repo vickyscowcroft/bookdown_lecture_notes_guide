@@ -43,5 +43,5 @@ sec:bib-files
 sec:ref-style
 sec:publishing
 sec:create-book
-sec:gh-pages
 sec:moodle-pub
+sec:gh-pages

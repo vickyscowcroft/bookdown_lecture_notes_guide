@@ -1,0 +1,1064 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\newcommand{\angstrom}{\mbox{\normalfont\AA}}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Making Lecture Notes with Bookdown},
+  pdfauthor={Vicky Scowcroft},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Making Lecture Notes with Bookdown}
+\author{Vicky Scowcroft}
+\date{2024-01-18}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Introduction}\label{introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+This guide walks through how to create html lecture notes using \textbf{R}, \textbf{Markdown} and \textbf{Bookdown}. This format is preferred as LaTeX doesn't play nicely with accessibility tools like screen readers, especially for maths heavy content.
+
+\section*{System Requirements}\label{system-requirements}
+\addcontentsline{toc}{section}{System Requirements}
+
+To use bookdown, you will need to have R and R studio installed (perhaps R studio is not a requirement, but it makes things a lot easier). These can both be installed from the DDAT Self Service app on a Mac, or R can be downloaded directly from \href{https://cran.r-project.org/}{here} and R Studio from \href{https://rstudio.com/products/rstudio/download/}{here}. You will also need \href{https://pandoc.org/index.html}{\textbf{pandoc}}. This may already be installed on your system as part of the Anaconda distribution.
+
+The \href{https://bookdown.org/yihui/bookdown/}{\textbf{bookdown}} package can be installed from CRAN or Github:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{\# or the development version}
+\CommentTok{\# devtools::install\_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Caveat}\label{caveat}
+\addcontentsline{toc}{section}{Caveat}
+
+The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you're familiar with using the command line.
+
+\chapter{Getting started}\label{getting-started}
+
+The quickest way to get started is to use the bookdown demo as a template. \href{https://bookdown.org/yihui/bookdown/get-started.html}{This page} gives instructions for how to do this.
+
+The \href{https://bookdown.org/yihui/bookdown/}{bookdown: Authoring Books and Technical Documents with R Markdown} is the main documentation for bookdown. I won't repeat a lot of the information here.
+
+This guide will walk through the steps I used to convert my LaTeX lecture notes for PH40112 to the bookdown version \href{https://vickyscowcroft.github.io/PH40112_rmd/}{here}. The files used to create the PH40112 notes are available on \href{https://github.com/vickyscowcroft/PH40112_rmd}{github} and you're welcome to use those as a starting point.
+
+\chapter{Converting from LaTeX notes}\label{convert-latex}
+
+\section{Converting tex files}\label{sec:con-tex}
+
+If you already have LaTeX versions of your notes you can convert these to markdown using pandoc Pandoc won't create \emph{perfect} versions of your notes - you'll most likely have to do a bit of tweaking, but it gets most of the way there.
+
+You can convert a tex file to Rmd via the command
+
+\begin{verbatim}
+pandoc -f latex -t markdown input-tex.tex -o output-md.Rmd
+\end{verbatim}
+
+where \texttt{input-tex.tex} is the name of your tex file and \texttt{output-md.Rmd} is the name of your output Rmd file.
+
+Pandoc converts one tex file at a time. It doesn't understand how to process a ``master'' tex file with \texttt{input} or \texttt{insert} LaTeX commands. Each file will need to be processed separately.
+
+\section{Batch conversion}\label{batch-conversion}
+
+If you want to convert a batch of latex files you can script the process.
+
+\section{Tidying up the Rmd file}\label{tidying}
+
+Pandoc will have done most of the work in getting your tex file converted to markdown. However, depending on how complex the original file was, you may end up with some tidying to do.
+
+Things that typically will need fixing are:
+
+\begin{itemize}
+\tightlist
+\item
+  Section etc labels - if you used underscores in any of your latex labels you should change these to `-' in the markdown file. The underscores confuse markdown. Section \ref{sec:chapters} discusses sections, chapters, etc.
+\item
+  Figures - the default pandoc conversion is quite limited, so here we'll use a more adaptable figure environment. In practice its easiest to just copy-paste the example code in Chapter \ref{sec:figures} and edit the relavent bits.
+\item
+  Equations - the equations themselves should be fine, but if you want to have equation numbers you'll need to do some tidying. See Chapter \ref{sec:equations} for the syntax.
+\item
+  Tables - tables have a different format but it's pretty easy to convert a latex table using find/replace. See Chapter \ref{sec:tables}.
+\item
+  References - generally easy to fix. See Chapter \ref{sec:referencing}.
+\end{itemize}
+
+\section{Notes with gaps}\label{sec:gaps}
+
+\textbf{Think carefully about whether you want to provide notes with gaps.} While they may serve a purpose when the students have a hard-copy of the notes in a live lecture, they will most likely be using your notes on a screen this year.
+
+It is possible to create notes with gaps for things like equations etc for the students to fill in. To do this you need to add some extra code to the \texttt{index.Rmd} file:
+
+\begin{verbatim}
+```
+{r setup, include=FALSE}
+library(knitr)
+knit_engines$set(asis = function(options) {
+  if (options$echo && options$eval) knit_child(text = options$code)
+})
+```
+\end{verbatim}
+
+Then to ``hide'' e.g.~an equation but still keep the same numbering, edit your equation to the following format:
+
+\begin{verbatim}
+\begin{equation}
+```{asis, echo=FALSE}
+\Delta s^2 = \Delta x_{1}^{2} + \Delta x_{2}^{2}
+```
+\label{eq:dist01}
+\end{equation}
+\end{verbatim}
+
+Here the \texttt{asis} command and back-ticks wrap around \textbf{only} the equation itself, rather than the whole \texttt{equation} object. If you wrap the \texttt{asis} around the \texttt{\textbackslash{}begin\{equation\}} and \texttt{\textbackslash{}end\{equation\}} the equation numbering will disappear too.
+
+\section{\texorpdfstring{Using the \texttt{titlesec} package}{Using the titlesec package}}\label{sec:titlesec}
+
+If you're using the \texttt{titlesec} latex package you'll need to add an additional line to the yaml information on your index.Rmd file:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subparagraph}\SpecialCharTok{:}\NormalTok{ yes}
+\end{Highlighting}
+\end{Shaded}
+
+This should fix any compilation errors related to the \texttt{titlesec} package when you're producing a pdf output.
+
+Source: \href{https://stackoverflow.com/questions/42916124/not-able-to-use-titlesec-with-markdown-and-pandoc}{Stack Overflow}
+
+\chapter{A quick introduction to Markdown}\label{sec:intro-markdown}
+
+\section{What is Markdown?}\label{sec:what-is-markdown}
+
+\begin{quote}
+Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
+
+\href{https://www.markdownguide.org/getting-started/}{markdown.org}
+\end{quote}
+
+You can create markdown documents in any text editor that can create plain text files. For making things in bookdown, I prefer to use the \href{https://www.rstudio.com/,}{RStudio} IDE so I have access to the build tools while I'm writing.
+
+\section{Markdown syntax}\label{sec:markdown-syntax}
+
+You may already be familiar with some/all of the markdown syntax from using things like Moodle. A nice markdown cheat sheet can be found \href{https://en.support.wordpress.com/markdown-quick-reference/,}{here}.
+
+These are some of the features I use most frequently. In the following examples, the grey boxes with mono-spaced font show the markdown and the green boxes show the rendered output. The ``\textbackslash{}'' you see in the raw markdown is an escape character to render the \#, * etc. as symbols rather than a formatter.
+
+\subsection{Headings}\label{sec:heading-syntax}
+
+You can make different levels of headings using different numbers of \#'s at the start of a line
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# One \textbackslash{}\#  for a chapter }
+\FunctionTok{\#\# Two \textbackslash{}\#\textbackslash{}\# for a section }
+\FunctionTok{\#\#\# Three \textbackslash{}\#\textbackslash{}\#\textbackslash{}\# for a subsection}
+\end{Highlighting}
+\end{Shaded}
+
+Chapter 1 ~One \# for a chapter
+
+1.1 ~Two \#\# for a section
+
+1.1.1 ~Three \#\#\# for a subsection
+
+More details about chapter and section headings is in Section \ref{sec:chapters}.\footnote{If you look at the source code for this section you'll see that the code to display the headings example doesn't match the markdown. This was a hacky way to get it to display correctly without messing up the section numbering If you find a solution for how to reset section numbers please let me know, because I've spent far too long on Stack Overflow today.}
+
+\subsection{Text formatting}\label{sec:text-formatting}
+
+You can make text \emph{italic} using one * or \_ at each end of the text. Bold uses two of each.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{make italics using \_one underscore\_ or *one star* at each end}
+\NormalTok{make bold using \_\_two underscores\_\_ or **two stars** at each end}
+\end{Highlighting}
+\end{Shaded}
+
+make italics using \emph{one underscore} or \emph{one star} at each end
+
+make bold using \textbf{two underscores} or \textbf{two stars} at each end
+
+\subsection{Lists}\label{sec:lists}
+
+Making lists is easy too!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{*   }\NormalTok{Bulleted lists}
+\SpecialStringTok{*   }\NormalTok{are made by putting}
+\SpecialStringTok{*   }\NormalTok{a }\SpecialCharTok{\textbackslash{}*}\NormalTok{ (asterix) }
+\SpecialStringTok{{-}   }\NormalTok{or a dash ({-})}
+\SpecialStringTok{{-}   }\NormalTok{at the start of the line.}
+\SpecialStringTok{{-}   }\NormalTok{You don\textquotesingle{}t even need to be consistent.}
+\SpecialStringTok{    {-} }\NormalTok{You can make a sub{-}list by adding 4 spaces before the {-}}
+\SpecialStringTok{        {-} }\NormalTok{but I\textquotesingle{}m not sure how many levels this goes to...}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Bulleted lists
+\item
+  are made by putting
+\item
+  a * (asterix)
+\item
+  or a dash (-)
+\item
+  at the start of the line.
+\item
+  You don't even need to be consistent.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    You can make a sub-list by adding 4 spaces before the -
+
+    \begin{itemize}
+    \tightlist
+    \item
+      but I'm not sure how many levels this goes to\ldots{}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{1. }\NormalTok{To make a numbered list}
+\SpecialStringTok{2. }\NormalTok{you just number things}
+\SpecialStringTok{3. }\NormalTok{i.e. 1., 2., at the start of a line}
+\SpecialStringTok{7. }\NormalTok{and it doesn\textquotesingle{}t matter}
+\SpecialStringTok{4. }\NormalTok{if your numbers are in the right order}
+\SpecialStringTok{1. }\NormalTok{or if you keep using}
+\SpecialStringTok{1. }\NormalTok{the same number}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  To make a numbered list
+\item
+  you just number things
+\item
+  i.e.~1., 2., at the start of a line
+\item
+  and it doesn't matter
+\item
+  if your numbers are in the right order
+\item
+  or if you keep using
+\item
+  the same number
+\end{enumerate}
+
+You can also do
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a) Alphabetical lists}
+\NormalTok{a) using lower case letters,}
+\NormalTok{A) or using}
+\NormalTok{A) upper case letters}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Alphabetical lists
+\item
+  using lower case letters,
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi})}
+\tightlist
+\item
+  or using
+\item
+  upper case letters
+\end{enumerate}
+
+or you can
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{1. }\NormalTok{mix all of them together}
+\NormalTok{    a) if that\textquotesingle{}s how}
+\SpecialStringTok{        {-} }\NormalTok{you like to spend}
+\SpecialStringTok{        {-} }\NormalTok{your time. }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  mix all of them together
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii})}
+  \tightlist
+  \item
+    if that's how
+
+    \begin{itemize}
+    \tightlist
+    \item
+      you like to spend
+    \item
+      your time.
+    \end{itemize}
+  \end{enumerate}
+\end{enumerate}
+
+\chapter{Chapters, sections, etc.}\label{sec:chapters}
+
+\section{File Structure}\label{sec:file-structure}
+
+Bookdown organises your notes into a book. The main page you see when you open a bookdown page is the \texttt{index.Rmd} file.
+
+Each chapter in the book has it's own markdown file. There are two options for defining the order of your chapters: using numbers in the file name, or specifying the order in the \texttt{\_bookdown.yml} file.
+
+\subsection{\texorpdfstring{Specifying the order in \texttt{\_bookdown.yml}}{Specifying the order in \_bookdown.yml}}\label{sec:specify-order}
+
+The easiest way to organise chapters is to specify the order in the \texttt{\_bookdown.yml} file. For this method you don't need to have the numbers in the file name, and it's much easier to rearrange things. To specify the order, add an \texttt{rmd\_files} section to the \texttt{\_bookdown.yml} file and put the file names in the order you want them to appear:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{rmd\_files:}
+\SpecialStringTok{  {-} }\NormalTok{index.Rmd}
+\SpecialStringTok{  {-} }\NormalTok{01{-}intro.Rmd}
+\SpecialStringTok{  {-} }\NormalTok{02{-}latex{-}conversion.Rmd}
+\SpecialStringTok{  {-} }\NormalTok{intro{-}markdown.Rmd}
+\SpecialStringTok{  {-} }\NormalTok{03{-}chapters.Rmd}
+\NormalTok{  ...}
+\SpecialStringTok{  {-} }\NormalTok{99{-}references.Rmd}
+\end{Highlighting}
+\end{Shaded}
+
+You'll see here that the \texttt{intro-markdown.Rmd} chapter doesn't have a number at the start. You don't need them for this method; bookdown will ignore the numbers and render things in your listed order. More details (that you probably won't need) about how this works are \href{https://bookdown.org/yihui/bookdown/usage.html}{here}. \textbf{Your references chapter should be the last one, otherwise it doesn't work properly.}
+
+\subsection{Order by filename}\label{sec:order-filename}
+
+This is the old method of ordering chapters. If you start from the bookdown template (described in Section \ref{getting-started}), you'll see that the template files all start with a number. Bookdown will put the chapters in numerical order. For example, the following file names would order the chapters as they are in this book:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{index.Rmd}
+\NormalTok{01{-}intro.Rmd}
+\NormalTok{02{-}latex{-}conversion.Rmd}
+\NormalTok{03{-}intro{-}markdown.Rmd}
+\NormalTok{04{-}chapters.Rmd}
+\NormalTok{... etc}
+\end{Highlighting}
+\end{Shaded}
+
+I find this works reasonably well if you know beforehand what order you're going to put things in, but it quickly gets annoying if you decide later on that you want to add a chapter between two existing ones (you'd have to rename all the subsequent chapters), so I recommend using the method in Section \ref{sec:specify-order}.
+
+\section{Section labels}\label{sec:sec-labels}
+
+The chapter title and label are given in the first line of the file.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Chapters, sections, etc. \{\#sec:chapters\}}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{\#} at the start of the line denotes a chapter heading (see Section \ref{sec:heading-syntax}). The label is given in \texttt{\{\#sec:chapters\}}. I think bookdown can create its own labels from the chapter/section heading, but it's easier to cross-reference if you set them yourself.
+
+You can make sections using two \# at the start of the line:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\#\# Section labels \{\#sec:sec{-}lables\}}
+\end{Highlighting}
+\end{Shaded}
+
+Note that the \texttt{\{\#sec:label\}} syntax is still the same - you don't need to say whether it's a chapter, section, subsection etc.
+
+Subsections are done similarly, with three \# at the start of the line.
+
+You can change the section heading from ``Chapter'' to e.g.~``Section'' by editing the following in the \texttt{\_bookdown.yml} file:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{language:}
+\NormalTok{  ui:}
+\NormalTok{    chapter\_name: "Section "}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Cross referencing}\label{sec:cross-ref}
+
+You can reference other chapters, sections etc. throughout the book with the following syntax:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Section \textbackslash{}@ref(sec:cross{-}ref) is this section.}
+\end{Highlighting}
+\end{Shaded}
+
+Section \ref{sec:cross-ref} is this section.
+
+When cross-referencing, you don't need the \# before \texttt{sec}. That's only used to define the label.
+
+\chapter{Figures}\label{sec:figures}
+
+\section{Adding figures}\label{sec:add-figs}
+
+Figures and captions can be included, but the syntax is quite different to LaTeX.
+
+Assuming that you would add a figure to a LaTeX document with the following code:
+
+\begin{verbatim}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.7\textwidth]{Images/ho-tension.png}
+\caption{This is a figure caption.}
+\label{fig:ho-plot}
+\end{centering}
+\end{figure}
+\end{verbatim}
+
+To include the figure in markdown the syntax is as follows:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\AttributeTok{\{r echo=FALSE, ho{-}plot, out.width=\textquotesingle{}70\%\textquotesingle{}, fig.show=\textquotesingle{}hold\textquotesingle{}, fig.cap="This is a figure caption."\}}
+\AttributeTok{knitr::include\_graphics("Images/ho{-}tension.png")}
+\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\includegraphics[width=0.7\linewidth]{Images/ho-tension} \caption{This is a figure caption.}\label{fig:ho-plot}
+\end{figure}
+
+Important parts of this command:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{echo=FALSE} prevents the code being used to display the figure being shown.
+\item
+  \texttt{ho-plot} is your figure label.
+\item
+  \texttt{out-width} is the output width of the figure.
+\item
+  \texttt{fig.cap} is the figure caption.
+\item
+  \texttt{knitr::include\_graphics} gives the location of the image file.
+\end{itemize}
+
+\section{Figure captions}\label{sec:fig-captions}
+
+Figure captions are controlled by the \texttt{fig.cap} setting. Your caption should be inside the double quotes. Remember to use \textbackslash'' to escape any '' characters you may use inside your caption.
+
+You can include cross-references and citations inside figure captions. See Sections \ref{sec:fig-nos}, \ref{sec:cross-ref-eqs}, and \ref{sec:tab-syntax} for how to label and cross-reference figures, equations, and tables. Citations are covered in Section \ref{sec:add-cite}.
+
+\section{Figure numbering and referencing}\label{sec:fig-nos}
+
+Figures with labels and captions are numbered according to the section (e.g.~Fig \ref{fig:ho-plot} in this case).
+
+To reference a figure use the syntax
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}@ref(fig:label)}
+\end{Highlighting}
+\end{Shaded}
+
+where \texttt{fig:label} would be \texttt{fig:ho-plot} in this case.
+
+You can cross reference between sections/chapters, so make sure to use unique figure labels.
+
+\chapter{Equations}\label{sec:equations}
+
+\section{Equation syntax}\label{sec:add-eqs}
+
+The syntax for equations is similar (but not identical) to LaTeX.
+
+LaTeX code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{equation\}}
+\NormalTok{\textbackslash{}label\{eqn:friedman\}}
+\NormalTok{    \textbackslash{}left(\textbackslash{}dfrac\{\textbackslash{}dot\{a\}\}\{a\}\textbackslash{}right)\^{}2 + \textbackslash{}dfrac\{kc\^{}2\}\{a\^{}2\} = \textbackslash{}dfrac\{8\textbackslash{}pi G\}\{3\}\textbackslash{}rho }
+\NormalTok{\textbackslash{}end\{equation\}}
+\end{Highlighting}
+\end{Shaded}
+
+Rmd code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{equation\}}
+\NormalTok{    \textbackslash{}left(\textbackslash{}dfrac\{\textbackslash{}dot\{a\}\}\{a\}\textbackslash{}right)\^{}2 + \textbackslash{}dfrac\{kc\^{}2\}\{a\^{}2\} = \textbackslash{}dfrac\{8\textbackslash{}pi G\}\{3\}\textbackslash{}rho}
+\NormalTok{(}\SpecialCharTok{\textbackslash{}\#}\NormalTok{eq:friedman)}
+\NormalTok{\textbackslash{}end\{equation\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{equation}
+    \left(\dfrac{\dot{a}}{a}\right)^2 + \dfrac{kc^2}{a^2} = \dfrac{8\pi G}{3}\rho
+\label{eq:friedman}
+\end{equation}
+
+You can also use the latex
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{align\}}
+\NormalTok{...}
+\NormalTok{\textbackslash{}end\{align\}}
+\end{Highlighting}
+\end{Shaded}
+
+format for equations. If you're converting from LaTeX to markdown with pandoc it may convert equations to
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{aligned\}}
+\NormalTok{...}
+\NormalTok{\textbackslash{}end\{aligned\}}
+\end{Highlighting}
+\end{Shaded}
+
+which also works.
+
+\textbf{LaTeX subequations and intertext}
+
+I haven't been able to get subequations and intertext to work in bookdown. LaTeX equations of the form
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{subequations\}\textbackslash{}begin\{align\}}
+\NormalTok{\textbackslash{}vec\{E\} \&= \textbackslash{}left( x,t \textbackslash{}right)}
+\NormalTok{\textbackslash{}intertext\{and in 3 dimensional space as\}}
+\NormalTok{\textbackslash{}vec\{E\} \&= \textbackslash{}left( x,y,z,t \textbackslash{}right)}
+\NormalTok{\textbackslash{}end\{align\}\textbackslash{}end\{subequations\}}
+\end{Highlighting}
+\end{Shaded}
+
+should be written as separate equations with the text between written outside the equation environment, e.g.~
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{align\}}
+\NormalTok{\textbackslash{}vec\{E\} \&= \textbackslash{}left( x,t \textbackslash{}right)}
+\NormalTok{\textbackslash{}end\{align\}}
+\NormalTok{and in 3 dimensional space as}
+\NormalTok{\textbackslash{}begin\{align\}}
+\NormalTok{\textbackslash{}vec\{E\} \&= \textbackslash{}left( x,y,z,t \textbackslash{}right)}
+\NormalTok{\textbackslash{}end\{align\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Equation numbers and labels}\label{sec:eq-nos-labels}
+
+The syntax for the maths is the same, but the labelling changes. To label and equation add
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(}\SpecialCharTok{\textbackslash{}\#}\NormalTok{eq:label)}
+\end{Highlighting}
+\end{Shaded}
+
+just before \texttt{end\{equation\}}. Only equations with labels will be numbered. If you don't want numbers then don't label the equations, but numbers are helpful.
+
+\section{Cross referencing equations}\label{sec:cross-ref-eqs}
+
+The syntax for cross-referencing equations is similar to sections and figures, i.e.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Eqn. \textbackslash{}@ref(eq:friedman) is the Friedman equation}
+\end{Highlighting}
+\end{Shaded}
+
+will give ``Eqn. \eqref{eq:friedman} is the Friedman equation''.
+
+\section{Maths in captions}\label{sec:maths-captions}
+
+R markdown gets a bit finicky about maths/symbols in captions. You may need to use two backslashes to escape symbols in figure captions.
+
+Example of a finicky caption:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\InformationTok{\{r echo=FALSE, gaussian, out.width=\textquotesingle{}100\%\textquotesingle{}, fig.show=\textquotesingle{}hold\textquotesingle{}, fig.cap="Gaussian uncertainties. }
+\InformationTok{If we measure a value $x$ for a variable that has a true value $\textbackslash{}\textbackslash{}langle x \textbackslash{}\textbackslash{}rangle$ and}
+\InformationTok{uncertainty $\textbackslash{}\textbackslash{}sigma$, there is a 68.3\% probability that $x$ will be within }
+\InformationTok{$\textbackslash{}\textbackslash{}langle x \textbackslash{}\textbackslash{}rangle \textbackslash{}\textbackslash{}pm 1\textbackslash{}\textbackslash{}sigma$. There\textquotesingle{}s a 95.4\% probability of $x$ being within }
+\InformationTok{$\textbackslash{}\textbackslash{}langle x \textbackslash{}\textbackslash{}rangle \textbackslash{}\textbackslash{}pm 2\textbackslash{}\textbackslash{}sigma$, and 99.7\% of $x$ being within  }
+\InformationTok{$\textbackslash{}\textbackslash{}langle x \textbackslash{}\textbackslash{}rangle \textbackslash{}\textbackslash{}pm 3\textbackslash{}\textbackslash{}sigma$."\}}
+\InformationTok{knitr::include\_graphics("Images/normal{-}curve.png")}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbackslash begin\{figure\}
+\includegraphics[width=1\linewidth]{Images/normal-curve} \textbackslash caption\{Gaussian uncertainties. If we measure a value \(x\) for a variable that has a true value \(\langle x \rangle\) and uncertainty \(\sigma\), there is a 68.3\% probability that \(x\) will be within \(\langle x \rangle \pm 1\sigma\). There's a 95.4\% probability of \(x\) being within \(\langle x \rangle \pm 2\sigma\), and 99.7\% of \(x\) being within \(\langle x \rangle \pm 3\sigma\).\}\label{fig:gaussian}
+\textbackslash end\{figure\}
+
+\section{Random tips}\label{sec:random-tips}
+
+\textbf{Angstrom symbol:} Use \texttt{\$\textbackslash{}unicode\{x0212B\}\$} rather than \texttt{\$\textbackslash{}AA\$} to get \(\unicode{x0212B}\). If you're outputting to pdf via latex then you might get an error/missing symbol.
+
+\chapter{Tables}\label{sec:tables}
+
+\section{Markdown table generator}\label{sec:md-tab-gen}
+
+If you're making a new table from scratch then the \hyperref[sec:md-tab-gen]{Markdown Table Generator} (\url{https://www.tablesgenerator.com/markdown_tables}) is a handy tool.
+
+\section{Table syntax}\label{sec:tab-syntax}
+
+Tables are a bit more simple in markdown than in latex. I haven't played around with complex tables much, but it's straightforward to make a basic one.
+
+Example table:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{Table:}\CommentTok{ (\textbackslash{}\#tab:planck{-}model) Base $\textbackslash{}Lambda$CDM cosmological parameters from @Planck18. }
+
+\PreprocessorTok{|}\NormalTok{ Parameter }\PreprocessorTok{|}\NormalTok{ Best fit value     }\PreprocessorTok{|}\NormalTok{ Uncertainty }\PreprocessorTok{|}
+\PreprocessorTok{|:{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}|{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}:|{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}:|}
+\PreprocessorTok{|}\NormalTok{ $\textbackslash{}Omega\_\{b\}h\^{}2$ }\PreprocessorTok{|}\NormalTok{ 0.02233 }\PreprocessorTok{|}\NormalTok{ 0.00015 }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ $\textbackslash{}Omega\_\{c\}h\^{}2$ }\PreprocessorTok{|}\NormalTok{ 0.1198 }\PreprocessorTok{|}\NormalTok{ 0.0012 }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ $\textbackslash{}Omega\_\{m\}h\^{}2$ }\PreprocessorTok{|}\NormalTok{ 0.1428 }\PreprocessorTok{|}\NormalTok{ 0.0011 }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ $H\_0$ }\PreprocessorTok{|}\NormalTok{ 67.37 }\PreprocessorTok{|}\NormalTok{ 0.54 }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ $\textbackslash{}Omega\_\{m\}$ }\PreprocessorTok{|}\NormalTok{ 0.3147 }\PreprocessorTok{|}\NormalTok{ 0.0074 }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ Age (Gyr) }\PreprocessorTok{|}\NormalTok{ 13.801 }\PreprocessorTok{|}\NormalTok{ 0.024 }\PreprocessorTok{|} 
+\PreprocessorTok{|}\NormalTok{ $z\_\{re\}$ }\PreprocessorTok{|}\NormalTok{ 7.64 }\PreprocessorTok{|}\NormalTok{  0.74 }\PreprocessorTok{|} 
+\PreprocessorTok{|}\NormalTok{ 100$\textbackslash{}theta\_\{*\}$ }\PreprocessorTok{|}\NormalTok{ 1.04108 }\PreprocessorTok{|}\NormalTok{ 0.00031 }\PreprocessorTok{|} 
+\end{Highlighting}
+\end{Shaded}
+
+Important things about tables:
+
+\begin{itemize}
+\tightlist
+\item
+  Captions go \textbf{at the top} and should include the label definition.
+\item
+  Label syntax is \texttt{Table:\ (\textbackslash{}\#tab:table-name)}
+\item
+  Columns are delimited by \texttt{\textbar{}}
+\item
+  Justification given by the colons and dashes in the line under the header row.
+\end{itemize}
+
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:planck-model} Base \(\Lambda\)CDM cosmological parameters from \citet{Planck18}.}\tabularnewline
+\toprule\noalign{}
+Parameter & Best fit value & Uncertainty \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Parameter & Best fit value & Uncertainty \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\Omega_{b}h^2\) & 0.02233 & 0.00015 \\
+\(\Omega_{c}h^2\) & 0.1198 & 0.0012 \\
+\(\Omega_{m}h^2\) & 0.1428 & 0.0011 \\
+\(H_0\) & 67.37 & 0.54 \\
+\(\Omega_{m}\) & 0.3147 & 0.0074 \\
+Age (Gyr) & 13.801 & 0.024 \\
+\(z_{re}\) & 7.64 & 0.74 \\
+100\(\theta_{*}\) & 1.04108 & 0.00031 \\
+\end{longtable}
+
+\section{Fancy tables}\label{sec:fancy-tables}
+
+The \texttt{kableExtra} package is useful if you want to make fancier tables with things like grouped columns. The documentation is \href{https://haozhu233.github.io/kableExtra/bookdown/index.html}{here} (it's a bit sparse\ldots) but I'm including an example here to save you the time googling.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(kableExtra)}
+\DocumentationTok{\#\# read the table in from a file}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"lj\_table.csv"}\NormalTok{, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{row.names =} \StringTok{"Element"}\NormalTok{)}
+\DocumentationTok{\#\# changing the names of my column headings. R starts}
+\DocumentationTok{\#\# counting at 1}
+\FunctionTok{names}\NormalTok{(df)[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\StringTok{"$10\^{}\{{-}21\}$ J"}\NormalTok{)}
+\FunctionTok{names}\NormalTok{(df)[}\DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\StringTok{"meV"}\NormalTok{)}
+\FunctionTok{names}\NormalTok{(df)[}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\StringTok{"$10\^{}\{{-}10\}$ m"}\NormalTok{)}
+\DocumentationTok{\#\# fancy formatting}
+\NormalTok{df }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{kbl}\NormalTok{(}\AttributeTok{caption =} \StringTok{"Lennerd{-}Jones potentials, apparently. Shamelessly stolen from Sloan\textquotesingle{}s lecture notes."}\NormalTok{,}
+        \AttributeTok{align =} \FunctionTok{c}\NormalTok{(}\StringTok{"l"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\StringTok{"c"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \DocumentationTok{\#\# only a little table, so stopping it being the full}
+    \DocumentationTok{\#\# width of the page}
+\FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{full\_width =}\NormalTok{ F) }\SpecialCharTok{\%\textgreater{}\%}
+    \DocumentationTok{\#\# Grouping some columns}
+\FunctionTok{add\_header\_above}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\AttributeTok{Element =} \DecValTok{1}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{$}\SpecialCharTok{\textbackslash{}\textbackslash{}}\AttributeTok{epsilon$}\StringTok{\textasciigrave{}} \OtherTok{=} \DecValTok{2}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{$}\SpecialCharTok{\textbackslash{}\textbackslash{}}\AttributeTok{sigma$}\StringTok{\textasciigrave{}} \OtherTok{=} \DecValTok{1}\NormalTok{,}
+    \StringTok{\textasciigrave{}}\AttributeTok{$r\_0$}\StringTok{\textasciigrave{}} \OtherTok{=} \DecValTok{1}\NormalTok{), }\AttributeTok{align =} \FunctionTok{c}\NormalTok{(}\StringTok{"l"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\StringTok{"c"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Lennerd-Jones potentials, apparently. Shamelessly stolen from Sloan's lecture notes.}
+\centering
+\begin{tabular}[t]{l|l|c|c|c}
+\hline
+\multicolumn{1}{l|}{Element} & \multicolumn{2}{c|}{\$\textbackslash{}epsilon\$} & \multicolumn{1}{c|}{\$\textbackslash{}sigma\$} & \multicolumn{1}{c}{\$r\_0\$} \\
+\cline{1-1} \cline{2-3} \cline{4-4} \cline{5-5}
+  & \$10\textasciicircum{}\{-21\}\$ J & meV & \$10\textasciicircum{}\{-10\}\$ m & Å\\
+\hline
+He & 0.14 & 0.9 & 2.56 & 3.12\\
+\hline
+Ne & 0.49 & 3.1 & 2.75 & 3.36\\
+\hline
+Ar & 1.70 & 10.6 & 3.40 & 4.15\\
+\hline
+\end{tabular}
+\end{table}
+
+To get this to show your table, include the code above inside an \texttt{r} code chunk. The \texttt{echo=FALSE} part hides the code but still displays the result (which is probably what you want).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\AttributeTok{\{r echo=FALSE\}}
+
+\AttributeTok{\#\# table code goes here}
+
+\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\chapter{Referencing}\label{sec:referencing}
+
+\section{Adding citations}\label{sec:add-cite}
+
+You can reference publications etc using the following syntax:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@bibcode }
+\end{Highlighting}
+\end{Shaded}
+
+where \texttt{bibcode} is the bibcode for the entry in your bib file (see Sec. \ref{sec:bib-files}). This will give the equivalent of the LaTeX \texttt{\textbackslash{}citet\{\}} command.
+Example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@2016Scowcroft showed that the SMC is a very elongated galaxy.}
+\end{Highlighting}
+\end{Shaded}
+
+\citet{2016Scowcroft} showed that the SMC is a very elongated galaxy.
+
+For \texttt{\textbackslash{}citep\{\}}, just put the citation in square brackets.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{The first observations of SMC Cepheids were taken over 100 years ago }\CommentTok{[}\OtherTok{@1912Leavitt}\CommentTok{]}\NormalTok{.}
+\end{Highlighting}
+\end{Shaded}
+
+The first observations of SMC Cepheids were taken over 100 years ago \citep{1912Leavitt}.
+
+\section{Bibliography files}\label{sec:bib-files}
+
+Assuming you're using natbib style references you can pass the same bib file to bookdown.
+
+Example bib file entry:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@ARTICLE\{1912Leavitt,}
+\NormalTok{       author = \{\{Leavitt\}, Henrietta S. and \{Pickering\}, Edward C.\},}
+\NormalTok{        title = "\{Periods of 25 Variable Stars in the Small Magellanic Cloud.\}",}
+\NormalTok{      journal = \{Harvard College Observatory Circular\},}
+\NormalTok{         year = "1912",}
+\NormalTok{       volume = \{173\},}
+\NormalTok{        pages = \{1\},}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Reference style}\label{sec:ref-style}
+
+The referencing style is controlled in the \texttt{index.Rmd} file.
+
+At the top of this file you'll find the section that defines things like the book title, output format etc. The following lines are where you define the bib file names and referencing format. You can have multiple bib files.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{bibliography:}\CommentTok{ [book.bib, packages.bib]}
+\AnnotationTok{csl:}\CommentTok{ apj.csl}
+\AnnotationTok{link{-}citations:}\CommentTok{ yes}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{bibliography:} line points to your bib file. The \texttt{csl:} line points to your style file. This book uses the ApJ style. Additional style files (e.g.~PRL etc.) can be downloaded from \href{https://www.zotero.org/styles}{zotero}. \texttt{link-citations:\ yes} creates links from the citations in the text to the reference list at the end of the chapter.
+
+Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file \texttt{99-references.Rmd}. \textbf{If you specify the ordering as described in Section \ref{sec:specify-order} you need to make sure that the reference chapter is the last one in the list.} The references file should contain the following text:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{\textasciigrave{}}\AttributeTok{r if (knitr::is\_html\_output()) \textquotesingle{}\# References \{{-}\}\textquotesingle{}}\StringTok{\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+This will create an \textbf{un-numbered} section at the end of the book called `References' that has the full reference list.
+
+\chapter{Publishing}\label{sec:publishing}
+
+\section{Compiling the book}\label{sec:create-book}
+
+To compile the book, press the `Build Book' button in R Studio. You may need to press the arrow on the button and select \texttt{bookdown::gitbook} the first time you do this.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Images/build-book} \caption{Build book button}\label{fig:build-book}
+\end{figure}
+
+This compiles all the markdown to create html files for the book. The output files should be in the \texttt{\_book} folder.
+
+\section{Publishing with github pages}\label{sec:gh-pages}
+
+I use \href{pages.github.com}{github pages} to publish my notes.
+
+The following assumes you are already using github to store your files. \textbf{TODO: Can add instructions for this part if needed}.
+
+Once you have your book on github, create a new branch called \texttt{gh-pages}. This should enable the gh-pages setting in the repo.
+
+Now clone the gh-pages branch into a directory called \texttt{book-output}
+
+\begin{verbatim}
+git clone -b gh-pages $repo-path book-output
+\end{verbatim}
+
+where \texttt{\$repo-path} is the location of the repository on github, e.g.~\texttt{https://github.com/your\_user\_name/lecture\_notes.git}
+
+Then you want to copy all the output files into this directory and push it to the gh-pages branch.
+
+\begin{verbatim}
+cd book-output
+cp -r ../_book/* ./
+git add --all *
+git commit -m "Update the book" || true
+git push -q origin gh-pages
+\end{verbatim}
+
+Your pretty lecture notes should now be online! You should find them at github\_username.github.io/repo\_name - or check the setting page of the repository. The address will be given in the github pages section.
+
+\section{Publishing to Moodle}\label{sec:moodle-pub}
+
+To be written soon\ldots.
+
+\chapter*{Things I should probably add to this guide at some point}\label{sec:todo}
+\addcontentsline{toc}{chapter}{Things I should probably add to this guide at some point}
+
+\section*{HTML output}\label{html-output}
+
+\begin{itemize}
+\tightlist
+\item
+  editing css
+
+  \begin{itemize}
+  \tightlist
+  \item
+    what files?
+  \item
+    where?
+  \item
+    how?
+  \end{itemize}
+\end{itemize}
+
+\section*{PDF output}\label{pdf-output}
+
+\begin{itemize}
+\tightlist
+\item
+  latex stuff?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    latex templates?
+  \item
+    is this even a good idea?
+  \end{itemize}
+\end{itemize}
+
+\section*{Adding new styles}\label{adding-new-styles}
+
+\begin{itemize}
+\tightlist
+\item
+  adding \texttt{div} things to the css
+\item
+  other stuff?
+\end{itemize}
+
+\section*{Publishing to mooodle}\label{publishing-to-mooodle}
+
+\begin{itemize}
+\tightlist
+\item
+  quick way to update individual files.
+\end{itemize}
+
+Suggestions for things that should be added are welcome.
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

@@ -15,7 +15,9 @@ link-citations: yes
 github-repo: vickyscowcroft/bookdown_lecture_notes_guide
 description: "Guide for creating html lecture notes using Bookdown"
 ---
-\newcommand{\AA}{\unicode{x0212B}}
+
+
+
 # Introduction {-}
 
 This guide walks through how to create html lecture notes using **R**, **Markdown** and **Bookdown**. This format is preferred as LaTeX doesn't play nicely with accessibility tools like screen readers, especially for maths heavy content. 
@@ -35,7 +37,7 @@ install.packages("bookdown")
 
 ## Caveat {-}
 
-The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2022.07.1 and pandoc version 2.18 (updated August 2022). This guide also assumes that you're familiar with using the command line.
+The instructions in this guide are what worked for me, on a Mac using R version 4.2.1, R Studio version 2023.12.0+369 and pandoc version  3.1.11.1 (updated Jan 2024). This guide also assumes that you're familiar with using the command line.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

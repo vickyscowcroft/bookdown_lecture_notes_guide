@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown</title>
   <meta name="description" content="Guide for creating html lecture notes using Bookdown" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 A quick introduction to Markdown | Making Lecture Notes with Bookdown" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2022-08-22" />
+<meta name="date" content="2024-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,7 +58,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -94,7 +94,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -107,7 +107,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -122,10 +122,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -223,8 +228,8 @@ div.csl-indent {
 <li class="chapter" data-level="9" data-path="08-publishing.html"><a href="08-publishing.html"><i class="fa fa-check"></i><b>9</b> Publishing</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="08-publishing.html"><a href="08-publishing.html#sec:create-book"><i class="fa fa-check"></i><b>9.1</b> Compiling the book</a></li>
-<li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.2</b> Publishing with github pages</a></li>
-<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.3</b> Publishing to Moodle</a></li>
+<li class="chapter" data-level="9.2" data-path="08-publishing.html"><a href="08-publishing.html#sec:moodle-pub"><i class="fa fa-check"></i><b>9.2</b> Publishing to Moodle</a></li>
+<li class="chapter" data-level="9.3" data-path="08-publishing.html"><a href="08-publishing.html#sec:gh-pages"><i class="fa fa-check"></i><b>9.3</b> Publishing with github pages</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="inprogress.html"><a href="inprogress.html"><i class="fa fa-check"></i>Things I should probably add to this guide at some point</a></li>
 <li class="chapter" data-level="" data-path="99-references.html"><a href="99-references.html"><i class="fa fa-check"></i>References</a></li>
@@ -265,9 +270,9 @@ div.csl-indent {
 <div id="sec:heading-syntax" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Headings<a href="intro-markdown.html#sec:heading-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can make different levels of headings using different numbers of #’s at the start of a line</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="intro-markdown.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># One \#  for a chapter </span></span>
-<span id="cb6-2"><a href="intro-markdown.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Two \#\# for a section </span></span>
-<span id="cb6-3"><a href="intro-markdown.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Three \#\#\# for a subsection</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="intro-markdown.html#cb6-1" tabindex="-1"></a><span class="fu"># One \#  for a chapter </span></span>
+<span id="cb6-2"><a href="intro-markdown.html#cb6-2" tabindex="-1"></a><span class="fu">## Two \#\# for a section </span></span>
+<span id="cb6-3"><a href="intro-markdown.html#cb6-3" tabindex="-1"></a><span class="fu">### Three \#\#\# for a subsection</span></span></code></pre></div>
 <div class="showoutput">
 <div class="showh1">
 <p>Chapter 1  One # for a chapter</p>
@@ -284,8 +289,8 @@ div.csl-indent {
 <div id="sec:text-formatting" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Text formatting<a href="intro-markdown.html#sec:text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can make text <em>italic</em> using one * or _ at each end of the text. Bold uses two of each.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="intro-markdown.html#cb7-1" aria-hidden="true" tabindex="-1"></a>make italics using _one underscore_ or *one star* at each end</span>
-<span id="cb7-2"><a href="intro-markdown.html#cb7-2" aria-hidden="true" tabindex="-1"></a>make bold using __two underscores__ or **two stars** at each end</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="intro-markdown.html#cb7-1" tabindex="-1"></a>make italics using _one underscore_ or *one star* at each end</span>
+<span id="cb7-2"><a href="intro-markdown.html#cb7-2" tabindex="-1"></a>make bold using __two underscores__ or **two stars** at each end</span></code></pre></div>
 <div class="showoutput">
 <p>make italics using <em>one underscore</em> or <em>one star</em> at each end</p>
 <p>make bold using <strong>two underscores</strong> or <strong>two stars</strong> at each end</p>
@@ -294,14 +299,14 @@ div.csl-indent {
 <div id="sec:lists" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Lists<a href="intro-markdown.html#sec:lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Making lists is easy too!</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="intro-markdown.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>Bulleted lists</span>
-<span id="cb8-2"><a href="intro-markdown.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>are made by putting</span>
-<span id="cb8-3"><a href="intro-markdown.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>a <span class="sc">\*</span> (asterix) </span>
-<span id="cb8-4"><a href="intro-markdown.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>or a dash (-)</span>
-<span id="cb8-5"><a href="intro-markdown.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>at the start of the line.</span>
-<span id="cb8-6"><a href="intro-markdown.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>You don&#39;t even need to be consistent.</span>
-<span id="cb8-7"><a href="intro-markdown.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>You can make a sub-list by adding 4 spaces before the -</span>
-<span id="cb8-8"><a href="intro-markdown.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>but I&#39;m not sure how many levels this goes to...</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="intro-markdown.html#cb8-1" tabindex="-1"></a><span class="ss">*   </span>Bulleted lists</span>
+<span id="cb8-2"><a href="intro-markdown.html#cb8-2" tabindex="-1"></a><span class="ss">*   </span>are made by putting</span>
+<span id="cb8-3"><a href="intro-markdown.html#cb8-3" tabindex="-1"></a><span class="ss">*   </span>a <span class="sc">\*</span> (asterix) </span>
+<span id="cb8-4"><a href="intro-markdown.html#cb8-4" tabindex="-1"></a><span class="ss">-   </span>or a dash (-)</span>
+<span id="cb8-5"><a href="intro-markdown.html#cb8-5" tabindex="-1"></a><span class="ss">-   </span>at the start of the line.</span>
+<span id="cb8-6"><a href="intro-markdown.html#cb8-6" tabindex="-1"></a><span class="ss">-   </span>You don&#39;t even need to be consistent.</span>
+<span id="cb8-7"><a href="intro-markdown.html#cb8-7" tabindex="-1"></a><span class="ss">    - </span>You can make a sub-list by adding 4 spaces before the -</span>
+<span id="cb8-8"><a href="intro-markdown.html#cb8-8" tabindex="-1"></a><span class="ss">        - </span>but I&#39;m not sure how many levels this goes to...</span></code></pre></div>
 <div class="showoutput">
 <ul>
 <li>Bulleted lists</li>
@@ -318,13 +323,13 @@ div.csl-indent {
 </ul></li>
 </ul>
 </div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="intro-markdown.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To make a numbered list</span>
-<span id="cb9-2"><a href="intro-markdown.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>you just number things</span>
-<span id="cb9-3"><a href="intro-markdown.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>i.e. 1., 2., at the start of a line</span>
-<span id="cb9-4"><a href="intro-markdown.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>and it doesn&#39;t matter</span>
-<span id="cb9-5"><a href="intro-markdown.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>if your numbers are in the right order</span>
-<span id="cb9-6"><a href="intro-markdown.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>or if you keep using</span>
-<span id="cb9-7"><a href="intro-markdown.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the same number</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="intro-markdown.html#cb9-1" tabindex="-1"></a><span class="ss">1. </span>To make a numbered list</span>
+<span id="cb9-2"><a href="intro-markdown.html#cb9-2" tabindex="-1"></a><span class="ss">2. </span>you just number things</span>
+<span id="cb9-3"><a href="intro-markdown.html#cb9-3" tabindex="-1"></a><span class="ss">3. </span>i.e. 1., 2., at the start of a line</span>
+<span id="cb9-4"><a href="intro-markdown.html#cb9-4" tabindex="-1"></a><span class="ss">7. </span>and it doesn&#39;t matter</span>
+<span id="cb9-5"><a href="intro-markdown.html#cb9-5" tabindex="-1"></a><span class="ss">4. </span>if your numbers are in the right order</span>
+<span id="cb9-6"><a href="intro-markdown.html#cb9-6" tabindex="-1"></a><span class="ss">1. </span>or if you keep using</span>
+<span id="cb9-7"><a href="intro-markdown.html#cb9-7" tabindex="-1"></a><span class="ss">1. </span>the same number</span></code></pre></div>
 <div class="showoutput">
 <ol style="list-style-type: decimal">
 <li>To make a numbered list</li>
@@ -337,10 +342,10 @@ div.csl-indent {
 </ol>
 </div>
 <p>You can also do</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="intro-markdown.html#cb10-1" aria-hidden="true" tabindex="-1"></a>a) Alphabetical lists</span>
-<span id="cb10-2"><a href="intro-markdown.html#cb10-2" aria-hidden="true" tabindex="-1"></a>a) using lower case letters,</span>
-<span id="cb10-3"><a href="intro-markdown.html#cb10-3" aria-hidden="true" tabindex="-1"></a>A) or using</span>
-<span id="cb10-4"><a href="intro-markdown.html#cb10-4" aria-hidden="true" tabindex="-1"></a>A) upper case letters</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="intro-markdown.html#cb10-1" tabindex="-1"></a>a) Alphabetical lists</span>
+<span id="cb10-2"><a href="intro-markdown.html#cb10-2" tabindex="-1"></a>a) using lower case letters,</span>
+<span id="cb10-3"><a href="intro-markdown.html#cb10-3" tabindex="-1"></a>A) or using</span>
+<span id="cb10-4"><a href="intro-markdown.html#cb10-4" tabindex="-1"></a>A) upper case letters</span></code></pre></div>
 <div class="showoutput">
 <ol style="list-style-type: lower-alpha">
 <li>Alphabetical lists</li>
@@ -352,10 +357,10 @@ div.csl-indent {
 </ol>
 </div>
 <p>or you can</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="intro-markdown.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>mix all of them together</span>
-<span id="cb11-2"><a href="intro-markdown.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    a) if that&#39;s how</span>
-<span id="cb11-3"><a href="intro-markdown.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>you like to spend</span>
-<span id="cb11-4"><a href="intro-markdown.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>your time. </span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="intro-markdown.html#cb11-1" tabindex="-1"></a><span class="ss">1. </span>mix all of them together</span>
+<span id="cb11-2"><a href="intro-markdown.html#cb11-2" tabindex="-1"></a>    a) if that&#39;s how</span>
+<span id="cb11-3"><a href="intro-markdown.html#cb11-3" tabindex="-1"></a><span class="ss">        - </span>you like to spend</span>
+<span id="cb11-4"><a href="intro-markdown.html#cb11-4" tabindex="-1"></a><span class="ss">        - </span>your time. </span></code></pre></div>
 <div class="showoutput">
 <ol style="list-style-type: decimal">
 <li>mix all of them together
@@ -426,7 +431,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["bookdown-lecture-notes.pdf", "bookdown-lecture-notes.epub"],
+"download": ["bookdown-lecture-notes.epub"],
 "search": {
 "engine": "fuse",
 "options": null
@@ -444,7 +449,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -10,9 +10,33 @@ knitr::include_graphics("Images/build-book.png")
 
 This compiles all the markdown to create html files for the book. The output files should be in the `_book` folder.
 
+## Publishing to Moodle {#sec:moodle-pub}
+
+Publishing to Moodle has now become more straight forward (yay!).
+
+Once you've compiled your book, you should end up with a folder called `_book` (assuming you haven't changed the output folder from the default). To upload to Moodle:
+
+1. Compress your `_book` folder to a zip file. I tend to rename mine at this point so I can keep track of which version is currently on Moodle, e.g. `_book_180124.zip`.
+
+2. Go to where you want to put the link to the book on Moodle and (with editing turned on) select **Add an activity or resource**. 
+
+3. In the pop-up box, select **File**. 
+
+4. Upload your zip file.
+
+5. Once it's uploaded, click on the zip file. In the pop-up box, select **unzip**. 
+
+6. Once it's unzipped, you should see a new folder called `_book`, in addition to your `_book.zip` file. Click on the folder, then on the `index.html` file. 
+
+7. In the "Edit index.html" pop-up box, select **Set main file**. The box should close and you should see that `index.html` is now bold in the file window. 
+
+8. Do any other editing you want for the name and description, then save the changes. Your book will now appear as a link on Moodle!
+
+**TO DO:** Add instructions about how to update individual files. 
+
 ## Publishing with github pages {#sec:gh-pages}
 
-I use [github pages](pages.github.com) to publish my notes. 
+I use [github pages](pages.github.com) to publish this guide. My lecture notes now go onto Moodle.  
 
 The following assumes you are already using github to store your files. **TODO: Can add instructions for this part if needed**.
 
@@ -37,9 +61,7 @@ git push -q origin gh-pages
 
 Your pretty lecture notes should now be online! You should find them at github_username.github.io/repo_name - or check the setting page of the repository. The address will be given in the github pages section.
 
-## Publishing to Moodle {#sec:moodle-pub}
 
-To be written soon....
 
 
 
