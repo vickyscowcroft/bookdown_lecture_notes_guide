@@ -4,3 +4,10 @@
 .Ruserdata
 _bookdown_files
 _deploy.sh
+*conflicted*
+demo_files
+example_files
+bookdown-demo_files
+_book.zip
+Dockerfile
+_bookdown_files
