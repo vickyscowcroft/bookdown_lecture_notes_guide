@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2024-01-18" />
+<meta name="date" content="2024-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -258,15 +258,15 @@ div.csl-indent {
 <div id="sec:add-cite" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Adding citations<a href="07-referencing.html#sec:add-cite" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can reference publications etc using the following syntax:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb33-1"><a href="07-referencing.html#cb33-1" tabindex="-1"></a>@bibcode </span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb34-1"><a href="07-referencing.html#cb34-1" tabindex="-1"></a>@bibcode </span></code></pre></div>
 <p>where <code>bibcode</code> is the bibcode for the entry in your bib file (see Sec. <a href="07-referencing.html#sec:bib-files">8.2</a>). This will give the equivalent of the LaTeX <code>\citet{}</code> command.
 Example:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb34-1"><a href="07-referencing.html#cb34-1" tabindex="-1"></a>@2016Scowcroft showed that the SMC is a very elongated galaxy.</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb35-1"><a href="07-referencing.html#cb35-1" tabindex="-1"></a>@2016Scowcroft showed that the SMC is a very elongated galaxy.</span></code></pre></div>
 <div class="showoutput">
 <p><span class="citation">Scowcroft et al. (<a href="#ref-2016Scowcroft">2016</a>)</span> showed that the SMC is a very elongated galaxy.</p>
 </div>
 <p>For <code>\citep{}</code>, just put the citation in square brackets.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb35-1"><a href="07-referencing.html#cb35-1" tabindex="-1"></a>The first observations of SMC Cepheids were taken over 100 years ago <span class="co">[</span><span class="ot">@1912Leavitt</span><span class="co">]</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb36-1"><a href="07-referencing.html#cb36-1" tabindex="-1"></a>The first observations of SMC Cepheids were taken over 100 years ago <span class="co">[</span><span class="ot">@1912Leavitt</span><span class="co">]</span>.</span></code></pre></div>
 <div class="showoutput">
 <p>The first observations of SMC Cepheids were taken over 100 years ago <span class="citation">(<a href="#ref-1912Leavitt">Leavitt &amp; Pickering 1912</a>)</span>.</p>
 </div>
@@ -275,25 +275,25 @@ Example:</p>
 <h2><span class="header-section-number">8.2</span> Bibliography files<a href="07-referencing.html#sec:bib-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assuming you’re using natbib style references you can pass the same bib file to bookdown.</p>
 <p>Example bib file entry:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb36-1"><a href="07-referencing.html#cb36-1" tabindex="-1"></a>@ARTICLE{1912Leavitt,</span>
-<span id="cb36-2"><a href="07-referencing.html#cb36-2" tabindex="-1"></a>       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span>
-<span id="cb36-3"><a href="07-referencing.html#cb36-3" tabindex="-1"></a>        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span>
-<span id="cb36-4"><a href="07-referencing.html#cb36-4" tabindex="-1"></a>      journal = {Harvard College Observatory Circular},</span>
-<span id="cb36-5"><a href="07-referencing.html#cb36-5" tabindex="-1"></a>         year = &quot;1912&quot;,</span>
-<span id="cb36-6"><a href="07-referencing.html#cb36-6" tabindex="-1"></a>       volume = {173},</span>
-<span id="cb36-7"><a href="07-referencing.html#cb36-7" tabindex="-1"></a>        pages = {1},</span>
-<span id="cb36-8"><a href="07-referencing.html#cb36-8" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb37-1"><a href="07-referencing.html#cb37-1" tabindex="-1"></a>@ARTICLE{1912Leavitt,</span>
+<span id="cb37-2"><a href="07-referencing.html#cb37-2" tabindex="-1"></a>       author = {{Leavitt}, Henrietta S. and {Pickering}, Edward C.},</span>
+<span id="cb37-3"><a href="07-referencing.html#cb37-3" tabindex="-1"></a>        title = &quot;{Periods of 25 Variable Stars in the Small Magellanic Cloud.}&quot;,</span>
+<span id="cb37-4"><a href="07-referencing.html#cb37-4" tabindex="-1"></a>      journal = {Harvard College Observatory Circular},</span>
+<span id="cb37-5"><a href="07-referencing.html#cb37-5" tabindex="-1"></a>         year = &quot;1912&quot;,</span>
+<span id="cb37-6"><a href="07-referencing.html#cb37-6" tabindex="-1"></a>       volume = {173},</span>
+<span id="cb37-7"><a href="07-referencing.html#cb37-7" tabindex="-1"></a>        pages = {1},</span>
+<span id="cb37-8"><a href="07-referencing.html#cb37-8" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="sec:ref-style" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Reference style<a href="07-referencing.html#sec:ref-style" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The referencing style is controlled in the <code>index.Rmd</code> file.</p>
 <p>At the top of this file you’ll find the section that defines things like the book title, output format etc. The following lines are where you define the bib file names and referencing format. You can have multiple bib files.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb37-1"><a href="07-referencing.html#cb37-1" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [book.bib, packages.bib]</span></span>
-<span id="cb37-2"><a href="07-referencing.html#cb37-2" tabindex="-1"></a><span class="an">csl:</span><span class="co"> apj.csl</span></span>
-<span id="cb37-3"><a href="07-referencing.html#cb37-3" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> yes</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb38-1"><a href="07-referencing.html#cb38-1" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [book.bib, packages.bib]</span></span>
+<span id="cb38-2"><a href="07-referencing.html#cb38-2" tabindex="-1"></a><span class="an">csl:</span><span class="co"> apj.csl</span></span>
+<span id="cb38-3"><a href="07-referencing.html#cb38-3" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> yes</span></span></code></pre></div>
 <p>The <code>bibliography:</code> line points to your bib file. The <code>csl:</code> line points to your style file. This book uses the ApJ style. Additional style files (e.g. PRL etc.) can be downloaded from <a href="https://www.zotero.org/styles">zotero</a>. <code>link-citations: yes</code> creates links from the citations in the text to the reference list at the end of the chapter.</p>
 <p>Any chapter that includes references will have a the reference list at the end. You can also include a separate reference list for the whole document. To make sure this goes right at the end I usually name my file <code>99-references.Rmd</code>. <strong>If you specify the ordering as described in Section <a href="03-chapters.html#sec:specify-order">4.1.1</a> you need to make sure that the reference chapter is the last one in the list.</strong> The references file should contain the following text:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="07-referencing.html#cb38-1" tabindex="-1"></a><span class="st">`</span><span class="at">r if (knitr::is_html_output()) &#39;# References {-}&#39;</span><span class="st">`</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="07-referencing.html#cb39-1" tabindex="-1"></a><span class="st">`</span><span class="at">r if (knitr::is_html_output()) &#39;# References {-}&#39;</span><span class="st">`</span></span></code></pre></div>
 <p>This will create an <strong>un-numbered</strong> section at the end of the book called ‘References’ that has the full reference list.</p>
 
 </div>
