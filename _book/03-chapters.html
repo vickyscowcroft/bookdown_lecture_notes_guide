@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2024-01-18" />
+<meta name="date" content="2024-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -259,49 +259,54 @@ div.csl-indent {
 <h2><span class="header-section-number">4.1</span> File Structure<a href="03-chapters.html#sec:file-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown organises your notes into a book. The main page you see when you open a bookdown page is the <code>index.Rmd</code> file.</p>
 <p>Each chapter in the book has it’s own markdown file. There are two options for defining the order of your chapters: using numbers in the file name, or specifying the order in the <code>_bookdown.yml</code> file.</p>
+<p>To avoid any issues with file names in the html version, you need to make sure to add the following to your <code>index.Rmd</code> file:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="03-chapters.html#cb12-1" tabindex="-1"></a><span class="an">output:</span><span class="co"> </span></span>
+<span id="cb12-2"><a href="03-chapters.html#cb12-2" tabindex="-1"></a>  bookdown:<span class="sc">:gitbook:</span></span>
+<span id="cb12-3"><a href="03-chapters.html#cb12-3" tabindex="-1"></a>    split_by: rmd</span></code></pre></div>
+<p>The first two lines of the above may already be there, so you’ll probably just need to add the <code>split_by: rmd</code> line. Note that indentation matters here (and in all <code>yml</code> code.)</p>
 <div id="sec:specify-order" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Specifying the order in <code>_bookdown.yml</code><a href="03-chapters.html#sec:specify-order" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The easiest way to organise chapters is to specify the order in the <code>_bookdown.yml</code> file. For this method you don’t need to have the numbers in the file name, and it’s much easier to rearrange things. To specify the order, add an <code>rmd_files</code> section to the <code>_bookdown.yml</code> file and put the file names in the order you want them to appear:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="03-chapters.html#cb12-1" tabindex="-1"></a><span class="an">rmd_files:</span></span>
-<span id="cb12-2"><a href="03-chapters.html#cb12-2" tabindex="-1"></a><span class="ss">  - </span>index.Rmd</span>
-<span id="cb12-3"><a href="03-chapters.html#cb12-3" tabindex="-1"></a><span class="ss">  - </span>01-intro.Rmd</span>
-<span id="cb12-4"><a href="03-chapters.html#cb12-4" tabindex="-1"></a><span class="ss">  - </span>02-latex-conversion.Rmd</span>
-<span id="cb12-5"><a href="03-chapters.html#cb12-5" tabindex="-1"></a><span class="ss">  - </span>intro-markdown.Rmd</span>
-<span id="cb12-6"><a href="03-chapters.html#cb12-6" tabindex="-1"></a><span class="ss">  - </span>03-chapters.Rmd</span>
-<span id="cb12-7"><a href="03-chapters.html#cb12-7" tabindex="-1"></a>  ...</span>
-<span id="cb12-8"><a href="03-chapters.html#cb12-8" tabindex="-1"></a><span class="ss">  - </span>99-references.Rmd</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="03-chapters.html#cb13-1" tabindex="-1"></a><span class="an">rmd_files:</span></span>
+<span id="cb13-2"><a href="03-chapters.html#cb13-2" tabindex="-1"></a><span class="ss">  - </span>index.Rmd</span>
+<span id="cb13-3"><a href="03-chapters.html#cb13-3" tabindex="-1"></a><span class="ss">  - </span>01-intro.Rmd</span>
+<span id="cb13-4"><a href="03-chapters.html#cb13-4" tabindex="-1"></a><span class="ss">  - </span>02-latex-conversion.Rmd</span>
+<span id="cb13-5"><a href="03-chapters.html#cb13-5" tabindex="-1"></a><span class="ss">  - </span>intro-markdown.Rmd</span>
+<span id="cb13-6"><a href="03-chapters.html#cb13-6" tabindex="-1"></a><span class="ss">  - </span>03-chapters.Rmd</span>
+<span id="cb13-7"><a href="03-chapters.html#cb13-7" tabindex="-1"></a>  ...</span>
+<span id="cb13-8"><a href="03-chapters.html#cb13-8" tabindex="-1"></a><span class="ss">  - </span>99-references.Rmd</span></code></pre></div>
 <p>You’ll see here that the <code>intro-markdown.Rmd</code> chapter doesn’t have a number at the start. You don’t need them for this method; bookdown will ignore the numbers and render things in your listed order. More details (that you probably won’t need) about how this works are <a href="https://bookdown.org/yihui/bookdown/usage.html">here</a>. <strong>Your references chapter should be the last one, otherwise it doesn’t work properly.</strong></p>
 </div>
 <div id="sec:order-filename" class="section level3 hasAnchor" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> Order by filename<a href="03-chapters.html#sec:order-filename" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This is the old method of ordering chapters. If you start from the bookdown template (described in Section <a href="01-intro.html#getting-started">1</a>), you’ll see that the template files all start with a number. Bookdown will put the chapters in numerical order. For example, the following file names would order the chapters as they are in this book:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="03-chapters.html#cb13-1" tabindex="-1"></a>index.Rmd</span>
-<span id="cb13-2"><a href="03-chapters.html#cb13-2" tabindex="-1"></a>01-intro.Rmd</span>
-<span id="cb13-3"><a href="03-chapters.html#cb13-3" tabindex="-1"></a>02-latex-conversion.Rmd</span>
-<span id="cb13-4"><a href="03-chapters.html#cb13-4" tabindex="-1"></a>03-intro-markdown.Rmd</span>
-<span id="cb13-5"><a href="03-chapters.html#cb13-5" tabindex="-1"></a>04-chapters.Rmd</span>
-<span id="cb13-6"><a href="03-chapters.html#cb13-6" tabindex="-1"></a>... etc</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="03-chapters.html#cb14-1" tabindex="-1"></a>index.Rmd</span>
+<span id="cb14-2"><a href="03-chapters.html#cb14-2" tabindex="-1"></a>01-intro.Rmd</span>
+<span id="cb14-3"><a href="03-chapters.html#cb14-3" tabindex="-1"></a>02-latex-conversion.Rmd</span>
+<span id="cb14-4"><a href="03-chapters.html#cb14-4" tabindex="-1"></a>03-intro-markdown.Rmd</span>
+<span id="cb14-5"><a href="03-chapters.html#cb14-5" tabindex="-1"></a>04-chapters.Rmd</span>
+<span id="cb14-6"><a href="03-chapters.html#cb14-6" tabindex="-1"></a>... etc</span></code></pre></div>
 <p>I find this works reasonably well if you know beforehand what order you’re going to put things in, but it quickly gets annoying if you decide later on that you want to add a chapter between two existing ones (you’d have to rename all the subsequent chapters), so I recommend using the method in Section <a href="03-chapters.html#sec:specify-order">4.1.1</a>.</p>
 </div>
 </div>
 <div id="sec:sec-labels" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Section labels<a href="03-chapters.html#sec:sec-labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The chapter title and label are given in the first line of the file.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="03-chapters.html#cb14-1" tabindex="-1"></a><span class="fu"># Chapters, sections, etc. {#sec:chapters}</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="03-chapters.html#cb15-1" tabindex="-1"></a><span class="fu"># Chapters, sections, etc. {#sec:chapters}</span></span></code></pre></div>
 <p>The <code>#</code> at the start of the line denotes a chapter heading (see Section <a href="intro-markdown.html#sec:heading-syntax">3.2.1</a>). The label is given in <code>{#sec:chapters}</code>. I think bookdown can create its own labels from the chapter/section heading, but it’s easier to cross-reference if you set them yourself.</p>
 <p>You can make sections using two # at the start of the line:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="03-chapters.html#cb15-1" tabindex="-1"></a><span class="fu">## Section labels {#sec:sec-lables}</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="03-chapters.html#cb16-1" tabindex="-1"></a><span class="fu">## Section labels {#sec:sec-lables}</span></span></code></pre></div>
 <p>Note that the <code>{#sec:label}</code> syntax is still the same - you don’t need to say whether it’s a chapter, section, subsection etc.</p>
 <p>Subsections are done similarly, with three # at the start of the line.</p>
 <p>You can change the section heading from “Chapter” to e.g. “Section” by editing the following in the <code>_bookdown.yml</code> file:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="03-chapters.html#cb16-1" tabindex="-1"></a><span class="an">language:</span></span>
-<span id="cb16-2"><a href="03-chapters.html#cb16-2" tabindex="-1"></a>  ui:</span>
-<span id="cb16-3"><a href="03-chapters.html#cb16-3" tabindex="-1"></a>    chapter_name: &quot;Section &quot;</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="03-chapters.html#cb17-1" tabindex="-1"></a><span class="an">language:</span></span>
+<span id="cb17-2"><a href="03-chapters.html#cb17-2" tabindex="-1"></a>  ui:</span>
+<span id="cb17-3"><a href="03-chapters.html#cb17-3" tabindex="-1"></a>    chapter_name: &quot;Section &quot;</span></code></pre></div>
 </div>
 <div id="sec:cross-ref" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Cross referencing<a href="03-chapters.html#sec:cross-ref" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can reference other chapters, sections etc. throughout the book with the following syntax:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="03-chapters.html#cb17-1" tabindex="-1"></a>Section \@ref(sec:cross-ref) is this section.</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="03-chapters.html#cb18-1" tabindex="-1"></a>Section \@ref(sec:cross-ref) is this section.</span></code></pre></div>
 <div class="showoutput">
 <p>Section <a href="03-chapters.html#sec:cross-ref">4.3</a> is this section.</p>
 </div>

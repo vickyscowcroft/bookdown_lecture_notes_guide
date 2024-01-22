@@ -6,6 +6,16 @@ Bookdown organises your notes into a book. The main page you see when you open a
 
 Each chapter in the book has it's own markdown file. There are two options for defining the order of your chapters: using numbers in the file name, or specifying the order in the `_bookdown.yml` file.
 
+To avoid any issues with file names in the html version, you need to make sure to add the following to your `index.Rmd` file:
+
+```markdown
+output: 
+  bookdown::gitbook:
+    split_by: rmd
+```
+
+The first two lines of the above may already be there, so you'll probably just need to add the `split_by: rmd` line. Note that indentation matters here (and in all `yml` code.)
+
 ### Specifying the order in `_bookdown.yml` {#sec:specify-order}
 
 The easiest way to organise chapters is to specify the order in the `_bookdown.yml` file. For this method you don't need to have the numbers in the file name, and it's much easier to rearrange things. To specify the order, add an `rmd_files` section to the `_bookdown.yml` file and put the file names in the order you want them to appear:

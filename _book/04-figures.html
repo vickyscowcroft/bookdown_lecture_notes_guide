@@ -23,7 +23,7 @@
 <meta name="author" content="Vicky Scowcroft" />
 
 
-<meta name="date" content="2024-01-18" />
+<meta name="date" content="2024-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -267,10 +267,10 @@ div.csl-indent {
 \end{centering}
 \end{figure}</code></pre>
 <p>To include the figure in markdown the syntax is as follows:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="04-figures.html#cb19-1" tabindex="-1"></a><span class="st">```</span></span>
-<span id="cb19-2"><a href="04-figures.html#cb19-2" tabindex="-1"></a><span class="at">{r echo=FALSE, ho-plot, out.width=&#39;70%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;This is a figure caption.&quot;}</span></span>
-<span id="cb19-3"><a href="04-figures.html#cb19-3" tabindex="-1"></a><span class="at">knitr::include_graphics(&quot;Images/ho-tension.png&quot;)</span></span>
-<span id="cb19-4"><a href="04-figures.html#cb19-4" tabindex="-1"></a><span class="st">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="04-figures.html#cb20-1" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb20-2"><a href="04-figures.html#cb20-2" tabindex="-1"></a><span class="at">{r echo=FALSE, ho-plot, out.width=&#39;70%&#39;, fig.show=&#39;hold&#39;, fig.cap=&quot;This is a figure caption.&quot;}</span></span>
+<span id="cb20-3"><a href="04-figures.html#cb20-3" tabindex="-1"></a><span class="at">knitr::include_graphics(&quot;Images/ho-tension.png&quot;)</span></span>
+<span id="cb20-4"><a href="04-figures.html#cb20-4" tabindex="-1"></a><span class="st">```</span></span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:ho-plot"></span>
 <img src="Images/ho-tension.png" alt="This is a figure caption." width="70%" />
 <p class="caption">
@@ -295,7 +295,7 @@ Figure 5.1: This is a figure caption.
 <h2><span class="header-section-number">5.3</span> Figure numbering and referencing<a href="04-figures.html#sec:fig-nos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures with labels and captions are numbered according to the section (e.g. Fig <a href="04-figures.html#fig:ho-plot">5.1</a> in this case).</p>
 <p>To reference a figure use the syntax</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="04-figures.html#cb20-1" tabindex="-1"></a>\@ref(fig:label)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="04-figures.html#cb21-1" tabindex="-1"></a>\@ref(fig:label)</span></code></pre></div>
 <p>where <code>fig:label</code> would be <code>fig:ho-plot</code> in this case.</p>
 <p>You can cross reference between sections/chapters, so make sure to use unique figure labels.</p>
 
