@@ -1,12 +1,7 @@
 #!/bin/sh
 
-set -e
 
-[ -z "${GITHUB_PAT}" ] && exit 0
-[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
-
-
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
+git clone -b gh-pages https://github.com/vickyscowcroft/bookdown_lecture_notes_guide.git book-output
 cd book-output
 cp -r ../_book/* ./
 git add --all *
