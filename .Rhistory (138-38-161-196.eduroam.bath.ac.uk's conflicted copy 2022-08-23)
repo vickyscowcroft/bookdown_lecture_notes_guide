@@ -1,8 +1,0 @@
-install.packages("bookdown")
-rmarkdown::clean_site(preview = FALSE)
-devtools::install_github("hebrewseniorlife/bookdownThemeEditor")
-install.packages('devtools')
-devtools::install_github("hebrewseniorlife/bookdownThemeEditor")
-bookdownThemeEditor:::bdTheme_addin()
-rmarkdown::pandoc_version()
-rmarkdown::clean_site(preview = FALSE)
