@@ -6,7 +6,7 @@ Guide can be found [here](https://vickyscowcroft.github.io/bookdown_lecture_note
 
 Example of lecture notes made with bookdown for PH40112 can be found [here](https://vickyscowcroft.github.io/PH40112_rmd/). Source for the lecture notes at [https://github.com/vickyscowcroft/PH40112_rmd](https://github.com/vickyscowcroft/PH40112_rmd).
 
-Last update 19/1/2024
+Last update 22/1/2024
 
 vs522@bath.ac.uk
 
