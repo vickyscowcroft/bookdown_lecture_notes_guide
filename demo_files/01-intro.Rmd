@@ -1,5 +1,0 @@
-# Getting started {#getting-started}
-
-The quickest way to get started is to use the bookdown demo as a template. [This page](https://bookdown.org/yihui/bookdown/get-started.html) gives instructions for how to do this.
-
-The [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) is the main documentation for bookdown. I won't repeat a lot of the information here, but will give some specific examples.

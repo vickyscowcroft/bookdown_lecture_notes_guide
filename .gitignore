@@ -1,5 +1,6 @@
 .Rproj.user
 .Rhistory
+.Rhistory*
 .RData
 .Ruserdata
 _bookdown_files
@@ -11,3 +12,4 @@ bookdown-demo_files
 _book.zip
 Dockerfile
 _bookdown_files
+.DS_Store
